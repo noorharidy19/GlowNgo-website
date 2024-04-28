@@ -172,3 +172,81 @@ header{
     text-align: center;
     color: rgb(245, 242, 237); 
   }
+  .prodip{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+   justify-content: center;
+   margin-top: 70px;
+   
+}.lip{
+    box-shadow: 0 5px 25px rgba(1 1 1/15%);
+    border-radius: 20px;
+    background-color: rgb(255, 202, 202);
+    margin: 5px;
+    height: 25em;
+    
+    transition: transform 0.3s ease;
+}
+.lip:hover {
+    transform: scale(1.05);
+}
+.lipprod{
+    text-align: center;
+    color: rgb(245, 242, 237); 
+    
+}
+img{
+    
+        display: block;
+        border-radius: 20px;
+        padding: 10px;
+        
+      
+}
+.browprod{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+   justify-content: center;
+   margin-top: 70px;
+  
+}
+.eyebrow{
+    box-shadow: 0 5px 25px rgba(1 1 1/15%);
+    border-radius: 20px;
+    background-color: rgb(255, 202, 202);
+    margin: 15px;
+    height: 25em;
+    transition: transform 0.3s ease;
+}
+.eyebrow:hover {
+    transform: scale(1.05);
+}
+.eye{
+    text-align: center;
+    color: rgb(245, 242, 237); 
+}
+.p{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+   justify-content: center;
+  
+}
+.pr{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+   justify-content: center;
+   margin-top: 70px;
+}
+.lipp{
+    box-shadow: 0 5px 25px rgba(1 1 1/15%);
+    border-radius: 20px;
+    background-color: rgb(255, 202, 202);
+    margin: 15px;
+    height: 25em;
+    
+    transition: transform 0.3s ease;
+}
