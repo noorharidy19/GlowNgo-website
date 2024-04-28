@@ -82,3 +82,93 @@ header{
       color: rgb(245, 242, 237); 
   
   }
+  .foundation{
+    text-align: center;
+    color: rgb(245, 242, 237); 
+}
+.face-cards{
+    box-shadow: 0 5px 25px rgba(1 1 1/15%);
+    border-radius: 20px;
+    background-color: rgb(255, 202, 202);
+    margin: 15px;
+    height: 25em;
+    transition: transform 0.3s ease;
+}
+.face-cards:hover {
+    transform: scale(1.05);
+  }
+  .image{
+    display: block;
+    border-radius: 20px;
+    padding: 10px;
+  }
+  .Concelar{
+    text-align: center;
+    color: rgb(245, 242, 237); 
+  }
+.products{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+   justify-content: center;
+   margin-top: 70px;
+}
+.Setting spray{
+    text-align: center;
+    color: rgb(245, 242, 237); 
+  }
+  .Powder{
+    text-align: center;
+    color: rgb(245, 242, 237); 
+  }
+  .Highlighter{
+    text-align: center;
+    color: rgb(245, 242, 237); 
+  }
+.Contouer{
+    text-align: center;
+    color: rgb(245, 242, 237); 
+  }
+  .Bronzer{
+    text-align: center;
+    color: rgb(245, 242, 237); 
+  }
+  .Blusher{
+    text-align: center;
+    color: rgb(245, 242, 237); 
+  }
+  .Eyes-cards{
+    box-shadow: 0 5px 25px rgba(1 1 1/15%);
+    border-radius: 20px;
+    background-color: rgb(255, 202, 202);
+    margin: 15px;
+    height: 25em;
+    transition: transform 0.3s ease;
+}
+.Eyes-cards:hover {
+    transform: scale(1.05);
+  }
+  .Mascara{
+    text-align: center;
+    color: rgb(245, 242, 237); 
+  }
+  .EyeLinear{
+    text-align: center;
+    color: rgb(245, 242, 237); 
+  }
+  .EyeShadow{
+    text-align: center;
+    color: rgb(245, 242, 237); 
+  }
+  .EyeLashes{
+    text-align: center;
+    color: rgb(245, 242, 237); 
+  }
+  .EyePrimer{
+    text-align: center;
+    color: rgb(245, 242, 237); 
+  }
+  .kohl{
+    text-align: center;
+    color: rgb(245, 242, 237); 
+  }
