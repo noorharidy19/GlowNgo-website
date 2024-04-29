@@ -114,7 +114,7 @@ header{
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.dots-container {
+.dash-container {
     position: absolute;
     bottom: 30px;
     left: 50%;
@@ -122,11 +122,11 @@ header{
     z-index: 999;
 }
 
-.dots {
+.dashes {
     text-align: center;
 }
 
-.dot {
+.dash {
     cursor: pointer;
     height: 15px;
     width: 15px;
@@ -135,7 +135,7 @@ header{
     display: inline-block;
 }
 
-.dot.active, .dot:hover {
+.dash.active, .dash:hover {
     background-color: #717171;
 }
 
