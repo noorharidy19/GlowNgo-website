@@ -33,8 +33,6 @@ header{
   }
   .navigation a:hover{
       color: rgba(146, 77, 89, 0.964);
-      border-bottom: 2px solid rgba(146, 77, 89, 0.964);
-      
   }
 
   body {
@@ -67,6 +65,7 @@ header{
 
 .slide:nth-child(1) {
     background-image: url("Pic1.jpg");
+    background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
 }
@@ -128,9 +127,9 @@ header{
 
 .dash {
     cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 10px;
+    height: 2px;
+    width: 20px;
+    margin: 0 3px;
     background-color: #bbb;
     display: inline-block;
 }
