@@ -141,10 +141,6 @@ header{
     background-color: #717171;
 }
 
-.fade {
-    display: none;
-}
-
 @keyframes slide {
     20% {
         margin-left: 0px;
