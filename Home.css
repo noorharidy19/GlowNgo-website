@@ -115,8 +115,8 @@ header{
 }
 
 .dots-container {
-    position: fixed;
-    bottom: 20px;
+    position: absolute;
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 999;
@@ -132,9 +132,7 @@ header{
     width: 15px;
     margin: 0 10px;
     background-color: #bbb;
-    border-radius: 50%;
     display: inline-block;
-    transition: background-color 1s ease;
 }
 
 .dot.active, .dot:hover {

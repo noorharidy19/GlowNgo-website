@@ -6,14 +6,14 @@ showSlides();
 function showSlides() {
     let i;
     let slides = document.getElementsByClassName("slide");
-    let dots = document.getElementsByClassName("dot");
+    let dashes = document.getElementsByClassName("dash");
 
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
 
-    for (i = 0; i < dots.length; i++) {
-        dots[i].classList.remove("active");
+    for (i = 0; i < dashes.length; i++) {
+        dashes[i].classList.remove("active");
     }
 
     slideIndex++;
@@ -22,8 +22,8 @@ function showSlides() {
     }
 
     slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].classList.add("active");
-    timeout = setTimeout(showSlides, 2000);
+    dashes[slideIndex - 1].classList.add("active");
+    timeout = setTimeout(showSlides, 5000);
 }
 
 function plusSlides(n) {
