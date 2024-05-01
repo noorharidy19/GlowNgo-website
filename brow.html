@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="StyleProd.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Products</title>
+    <script src="Prod.js"></script>
 </head>
 <body>
     <header>
@@ -24,12 +25,12 @@
         <div class="browprod">
             <div class="eyebrow">
                 <h2 class="eye">Eyebrow Gel</h2>
-                <a href=""><img src="eyebrowgel.jpg" alt="Makeup img" width="318" height="300"></a>
+                <a href="#" onclick="showP()"><img src="eyebrowgel.jpg" alt="Makeup img" width="318" height="300"></a>
 
             </div>
             <div class="eyebrow">
                 <h2 class="eye">Eyebrow pencil</h2>
-                <a href=""><img src="browpencil.jpg" alt="Makeup img" width="318" height="300"></a>
+                <a href="#" onclick=""><img src="browpencil.jpg" alt="Makeup img" width="318" height="300"></a>
 
                 
             </div>
@@ -40,6 +41,116 @@
                 
             </div>
         </div>
+        <div class="Product-window" id="PCont">
+            <span class="close-btn" onclick="hideP()">&times;</span>
+            <select class="sortt" id="sortSelect"  onchange="x(this.value)">
+                <option>Select</option>
+                <option>A-Z</option>
+                <option>BY BRAND</option>
+                <option>By price(LOWER->HIGHER)</option>
+                <option>By price(HIGHER->LOWER)</option>
+            </select> 
+           
+            <div class="popupp">
+
+                <div class="Kiko"> 
+                    
+                    <div class="container">
+                        
+                        <img src="kikogel.jpg" class="imggel" alt="Makeup img" width="318" height="300">
+                        <div class="middle">
+                            <div class="text" onclick="showPopup()"><i class="fa-sharp fa-solid fa-eye"></i></div>
+                        </div>
+                    </div>
+                    <h3>Kiko Eyebrow Designer Gel Mascara </h3>
+                    <p>15.00$</p>
+                </div>
+                <div class="Maybelline">
+                    <div class="container">
+                        <img src="mayb gel.jpg" class="imggel" alt="Makeup img" width="318" height="300">
+                        <div class="middle">
+                            <div class="text" onclick="usee()"><i class="fa-sharp fa-solid fa-eye"></i></div>
+                        </div>
+                    </div>
+                    <h3>Maybelline Eyebrow Designer Gel </h3>
+                    <p>13.00$</p>
+                </div>
+            </div>
+        </div>
+                
+               
+        
+        <div class="Products-window " id="PContainer">
+            <h2 class="p1">Kiko Eyebrow Designer Gel Mascara  <span class="price">15.00$</span></h2>
+            <div class="popup">
+                
+                <span class="close-btn" onclick="hidePopup()">&times;</span>
+                <img src="kikogel.jpg" alt="Makeup img" width="350" height="320">
+               
+               
+                <div>
+                <h1 class="btn1" id="b1" onclick="des()">Description </h1>
+                <h1 class="btn2" id="b2" onclick="use()">how to use</h1>
+                <div id="i77" class="nourhan">
+-Eyebrow fixing gel with satin finish.
+
+<br>
+-Perfect for shaping, filling and defining the eyebrows, enhancing them with a sophisticated satin finish.
+<br>
+
+-The lightweight gel ensures perfect hold without leaving marks.
+
+<br>
+-The unique mini brush ensures more defined and precise application, for a flawless and extremely professional result.
+<br>
+
+-Non-drying and non-sticky.
+
+<br>
+-Ophthalmologically tested.
+
+</div>
+<div id="i7" class="noor">The unique mini applicator allows you to groom, shape and define your eyebrows, for an even more precise and sophisticated finish.</div>
+</div>
+
+            </div>
+            <div class="rev">
+                <h1>ADD TO <i class="fa-solid fa-cart-shopping" title="cart"  style="color:rgb(222, 128, 128)"></i>
+                    <i class="fa-regular fa-heart" title="wishlist"  style="color:rgb(222, 128, 128)"></i> </h1>
+                <h1>Reviews <i class="fa-brands fa-tiktok"></i> </h1>
+                 
+            </div>
+                
+        </div>
+        <div class="Products-window " id="PContainerr">
+            <h2 class="p1"> MAYBELLINE BROW™ FAST SCULPT™   <span class="price">13.00$</span></h2>
+            <div class="popup">
+                
+                <span class="close-btn" onclick="hidePopup()">&times;</span>
+                <img src="mayb gel.jpg" alt="Makeup img" width="350" height="320">
+               
+               
+                <div>
+                <h1 class="btn1" id="b1" onclick="des()">Description </h1>
+                <h1 class="btn2" id="b2" onclick="use()">how to use</h1>
+                <div id="i77" class="nourhan"> Brow sculpting made for the NYC hustle! 
+                    Tame, and shape brows fast. 
+                    This clear gel brow mascara features a mini sculpting brush that precisely tames and shapes brows 
+                    without hassle. With this quick and easy taming brow gel mascara you can get flawless brows on the go.</div>
+<div id="i7" class="noor">Brush gel into brows with short upward strokes </div>
+</div>
+
+            </div>
+            <div class="rev">
+                <h1 class="o">ADD TO <i class="fa-solid fa-cart-shopping" title="cart" style="color:rgb(222, 128, 128)"></i>
+                    <i class="fa-regular fa-heart" title="wishlist"  style="color:rgb(222, 128, 128)" ></i> </h1>
+                <h1>Reviews <i class="fa-brands fa-tiktok"></i> </h1>
+                 
+            </div>
+                
+        </div>
+   
+       
     </section>
 </body>
 </html>
