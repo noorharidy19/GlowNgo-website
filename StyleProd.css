@@ -117,7 +117,7 @@ header{
    justify-content: center;
    margin-top: 70px;
 }
-.Setting spray{
+/* .Setting spray{
     text-align: center;
     color: rgb(245, 242, 237); 
   }
@@ -140,7 +140,7 @@ header{
   .Blusher{
     text-align: center;
     color: rgb(245, 242, 237); 
-  }
+  } */
   .Eyes-cards{
     box-shadow: 0 5px 25px rgba(1 1 1/15%);
     border-radius: 20px;
@@ -429,6 +429,7 @@ font-size:90%;
 }
 .noor{
     display:none;
+    font-size:90%;
 }
 
 .p1{
