@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="StyleProd.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Products</title>
+    <script src="Prod.js"></script>
 </head>
 <body>
     <header>
@@ -22,26 +23,154 @@
     <section class="Tools">
         <div class="products">
             <div class="Tools-cards">
-                <h2 class="FaceBrush">Face Brush</h2>
-                <a href="FaceBrush.html"><img src="FaceBrush3.jpg" alt="Face Brush img" width="318" height="300" class="image"></a>
+                <div class="container">
+                    <img src="kikobrush1.jpg" alt="Makeup img" width="318" height="300" class="imggel">
+                    <h2 class="FaceBrush">Kiko Brush Set</h2>
+                    <h3 class="FaceBrush">33.00$</h3>
+                    <div class="middle">
+                        <div class="text" onclick=""><i class="fa-solid fa-cart-shopping" title="Add To Cart"></i></div>
+                        <div class="text" onclick="showPopup(['brush1'])"><i class="fa-sharp fa-solid fa-eye" title="Description"></i></div>
+                        <div class="text" onclick=""><i class="fa-solid fa-heart" title="Add To Whishlist"></i></div>
+                    </div>
+                </div>  
             </div>
                 <div class="Tools-cards">
-                    <h2 class="EyeBrush">Eye Brush</h2>
-                    <a href="EyeBrush.html"><img src="EyeBrush4.jpg" alt="Eye Brush img" width="318" height="300" class="image"></a>
+                    <div class="container">
+                        <img src="spongefanty.jpg" alt="Makeup img" width="318" height="300" class="imggel">
+                        <h2 class="Sponges">Fenty Beauty Blender </h2>
+                        <h3 class="Sponges">24.00$</h3>
+                        <div class="middle">
+                            <div class="text" onclick=""><i class="fa-solid fa-cart-shopping" title="Add To Cart"></i></div>
+                            <div class="text" onclick="showPopup(['brush2'])"><i class="fa-sharp fa-solid fa-eye" title="Description"></i></div>
+                            <div class="text" onclick=""><i class="fa-solid fa-heart" title="Add To Whishlist"></i></div>
+                        </div>
+                    </div>  
                 </div>
                 <div class="Tools-cards">
-                    <h2 class="LipBrush">Lip Brush</h2>
-                    <a href="LipBrush.html"><img src="LipBrush2.jpg" alt="Lip Brush img" width="318" height="300" class="image"></a>
-                </div>
-                <div class="Tools-cards">
-                    <h2 class="Sponges">Sponges</h2>
-                    <a href="Sponges.html"><img src="Sponges1.jpg" alt="Sponges img" width="318" height="300" class="image"></a>
-                </div>
-                <div class="Tools-cards">
-                    <h2 class="Curlers">EyeLash Curlers</h2>
-                    <a href="Curlers.html"><img src="Curlers.jpg" alt="EyeLash Curlers img" width="318" height="300" class="image"></a>
+                    <div class="container">
+                        <img src="diorcurler.jpg" alt="Makeup img" width="318" height="300" class="imggel">
+                        <h2 class="Curlers">Dior EyeLash Curler</h2>
+                        <h3 class="Curlers">30.00$</h3>
+                        <div class="middle">
+                            <div class="text" onclick=""><i class="fa-solid fa-cart-shopping" title="Add To Cart"></i></div>
+                            <div class="text" onclick="showPopup(['brush3'])"><i class="fa-sharp fa-solid fa-eye" title="Description"></i></div>
+                            <div class="text" onclick=""><i class="fa-solid fa-heart" title="Add To Whishlist"></i></div>
+                        </div>
+                    </div>  
                 </div>
         </div>
     </section>
+    <!-- ---------------------------------------------------------------------------------------------------- -->
+
+    <div class="Products-window " id="brush1">
+        <h2 class="p1">Kiko Brush set<span class="price"> 33.00$</span></h2>
+        <div class="popup">
+            
+            <span class="close-btn" onclick="hidePopup(['brush1'])">&times;</span>
+            <img src="kikobrush1.jpg" alt="Makeup img" width="350" height="320">
+           
+           
+            <div>
+            <h1 class="btn1" id="b1" onclick="des()">Description </h1>
+            <h1 class="btn2" id="b2" onclick="use()">how to use</h1>
+            <div id="i77" class="nourhan">  
+                2 mono brushes and 3 duo brushes for a total of 8 different  applicators for face, eye and lip makeup.
+               <br>
+             the Travel Brush Set is the solution to easily reapply flawless makeup on the go, without sacrificing style or practicality.
+                Contains:
+<br>01 FOUNDATION BRUSH 
+<br>02 POWDER BRUSH
+<br>03 SHADING BRUSH DUO
+<br>04 BLENDING BRUSH DUO
+<br>05 EYELINER - LIP BRUSH DUO
+                
+                </div>
+                <div id="i7" class="noor">01 FOUNDATION BRUSH:
+                    Flat brush ideal for application of liquid or cream foundation.
+                    <br>
+                    02 POWDER BRUSH:
+                    Brush with a rounded tip, perfect for applying all types of powders.
+                    <br>
+                    03 SHADING BRUSH DUO:
+                    Duo brush with: a flat tip that allows for precise and controlled application of eyeshadows and concealers.
+                    <br>
+                    04 BLENDING BRUSH DUO:
+                    Duo brush with: a flat tip perfect for applying eyeshadows. 
+                    <br>
+                    05 EYELINER - LIP BRUSH DUO:
+                    At one end, the brush with an angled tip is aimed at applying eyeliner. </div>
+                </div>
+
+        </div>
+        <div class="rev">
+            <h1 class="o">ADD TO <i class="fa-solid fa-cart-shopping" title="cart" style="color:rgb(222, 128, 128)"></i>
+                <i class="fa-regular fa-heart" title="wishlist"  style="color:rgb(222, 128, 128)" ></i> </h1>
+            <h1>Reviews <i class="fa-brands fa-tiktok"></i> </h1>
+             
+        </div> 
+    </div>
+    <!-- ----------------------------------------------------------------------------------------------------------- -->
+
+    <div class="Products-window " id="brush2">
+        <h2 class="p1">Fenty Beauty Blender<span class="price"> 24.00$</span></h2>
+        <div class="popup">
+            
+            <span class="close-btn" onclick="hidePopup(['brush2'])">&times;</span>
+            <img src="spongefanty.jpg" alt="Makeup img" width="350" height="320">
+           
+           
+            <div>
+            <h1 class="btn1" id="b1" onclick="des()">Description </h1>
+            <h1 class="btn2" id="b2" onclick="use()">how to use</h1>
+            <div id="i77" class="nourhan"> TRIPLE-EDGED SPONGE FOR TARGETED COVERAGE. <br>
+                DUAL-EDGED SPONGE WITH VELVETY END FOR EFFORTLESS SETTING.
+                
+                </div>
+                <div id="i7" class="noor">Conceal, contour, and set with next-level precision:
+<br>
+                    For max precision, use the triple-edged mini beauty sponge—the tear-drop point is great for the most spot-on coverage in even the toughest-to-reach areas.
+                    <br>
+                    For controlled blending and setting, try the dual-edged mini beauty sponge, which comes with an innovative velvety end designed to apply setting powder!
+                   <br>
+                    Use damp for buildable coverage or dry for full coverage.</div>
+                </div>
+
+        </div>
+        <div class="rev">
+            <h1 class="o">ADD TO <i class="fa-solid fa-cart-shopping" title="cart" style="color:rgb(222, 128, 128)"></i>
+                <i class="fa-regular fa-heart" title="wishlist"  style="color:rgb(222, 128, 128)" ></i> </h1>
+            <h1>Reviews <i class="fa-brands fa-tiktok"></i> </h1>
+             
+        </div> 
+    </div>
+        <!-- ----------------------------------------------------------------------------------------------------------- -->
+
+        <div class="Products-window " id="brush3">
+            <h2 class="p1">Dior EyeLash Curler <span class="price">30.00$</span></h2>
+            <div class="popup">
+                
+                <span class="close-btn" onclick="hidePopup(['brush3'])">&times;</span>
+                <img src="diorcurler.jpg" alt="Makeup img" width="350" height="320">
+               
+               
+                <div>
+                <h1 class="btn1" id="b1" onclick="des()">Description </h1>
+                <h1 class="btn2" id="b2" onclick="use()">how to use</h1>
+                <div id="i77" class="nourhan"> The Dior Backstage Eyelash Curler is the Dior makeup artists'
+                    <br> secret weapon for perfectly curled lashes in one simple step.
+                    </div>
+                    <div id="i7" class="noor">
+                        Use the lash curler before applying mascara to maximize the makeup result.
+                        </div>
+                    </div>
+    
+            </div>
+            <div class="rev">
+                <h1 class="o">ADD TO <i class="fa-solid fa-cart-shopping" title="cart" style="color:rgb(222, 128, 128)"></i>
+                    <i class="fa-regular fa-heart" title="wishlist"  style="color:rgb(222, 128, 128)" ></i> </h1>
+                <h1>Reviews <i class="fa-brands fa-tiktok"></i> </h1>
+                 
+            </div> 
+        </div>
 </body>
 </html>
