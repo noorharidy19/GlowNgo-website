@@ -142,7 +142,7 @@ function validateForm2() {
     if (error) {
         return false; 
     }
-    window.open("trial2.html", "_self");
+    window.open("Home.html", "_self");
     
     return false; 
 }
