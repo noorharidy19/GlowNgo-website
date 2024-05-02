@@ -1,30 +1,42 @@
-function showPopup() {
-    document.getElementById("PContainer").style.display = "block";
-  
-    
+function showPopup(containerIds) {
+    containerIds.forEach(function(id) {
+        document.getElementById(id).style.display = "block";
+    });
+}
+
+function hidePopup(containerIds) {
+    containerIds.forEach(function(id) {
+        document.getElementById(id).style.display = "none";
+    });
+}
+function showP(containerIds) {
+    containerIds.forEach(function(id) {
+        document.getElementById(id).style.display = "block";
+    });
+}
+
+function hideP(containerIds) {
+    containerIds.forEach(function(id) {
+        document.getElementById(id).style.display = "none";
+    });
+}
+// function showPopup1() {
+//     document.getElementById("PContainerrr").style.display = "block";
+// }
+
+// function hidePopup1() {
+//     document.getElementById("PContainerrr").style.display = "none";
+//     document.getElementById("PContainerrrr").style.display = "none";
+// }
+// function showP1() {
+//     document.getElementById("PContt").style.display = "block";
+// }
+
+// function hideP1() {
+//     document.getElementById("PContt").style.display = "none";
    
-    
+// }
 
-}
-
-function hidePopup() {
-    document.getElementById("PContainer").style.display = "none";
-    document.getElementById("PContainerr").style.display = "none";
-  
-  
-}
-function showP() {
-    document.getElementById("PCont").style.display = "block";
-   
-    
-    
-
-}
-
-function hideP() {
-    document.getElementById("PCont").style.display = "none";
-   
-}
 function des(){
     var nourhanElements = document.getElementsByClassName("nourhan");//description->nourhan
     var btn1Elements = document.getElementsByClassName("btn1");
@@ -64,45 +76,44 @@ function use(){
 }
 
 
-function usee(){
-    document.getElementById("PContainerr").style.display = "block";
+// function usee(){
+//     document.getElementById("PContainerr").style.display = "block";
   
    
-}
+// }
 
 
-function x(selectedOption) {
+function x(selectedOption, container) {
     if (selectedOption) {
         switch (selectedOption) {
             case "A-Z":
-                sortDivsAlphabetically();
+                sortDivsAlphabetically(container);
                 console.log("Sorting A-Z");
                 break;
             case "By price(LOWER->HIGHER)":
-                sortProductsByPrice();
+                sortProductsByPrice(container);
                 console.log("Sorting by price (lower to higher)");
                 break;
             case "BY BRAND":
                 console.log("Sorting by brand");
                 break;
-                case "By price(HIGHER->LOWER)":
-                    sortProductsByPriceDescending();
+            case "By price(HIGHER->LOWER)":
+                sortProductsByPriceDescending(container);
+                console.log("Sorting by price (higher to lower)");
+                break;
             default:
                 console.log("Please select an option");
                 break;
         }
     } else {
-        var selectedValue = document.getElementById("sortSelect").value;
-        x(selectedValue);
+        console.log("Please select an option");
     }
 }
 
-function sortDivsAlphabetically() {
+function sortDivsAlphabetically(container) {
     console.log("Sorting divs alphabetically...");
-    
-    var parentContainer = document.querySelector('.popupp');
+    var parentContainer = document.querySelector(container);
     var divs = Array.from(parentContainer.children);
-    
     divs.sort(function(a, b) {
         var textA = a.querySelector('h3').textContent.toUpperCase();
         var textB = b.querySelector('h3').textContent.toUpperCase();
@@ -121,8 +132,9 @@ function sortDivsAlphabetically() {
         parentContainer.appendChild(div);
     });
 }
-function sortProductsByPrice() {
-    var parentContainer = document.querySelector('.popupp');
+
+function sortProductsByPrice(container) {
+    var parentContainer = document.querySelector(container);
     var productElements = Array.from(parentContainer.children);
     productElements.sort(function(a, b) {
         var priceA = parseFloat(a.querySelector('p').textContent.replace('$', ''));
@@ -133,8 +145,9 @@ function sortProductsByPrice() {
         parentContainer.appendChild(product);
     });
 }
-function sortProductsByPriceDescending() {
-    var parentContainer = document.querySelector('.popupp');
+
+function sortProductsByPriceDescending(container) {
+    var parentContainer = document.querySelector(container);
     var productElements = Array.from(parentContainer.children);
     productElements.sort(function(a, b) {
         var priceA = parseFloat(a.querySelector('p').textContent.replace('$', ''));
