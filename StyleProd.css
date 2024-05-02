@@ -65,7 +65,7 @@ header{
   }
   .eye{
       text-align: center;
-      color: rgb(245, 242, 237); 
+      color: rgb(208, 177, 177);
   }
   .lips{
       text-align: center;
@@ -212,20 +212,20 @@ img{
    margin-top: 70px;
   
 }
-.eyebrow{
+/* .eyebrow{
     box-shadow: 0 5px 25px rgba(1 1 1/15%);
     border-radius: 20px;
-    background-color: rgb(255, 202, 202);
+    background-color: whitesmoke;
     margin: 15px;
     height: 25em;
     transition: transform 0.3s ease;
-}
+} */
 .eyebrow:hover {
     transform: scale(1.05);
 }
 .eye{
     text-align: center;
-    color: rgb(245, 242, 237); 
+    color: rgb(208, 177, 177); 
 }
 .p{
     display: flex;
@@ -297,7 +297,7 @@ img{
     
 }
 
-.popupp {
+.popupp,.popupp2 ,.popupp3 {
     text-align: center;
     justify-content: center;
     display: flex;
@@ -312,13 +312,14 @@ img{
     
 }
 
-.imggel {
+.imggel {   
+
     opacity: 1;
     display: block;
-    height: auto;
+    /* height: auto;  */
     transition: .5s ease;
     backface-visibility: hidden;
-   border: solid rgba(31, 29, 29, 0.749);
+   border: solid rgba(238, 193, 193, 0.749);
    margin: 10px;
 }
 
@@ -330,7 +331,7 @@ img{
     transition: .5s ease;
     opacity: 0;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -417,6 +418,7 @@ close-btn:hover{
 .nourhan{
 display: inline-block;
 text-align: left;
+font-size:90%;
 
 }
 .noor{

@@ -24,110 +24,126 @@
     <section class="brow">
         <div class="browprod">
             <div class="eyebrow">
-                <h2 class="eye">Eyebrow Gel</h2>
-                <a href="#" onclick="showP()"><img src="eyebrowgel.jpg" alt="Makeup img" width="318" height="300"></a>
-
+                <div class="container">
+                    <img src="kikogel.jpg" alt="Makeup img" width="318" height="300" class="imggel">
+                    <h2 class="eye">kiko Eyebrow Gel</h2>
+                    <h3 class="eye">15.00$</h3>
+                    <div class="middle">
+                        <div class="text" onclick=""><i class="fa-solid fa-cart-shopping" title="Add To Cart"></i></div>
+                        <div class="text" onclick="showPopup(['brow'])"><i class="fa-sharp fa-solid fa-eye" title="Description"></i></div>
+                        <div class="text" onclick=""><i class="fa-solid fa-heart" title="Add To Whishlist"></i></div>
+                    </div>
+                </div>
             </div>
             <div class="eyebrow">
-                <h2 class="eye">Eyebrow pencil</h2>
-                <a href="#" onclick=""><img src="browpencil.jpg" alt="Makeup img" width="318" height="300"></a>
-
-                
-            </div>
-            <div class="eyebrow">
-                <h2 class="eye">Eyebrow mascara</h2>
-                <a href=""><img src="eyebrow mas.jpg" alt="Makeup img" width="318" height="300"></a>
-
+                <div class="container">
+                    <img src="rarebrow.jpg" alt="Makeup img" width="318" height="300" class="imggel">
+                    <h2 class="eye">RareBeauty Eyebrow pencil</h2>
+                    <h3 class="eye">19.00$</h3>
+                    <div class="middle">
+                        <div class="text" onclick=""><i class="fa-solid fa-cart-shopping" title="Add To Cart"></i></div>
+                        <div class="text" onclick="showPopup(['brow1'])"><i class="fa-sharp fa-solid fa-eye" title="Description"></i></div>
+                        <div class="text" onclick=""><i class="fa-solid fa-heart" title="Add To Whishlist"></i></div>
+                    </div>
                 
             </div>
         </div>
-        <div class="Product-window" id="PCont">
-            <span class="close-btn" onclick="hideP()">&times;</span>
-            <select class="sortt" id="sortSelect"  onchange="x(this.value)">
-                <option>Select</option>
-                <option>A-Z</option>
-                <option>BY BRAND</option>
-                <option>By price(LOWER->HIGHER)</option>
-                <option>By price(HIGHER->LOWER)</option>
-            </select> 
+            <div class="eyebrow">
+                <div class="container">
+                    <img src="maybelineeye.jpeg" alt="Makeup img" width="318" height="300" class="imggel">
+                    <h2 class="eye">Maybeline Eyebrow mascara</h2>
+                    <h3 class="eye">20.00$</h3>
+                    <div class="middle">
+                        <div class="text" onclick=""><i class="fa-solid fa-cart-shopping" title="Add To Cart"></i></div>
+                        <div class="text" onclick="showPopup(['brow2'])"><i class="fa-sharp fa-solid fa-eye" title="Description"></i></div>
+                        <div class="text" onclick=""><i class="fa-solid fa-heart" title="Add To Whishlist"></i></div>
+                    </div>
+                
+            </div>
+        </div>
+    </section>
+        <!------------------------------------------------------------------------------------------------------------------- -->
+
+    <div class="Products-window " id="brow">
+        <h2 class="p1"> Kiko Eyebrow Designer Gel Mascara  <span class="price">15.00$</span></h2>
+        <div class="popup">
+            
+            <span class="close-btn" onclick="hidePopup(['brow'])">&times;</span>
+            <img src="kikogel.jpg" alt="Makeup img" width="350" height="320">
            
-            <div class="popupp">
+           
+            <div>
+            <h1 class="btn1" id="b1" onclick="des()">Description </h1>
+            <h1 class="btn2" id="b2" onclick="use()">how to use</h1>
+            <div id="i77" class="nourhan"> -Eyebrow fixing gel with satin finish.
 
-                <div class="Kiko"> 
-                    
-                    <div class="container">
-                        
-                        <img src="kikogel.jpg" class="imggel" alt="Makeup img" width="318" height="300">
-                        <div class="middle">
-                            <div class="text" onclick="showPopup()"><i class="fa-sharp fa-solid fa-eye"></i></div>
-                        </div>
-                    </div>
-                    <h3>Kiko Eyebrow Designer Gel Mascara </h3>
-                    <p>15.00$</p>
-                </div>
-                <div class="Maybelline">
-                    <div class="container">
-                        <img src="mayb gel.jpg" class="imggel" alt="Makeup img" width="318" height="300">
-                        <div class="middle">
-                            <div class="text" onclick="usee()"><i class="fa-sharp fa-solid fa-eye"></i></div>
-                        </div>
-                    </div>
-                    <h3>Maybelline Eyebrow Designer Gel </h3>
-                    <p>13.00$</p>
-                </div>
-            </div>
-        </div>
+                <br>
+                -Perfect for shaping, filling and defining the eyebrows, enhancing them with a sophisticated satin finish.
+                <br>
                 
-               
-        
-        <div class="Products-window " id="PContainer">
-            <h2 class="p1">Kiko Eyebrow Designer Gel Mascara  <span class="price">15.00$</span></h2>
+                -The lightweight gel ensures perfect hold without leaving marks.
+                
+                <br>
+                -The unique mini brush ensures more defined and precise application, for a flawless and extremely professional result.
+                <br>
+                
+                -Non-drying and non-sticky.
+                
+                <br>
+                -Ophthalmologically tested.
+                
+                </div>
+                <div id="i7" class="noor">The unique mini applicator allows you to groom, shape and define your eyebrows, for an even more precise and sophisticated finish.</div>
+                </div>
+
+        </div>
+        <div class="rev">
+            <h1 class="o">ADD TO <i class="fa-solid fa-cart-shopping" title="cart" style="color:rgb(222, 128, 128)"></i>
+                <i class="fa-regular fa-heart" title="wishlist"  style="color:rgb(222, 128, 128)" ></i> </h1>
+            <h1>Reviews <i class="fa-brands fa-tiktok"></i> </h1>
+             
+        </div> 
+    </div>
+    <!------------------------------------------------------------------------------------------------------------------- -->
+    <div class="Products-window " id="brow1">
+        <h2 class="p1"> Rare Beauty Brow Harmony Precision Pencil <span class="price">19.00$</span></h2>
+        <div class="popup">
+            
+            <span class="close-btn" onclick="hidePopup(['brow1'])">&times;</span>
+            <img src="rarebrow.jpg" alt="Makeup img" width="350" height="320">
+           
+           
+            <div>
+            <h1 class="btn1" id="b1" onclick="des()">Description </h1>
+            <h1 class="btn2" id="b2" onclick="use()">how to use</h1>
+            <div id="i77" class="nourhan">  Unique angled rectangle tip makes it easy to draw on individual hairs for a natural feathery look, or to shade in sparse or over-tweezed areas for a fuller effect.
+                <br>
+                                    Not too creamy, not too waxy, but just right—applying smoothly and evenly with just enough color intensity that’s easy to control.
+                                    <br>
+                                    Waterproof formula even resists sweat and oil, staying put all day without smudging, transferring, or fading.
+                                    <br>
+                                    Built-in spoolie brush for effortless brushing and diffusing for the most natural finish.
+                
+                </div>
+                <div id="i7" class="noor">  Twist pencil to reveal a small amount of product. Use the precision angled tip to fill…</div>
+                </div>
+
+        </div>
+        <div class="rev">
+            <h1 class="o">ADD TO <i class="fa-solid fa-cart-shopping" title="cart" style="color:rgb(222, 128, 128)"></i>
+                <i class="fa-regular fa-heart" title="wishlist"  style="color:rgb(222, 128, 128)" ></i> </h1>
+            <h1>Reviews <i class="fa-brands fa-tiktok"></i> </h1>
+             
+        </div> 
+    </div>
+        <!------------------------------------------------------------------------------------------------------------------- -->
+      
+        <div class="Products-window " id="brow2">
+            <h2 class="p1"> MAYBELLINE GEL BROW MASCARA  <span class="price">20.00$</span></h2>
             <div class="popup">
                 
-                <span class="close-btn" onclick="hidePopup()">&times;</span>
-                <img src="kikogel.jpg" alt="Makeup img" width="350" height="320">
-               
-               
-                <div>
-                <h1 class="btn1" id="b1" onclick="des()">Description </h1>
-                <h1 class="btn2" id="b2" onclick="use()">how to use</h1>
-                <div id="i77" class="nourhan">
--Eyebrow fixing gel with satin finish.
-
-<br>
--Perfect for shaping, filling and defining the eyebrows, enhancing them with a sophisticated satin finish.
-<br>
-
--The lightweight gel ensures perfect hold without leaving marks.
-
-<br>
--The unique mini brush ensures more defined and precise application, for a flawless and extremely professional result.
-<br>
-
--Non-drying and non-sticky.
-
-<br>
--Ophthalmologically tested.
-
-</div>
-<div id="i7" class="noor">The unique mini applicator allows you to groom, shape and define your eyebrows, for an even more precise and sophisticated finish.</div>
-</div>
-
-            </div>
-            <div class="rev">
-                <h1>ADD TO <i class="fa-solid fa-cart-shopping" title="cart"  style="color:rgb(222, 128, 128)"></i>
-                    <i class="fa-regular fa-heart" title="wishlist"  style="color:rgb(222, 128, 128)"></i> </h1>
-                <h1>Reviews <i class="fa-brands fa-tiktok"></i> </h1>
-                 
-            </div>
-                
-        </div>
-        <div class="Products-window " id="PContainerr">
-            <h2 class="p1"> MAYBELLINE BROW™ FAST SCULPT™   <span class="price">13.00$</span></h2>
-            <div class="popup">
-                
-                <span class="close-btn" onclick="hidePopup()">&times;</span>
-                <img src="mayb gel.jpg" alt="Makeup img" width="350" height="320">
+                <span class="close-btn" onclick="hidePopup(['brow2'])">&times;</span>
+                <img src="maybelineeye.jpeg" alt="Makeup img" width="350" height="320">
                
                
                 <div>
@@ -137,9 +153,9 @@
                     Tame, and shape brows fast. 
                     This clear gel brow mascara features a mini sculpting brush that precisely tames and shapes brows 
                     without hassle. With this quick and easy taming brow gel mascara you can get flawless brows on the go.</div>
-<div id="i7" class="noor">Brush gel into brows with short upward strokes </div>
-</div>
-
+    <div id="i7" class="noor">Brush gel into brows with short upward strokes </div>
+    </div>
+    
             </div>
             <div class="rev">
                 <h1 class="o">ADD TO <i class="fa-solid fa-cart-shopping" title="cart" style="color:rgb(222, 128, 128)"></i>
@@ -149,8 +165,6 @@
             </div>
                 
         </div>
-   
-       
-    </section>
+
 </body>
 </html>
