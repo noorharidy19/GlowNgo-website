@@ -86,14 +86,14 @@ header{
     text-align: center;
     color: rgb(245, 242, 237); 
 }
-.face-cards{
+/* .face-cards{
     box-shadow: 0 5px 25px rgba(1 1 1/15%);
     border-radius: 20px;
     background-color: rgb(255, 202, 202);
     margin: 15px;
     height: 25em;
     transition: transform 0.3s ease;
-}
+} */
 .face-cards:hover {
     transform: scale(1.05);
   }
@@ -102,10 +102,14 @@ header{
     border-radius: 20px;
     padding: 10px;
   }
-  .Concelar{
+  .facee{
+    text-align: center;
+    color:rgb(208, 177, 177);
+  }
+  /* .Concelar{
     text-align: center;
     color: rgb(245, 242, 237); 
-  }
+  } */
 .products{
     display: flex;
     flex-direction: row;
@@ -113,7 +117,7 @@ header{
    justify-content: center;
    margin-top: 70px;
 }
-.Setting spray{
+/* .Setting spray{
     text-align: center;
     color: rgb(245, 242, 237); 
   }
@@ -136,7 +140,7 @@ header{
   .Blusher{
     text-align: center;
     color: rgb(245, 242, 237); 
-  }
+  } */
   .Eyes-cards{
     box-shadow: 0 5px 25px rgba(1 1 1/15%);
     border-radius: 20px;
@@ -179,21 +183,23 @@ header{
    justify-content: center;
    margin-top: 70px;
    
-}.lip{
+}
+/* .lip{
     box-shadow: 0 5px 25px rgba(1 1 1/15%);
     border-radius: 20px;
-    background-color: rgb(255, 202, 202);
+    background-color:rgb(245, 243, 243);
     margin: 5px;
     height: 25em;
     
     transition: transform 0.3s ease;
-}
+} */
 .lip:hover {
     transform: scale(1.05);
 }
 .lipprod{
     text-align: center;
-    color: rgb(245, 242, 237); 
+    color:rgb(208, 177, 177);
+    /* -webkit-text-stroke: 1px rgb(180, 52, 76); */
     
 }
 img{
@@ -423,6 +429,7 @@ font-size:90%;
 }
 .noor{
     display:none;
+    font-size:90%;
 }
 
 .p1{
