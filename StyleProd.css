@@ -179,21 +179,23 @@ header{
    justify-content: center;
    margin-top: 70px;
    
-}.lip{
+}
+/* .lip{
     box-shadow: 0 5px 25px rgba(1 1 1/15%);
     border-radius: 20px;
-    background-color: rgb(255, 202, 202);
+    background-color:rgb(245, 243, 243);
     margin: 5px;
     height: 25em;
     
     transition: transform 0.3s ease;
-}
+} */
 .lip:hover {
     transform: scale(1.05);
 }
 .lipprod{
     text-align: center;
-    color: rgb(245, 242, 237); 
+    color:rgb(208, 177, 177);
+    /* -webkit-text-stroke: 1px rgb(180, 52, 76); */
     
 }
 img{
