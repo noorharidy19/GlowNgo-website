@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="StyleProd.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <title>Products</title>
+    <script src="Prod.js"></script>
+    <title>All Products</title>
 </head>
 <body>
     <header>
@@ -21,150 +22,1336 @@
         </nav>
     </header>
     <section class="face">
-        <div class="pr">
-          
-        <div class="face-cards">
-            <h2 class="foundation">Foundation</h2>
-            <a href="foundation.html"><img src="foundation1.jpg" alt="Makeup img" width="318" height="300" class="image"></a>
-        </div>
-        <div class="face-cards">
-            <h2 class="Concelar">Concelar</h2>
-            <a href="concelar.html"><img src="Concelar.jpg" alt="Concelar img" width="318" height="300" class="image"></a>
-        </div>
-        <div class="face-cards">
-            <h2 class="Primer">Primer</h2>
-            <a href="Primer.html"><img src="Primer.jpg" alt="Primer img" width="318" height="300" class="image"></a>
-        </div>
-        <div class="face-cards">
-            <h2 class="Setting spray">Setting Spray</h2>
-            <a href="spray.html"><img src="spray.jpg" alt="spray img" width="318" height="300" class="image"></a>
-        </div>
-        <div class="face-cards">
-            <h2 class="Powder">Powder</h2>
-            <a href="powdder.html"><img src="powder.jpg" alt="Powder img" width="318" height="300" class="image"></a>
-        </div>
-        <div class="face-cards">
-            <h2 class="Highlighter">Highlighter</h2>
-            <a href="Highlighter.html"><img src="highlighter.jpg" alt="Highlighter img" width="318" height="300" class="image"></a>
-        </div>
-        <div class="face-cards">
-            <h2 class="Contouer">Contouer</h2>
-            <a href="Contouer.html"><img src="Contouer.jpg" alt="Contouer img" width="318" height="300" class="image"></a>
-        </div>
-        <div class="face-cards">
-            <h2 class="Bronzer">Bronzer</h2>
-            <a href="Bronzer.html"><img src="Bronzer.jpg" alt="Bronzer img" width="318" height="300" class="image"></a>
-        </div>
-        <div class="face-cards">
-            <h2 class="Blusher">Blusher</h2>
-            <a href="Blusher.html"><img src="Blusher.jpg" alt="Blusher img" width="318" height="300" class="image"></a>
-        </div>
+        <div class="p">
+            <div class="products">
+                <div class="face-cards">
+                    <div class="container">
+                        <img src="fentyFounjpg.jpg" alt="Makeup img" width="318" height="300" class="imggel">
+                        <h2 class="facee">Fenty Beauty Founadtion</h2>
+                        <h3 class="facee">40.00$</h3>
+                        <div class="middle">
+                            <div class="text" onclick=""><i class="fa-solid fa-cart-shopping" title="Add To Cart"></i></div>
+                            <div class="text" onclick="showPopup(['face1'])"><i class="fa-sharp fa-solid fa-eye" title="View more"></i></div>
+                            <div class="text" onclick=""><i class="fa-solid fa-heart" title="Add To Whishlist"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="face-cards">
+                    <div class="container">
+                        <img src="fentycon.jpg" alt="Concelar img" width="318" height="300" class="imggel">
+                        <h2 class="facee">Fenty Beauty Concelar</h2>
+                        <h3 class="facee">30.00$</h3>
+                        <div class="middle">
+                            <div class="text" onclick=""><i class="fa-solid fa-cart-shopping" title="Add To Cart"></i></div>
+                            <div class="text" onclick="showPopup(['face2'])"><i class="fa-sharp fa-solid fa-eye" title="View more"></i></div>
+                            <div class="text" onclick=""><i class="fa-solid fa-heart" title="Add To Whishlist"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="face-cards">
+                    <div class="container">
+                        <img src="primerdiorjpg.jpg" alt="Makeup img" width="318" height="300" class="imggel">
+                        <h2 class="facee">Dior Primer</h2>
+                        <h3 class="facee">38.00$</h3>
+                        <div class="middle">
+                            <div class="text" onclick=""><i class="fa-solid fa-cart-shopping" title="Add To Cart"></i></div>
+                            <div class="text" onclick="showPopup(['face3'])"><i class="fa-sharp fa-solid fa-eye" title="View more"></i></div>
+                            <div class="text" onclick=""><i class="fa-solid fa-heart" title="Add To Whishlist"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="face-cards">
+                    <div class="container">
+                        <img src="spayrare8.jpg" alt="Concelar img" width="318" height="300"  class="imggel">
+                        <h2 class="facee">Rare Beauty Setting Spray</h2>
+                        <h3 class="facee">14.00$</h3>
+                        <div class="middle">
+                            <div class="text" onclick=""><i class="fa-solid fa-cart-shopping" title="Add To Cart"></i></div>
+                            <div class="text" onclick="showPopup(['face4'])"><i class="fa-sharp fa-solid fa-eye" title="View more"></i></div>
+                            <div class="text" onclick=""><i class="fa-solid fa-heart" title="Add To Whishlist"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="face-cards">
+                    <div class="container">
+                        <img src="kikohighlighter.jpg" alt="Makeup img" width="318" height="300" class="imggel">
+                        <h2 class="facee">Kiko Highlighter</h2>
+                        <h3 class="facee">17.00$</h3>
+                        <div class="middle">
+                            <div class="text" onclick=""><i class="fa-solid fa-cart-shopping" title="Add To Cart"></i></div>
+                            <div class="text" onclick="showPopup(['face5'])"><i class="fa-sharp fa-solid fa-eye" title="View more"></i></div>
+                            <div class="text" onclick=""><i class="fa-solid fa-heart" title="Add To Whishlist"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="face-cards">
+                    <div class="container">
+                        <img src="kikopowder.jpg" alt="Concelar img" width="318" height="300"  class="imggel">
+                        <h2 class="facee">Kiko Powder</h2>
+                        <h3 class="facee">25.00$</h3>
+                        <div class="middle">
+                            <div class="text" onclick=""><i class="fa-solid fa-cart-shopping" title="Add To Cart"></i></div>
+                            <div class="text" onclick="showPopup(['face6'])"><i class="fa-sharp fa-solid fa-eye" title="View more"></i></div>
+                            <div class="text" onclick=""><i class="fa-solid fa-heart" title="Add To Whishlist"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="face-cards">
+                    <div class="container">
+                        <img src="cont.jpg" alt="Makeup img" width="318" height="300"  class="imggel">
+                        <h2 class="facee">Charlotte Tilbury Contouer wand</h2>
+                        <h3 class="facee">42.00$</h3>
+                        <div class="middle">
+                            <div class="text" onclick=""><i class="fa-solid fa-cart-shopping" title="Add To Cart"></i></div>
+                            <div class="text" onclick="showPopup(['face7'])"><i class="fa-sharp fa-solid fa-eye" title="View more"></i></div>
+                            <div class="text" onclick=""><i class="fa-solid fa-heart" title="Add To Whishlist"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="face-cards">
+                    <div class="container">
+                        <img src="bronzerkiko.jpg" alt="Concelar img" width="318" height="300" class="imggel">
+                        <h2 class="facee">Kiko Bronzer</h2>
+                        <h3 class="facee">20.00$</h3>
+                        <div class="middle">
+                            <div class="text" onclick=""><i class="fa-solid fa-cart-shopping" title="Add To Cart"></i></div>
+                            <div class="text" onclick="showPopup(['face8'])"><i class="fa-sharp fa-solid fa-eye" title="View more"></i></div>
+                            <div class="text" onclick=""><i class="fa-solid fa-heart" title="Add To Whishlist"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="face-cards">
+                    <div class="container">
+                        <img src="rarelush.jpg" alt="Makeup img" width="318" height="300" class="imggel">
+                        <h2 class="facee">Rare Beauty Liquid Blush</h2>
+                        <h3 class="facee">23.00$</h3>
+                        <div class="middle">
+                            <div class="text" onclick=""><i class="fa-solid fa-cart-shopping" title="Add To Cart"></i></div>
+                            <div class="text" onclick="showPopup(['face9'])"><i class="fa-sharp fa-solid fa-eye" title="View more"></i></div>
+                            <div class="text" onclick=""><i class="fa-solid fa-heart" title="Add To Whishlist"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="products">
+                <div class="Eyes-cards">
+                    <div class="container">
+                        <img src="mascararare.jpeg" alt="Makeup img" width="318" height="300" class="imggel">
+                        <h2 class="Mascara">Rare Beauty Mascara</h2>
+                        <h3 class="Mascara">11.00$</h3>
+                        <div class="middle">
+                            <div class="text" onclick=""><i class="fa-solid fa-cart-shopping" title="Add To Cart"></i></div>
+                            <div class="text" onclick="showPopup(['eyes1'])"><i class="fa-sharp fa-solid fa-eye" title="View more"></i></div>
+                            <div class="text" onclick=""><i class="fa-solid fa-heart" title="Add To Whishlist"></i></div>
+                        </div>
+                    </div>  
+                </div>
+                <div class="Eyes-cards">
+                    <div class="container">
+                    <a href="EyeLinear.html"><img src="kikolinear.jpeg" alt="EyeLinear img" width="318" height="300" class="imggel"></a>
+                    <h2 class="EyeLinear">Kiko EyeLinear</h2>
+                    <h3 class="EyeLinear">30.00$</h3>
+                    <div class="middle">
+                        <div class="text" onclick=""><i class="fa-solid fa-cart-shopping" title="Add To Cart"></i></div>
+                        <div class="text" onclick="showPopup(['eyes2'])"><i class="fa-sharp fa-solid fa-eye" title="View more"></i></div>
+                        <div class="text" onclick=""><i class="fa-solid fa-heart" title="Add To Whishlist"></i></div>
+                    </div>
+                </div>  
+             </div>
+                <div class="Eyes-cards">
+                    <div class="container">
+                        <img src="shadowmay.jpeg" alt="Makeup img" width="318" height="300" class="imggel">
+                        <h2 class="EyeShadow">RareBeauty EyeShadow</h2>
+                        <h3 class="Mascara">11.00$</h3>
+                        <div class="middle">
+                            <div class="text" onclick=""><i class="fa-solid fa-cart-shopping" title="Add To Cart"></i></div>
+                            <div class="text" onclick="showPopup(['eyes3'])"><i class="fa-sharp fa-solid fa-eye" title="View more"></i></div>
+                            <div class="text" onclick=""><i class="fa-solid fa-heart" title="Add To Whishlist"></i></div>
+                        </div>
+                    </div>  
+                </div>
+                <div class="Eyes-cards">
+                    <div class="container">
+                        <img src="kikolashe.jpeg" alt="Makeup img" width="318" height="300" class="imggel">
+                        <h2 class="EyeLashes">Kiko EyeLashes</h2>
+                        <h3 class="EyeLashes">11.00$</h3>
+                        <div class="middle">
+                            <div class="text" onclick=""><i class="fa-solid fa-cart-shopping" title="Add To Cart"></i></div>
+                            <div class="text" onclick="showPopup(['eyes4'])"><i class="fa-sharp fa-solid fa-eye" title="View more"></i></div>
+                            <div class="text" onclick=""><i class="fa-solid fa-heart" title="Add To Whishlist"></i></div>
+                        </div>
+                    </div>  
+                </div>
+                <div class="Eyes-cards">
+                    <div class="container">
+                        <img src="rareprimer.jpeg" alt="Makeup img" width="318" height="300" class="imggel">
+                        <h2 class="EyePrimer">RareBeauty EyePrimer</h2>
+                        <h3 class="EyePrimer">21.00$</h3>
+                        <div class="middle">
+                            <div class="text" onclick=""><i class="fa-solid fa-cart-shopping" title="Add To Cart"></i></div>
+                            <div class="text" onclick="showPopup(['eyes5'])"><i class="fa-sharp fa-solid fa-eye" title="View more"></i></div>
+                            <div class="text" onclick=""><i class="fa-solid fa-heart" title="Add To Whishlist"></i></div>
+                        </div>
+                    </div>  
+                </div>
+                <div class="Eyes-cards">
+                    <div class="container">
+                        <img src="kikopencil.jpeg" alt="Makeup img" width="318" height="300" class="imggel">
+                        <h2 class="kohl">Eye Pencil</h2>
+                        <h3 class="kohl">15.00$</h3>
+                        <div class="middle">
+                            <div class="text" onclick=""><i class="fa-solid fa-cart-shopping" title="Add To Cart"></i></div>
+                            <div class="text" onclick="showPopup(['eyes6'])"><i class="fa-sharp fa-solid fa-eye" title="View more"></i></div>
+                            <div class="text" onclick=""><i class="fa-solid fa-heart" title="Add To Whishlist"></i></div>
+                        </div>
+                    </div>  
+                </div>
+            </div>
         </div>
 
-    
-    
         <div class="p">
-            <div class="Eyes-cards">
-                <h2 class="Mascara">Mascara</h2>
-                <a href="Mascara.html"><img src="Mascara (2).jpg" alt="Mascara img" width="318" height="300" class="image"></a>
-            </div>
-            <div class="Eyes-cards">
-                <h2 class="EyeLinear">EyeLinear</h2>
-                <a href="EyeLinear.html"><img src="EyeLinear1.jpg" alt="EyeLinear img" width="318" height="300" class="image"></a>
-            </div>
-            <div class="Eyes-cards">
-                <h2 class="EyeShadow">EyeShadow</h2>
-                <a href="EyeShadow.html"><img src="EyeShadow.jpg" alt="EyeShadow img" width="318" height="300" class="image"></a>
-            </div>
-            <div class="Eyes-cards">
-                <h2 class="EyeLashes">EyeLashes</h2>
-                <a href="EyeLashes.html"><img src="EyeLashes2.jpg" alt="EyeLashes img" width="318" height="300" class="image"></a>
-            </div>
-            <div class="Eyes-cards">
-                <h2 class="EyePrimer">EyePrimer</h2>
-                <a href="EyePrimer.html"><img src="EyePrimer.jpg" alt="EyePrimer img" width="318" height="300" class="image"></a>
-            </div>
-            <div class="Eyes-cards">
-                <h2 class="kohl">Eye Pencil</h2>
-                <a href="kohl.html"><img src="kohl.jpg" alt="kohl img" width="318" height="300" class="image"></a>
-            </div>
-        </div>
+            <div class="lip">
+                <div class="container">
+                    <img src="rarestickjpg.jpg" alt="Makeup img" width="318" height="300" class="imggel">
+                <h2 class="lipprod">Rare Beauty Lip Stick</h2>
+                <h3 class="lipprod">20.00$</h3>
 
-        <div class="p">
-            <div class="lipp">
-                <h2 class="lipprod">Lip stick</h2>
-                <a href="noor.html"><img src="lipstick.jpg" alt="Makeup img" width="318" height="300"></a>
+                    <div class="middle">
+                        <div class="text" onclick=""><i class="fa-solid fa-cart-shopping" title="Add To Cart"></i></div>
+                        <div class="text" onclick="showPopup(['PContainer1'])"><i class="fa-sharp fa-solid fa-eye" title="View more"></i></div>
+                        <div class="text" onclick=""><i class="fa-solid fa-heart" title="Add To Whishlist"></i></div>
+                    </div>
+                </div>
             </div>
             <div class="lip">
-                <h2 class="lipprod">Lip Liner</h2>
-                <a href="l.html"><img src="lipliner.jpg" alt="Makeup img" width="318" height="300"></a>
+                <div class="container">
+                    <img src="rareliner.jpg" alt="Makeup img" width="318" height="300" class="imggel">
+                    <h2 class="lipprod">Rare Beauty Lip Liner</h2>
+                    <h3 class="lipprod">15.00$</h3>
+                    <div class="middle">
+                        <div class="text" onclick=""><i class="fa-solid fa-cart-shopping" title="Add To Cart"></i></div>
+                        <div class="text" onclick="showPopup(['PContainer2'])"><i class="fa-sharp fa-solid fa-eye" title="View more"></i></div>
+                        <div class="text" onclick=""><i class="fa-solid fa-heart" title="Add To Whishlist"></i></div>
+                    </div>
+                </div>
             </div>
-            <div class="lipp">
-                <h2 class="lipprod">Lip gloss</h2>
-                <a href=""><img src="lipglossjpg.jpg" alt="Makeup img" width="318" height="300"></a>
+            <div class="lip">
+                <div class="container">
+                <img src="lifterglossjpg.jpg" alt="Makeup img" width="318" height="300" class="imggel">
+                <h2 class="lipprod">Maybelline Lifter Gloss</h2>
+                <h3 class="lipprod">11.00$</h3>
+                <div class="middle">
+                    <div class="text" onclick=""><i class="fa-solid fa-cart-shopping" title="Add To Cart"></i></div>
+                    <div class="text" onclick="showPopup(['PContainer3'])"><i class="fa-sharp fa-solid fa-eye" title="View more"></i></div>
+                    <div class="text" onclick=""><i class="fa-solid fa-heart" title="Add To Whishlist"></i></div>
+                </div>
             </div>
-            <div class="lipp">
-                <h2 class="lipprod">Lip Oil</h2>
-                <a href=""><img src="lipoil.jpg" alt="Makeup img" width="318" height="300"></a>
             </div>
-            <div class="lipp">
-                <h2 class="lipprod">Lip Plumper</h2>
-                <a href=""><img src="plumper.jpg" alt="Makeup img" width="318" height="300"></a>
+            <div class="lip">
+                <div class="container">
+                    <img src="oil.jpg" alt="Makeup img" width="318" height="300" class="imggel">
+                    <h2 class="lipprod">Dior Lip Oil</h2>
+                    <h3 class="lipprod">40.00$</h3>
+                    <div class="middle">
+                        <div class="text" onclick=""><i class="fa-solid fa-cart-shopping" title="Add To Cart"></i></div>
+                        <div class="text" onclick="showPopup(['PContainer4'])"><i class="fa-sharp fa-solid fa-eye" title="View more"></i></div>
+                        <div class="text" onclick=""><i class="fa-solid fa-heart" title="Add To Whishlist"></i></div>
+                    </div>
             </div>
-            <div class="lipp">
-                <h2 class="lipprod">Lip Tint</h2>
-                <a href=""><img src="tint.jpg" alt="Makeup img" width="318" height="300"></a>
             </div>
-            <div class="lipp">
-                <h2 class="lipprod">Lip balm</h2>
-                <a href=""><img src="lipbalm.jpg" alt="Makeup img" width="318" height="300"></a>
+            <div class="lip">
+                <div class="container">
+                    <img src="plumperrr.jpg" alt="Makeup img" width="318" height="300" class="imggel">
+                    <h2 class="lipprod">Dior Plumping Gloss</h2>
+                    <h3 class="lipprod">40.00$</h3>
+                    <div class="middle">
+                        <div class="text" onclick=""><i class="fa-solid fa-cart-shopping" title="Add To Cart"></i></div>
+                        <div class="text" onclick="showPopup(['PContainer5'])"><i class="fa-sharp fa-solid fa-eye" title="View more"></i></div>
+                        <div class="text" onclick=""><i class="fa-solid fa-heart" title="Add To Whishlist"></i></div>
+                    </div>
             </div>
-            <div class="lipp">
-                <h2 class="lipprod">Liquid lipstick</h2>
-                <a href=""><img src="liqlipstick.jpg" alt="Makeup img" width="318" height="300"></a>
             </div>
+            <div class="lip">
+                <div class="container">
+                    <img src="benetint.jpg" alt="Makeup img" width="318" height="300" class="imggel">
+                    <h2 class="lipprod">Benetint</h2>
+                    <h3 class="lipprod">24.00$</h3>
+                    <div class="middle">
+                        <div class="text" onclick=""><i class="fa-solid fa-cart-shopping" title="Add To Cart"></i></div>
+                        <div class="text" onclick="showPopup(['PContainer6'])"><i class="fa-sharp fa-solid fa-eye" title="View more"></i></div>
+                        <div class="text" onclick=""><i class="fa-solid fa-heart" title="Add To Whishlist"></i></div>
+                    </div>
+            </div>
+            </div>
+            
+            <div class="lip">
+                <div class="container">
+                    <img src="balmm.jpg" alt="Makeup img" width="318" height="300" class="imggel">
+                    <h2 class="lipprod">Summer Fridays Lip Balm</h2>
+                    <h3 class="lipprod">24.00$</h3>
+                    <div class="middle">
+                        <div class="text" onclick=""><i class="fa-solid fa-cart-shopping" title="Add To Cart"></i></div>
+                        <div class="text" onclick="showPopup(['PContainer7'])"><i class="fa-sharp fa-solid fa-eye" title="View more"></i></div>
+                        <div class="text" onclick=""><i class="fa-solid fa-heart" title="Add To Whishlist"></i></div>
+                    </div>
+            </div>
+            </div>
+            <div class="lip">
+                <div class="container">
+                    <img src="liqkiko.jpg" alt="Makeup img" width="318" height="300" class="imggel">
+                    <h2 class="lipprod">Kiko Unlimited Double Touch</h2>
+                    <h3 class="lipprod">17.00$</h3>
+                    <div class="middle">
+                        <div class="text" onclick=""><i class="fa-solid fa-cart-shopping" title="Add To Cart"></i></div>
+                        <div class="text" onclick="showPopup(['PContainer8'])"><i class="fa-sharp fa-solid fa-eye" title="View more"></i></div>
+                        <div class="text" onclick=""><i class="fa-solid fa-heart" title="Add To Whishlist"></i></div>
+                    </div>
+            </div>
+            </div>
+       
 
         
-            <div class="eyebrow">
-                <h2 class="eye">Eyebrow Gel</h2>
-                <a href=""><img src="eyebrowgel.jpg" alt="Makeup img" width="318" height="300"></a>
-
-            </div>
-            <div class="eyebrow">
-                <h2 class="eye">Eyebrow pencil</h2>
-                <a href=""><img src="browpencil.jpg" alt="Makeup img" width="318" height="300"></a>
-
-                
-            </div>
-            <div class="eyebrow">
-                <h2 class="eye">Eyebrow mascara</h2>
-                <a href=""><img src="eyebrow mas.jpg" alt="Makeup img" width="318" height="300"></a>
-
-                
-            </div>
-            <div class="Tools-cards">
-                <h2 class="FaceBrush">Face Brush</h2>
-                <a href="FaceBrush.html"><img src="FaceBrush3.jpg" alt="Face Brush img" width="318" height="300" class="image"></a>
-            </div>
-                <div class="Tools-cards">
-                    <h2 class="EyeBrush">Eye Brush</h2>
-                    <a href="EyeBrush.html"><img src="EyeBrush4.jpg" alt="Eye Brush img" width="318" height="300" class="image"></a>
+        <div class="eyebrow">
+            <div class="container">
+                <img src="kikogel.jpg" alt="Makeup img" width="318" height="300" class="imggel">
+                <h2 class="eye">kiko Eyebrow Gel</h2>
+                <h3 class="eye">15.00$</h3>
+                <div class="middle">
+                    <div class="text" onclick=""><i class="fa-solid fa-cart-shopping" title="Add To Cart"></i></div>
+                    <div class="text" onclick="showPopup(['brow'])"><i class="fa-sharp fa-solid fa-eye" title="View more"></i></div>
+                    <div class="text" onclick=""><i class="fa-solid fa-heart" title="Add To Whishlist"></i></div>
                 </div>
-                <div class="Tools-cards">
-                    <h2 class="LipBrush">Lip Brush</h2>
-                    <a href="LipBrush.html"><img src="LipBrush2.jpg" alt="Lip Brush img" width="318" height="300" class="image"></a>
-                </div>
-                <div class="Tools-cards">
-                    <h2 class="Sponges">Sponges</h2>
-                    <a href="Sponges.html"><img src="Sponges1.jpg" alt="Sponges img" width="318" height="300" class="image"></a>
-                </div>
-                <div class="Tools-cards">
-                    <h2 class="Curlers">EyeLash Curlers</h2>
-                    <a href="Curlers.html"><img src="Curlers.jpg" alt="EyeLash Curlers img" width="318" height="300" class="image"></a>
-                </div>
+            </div>
         </div>
+        <div class="eyebrow">
+            <div class="container">
+                <img src="rarebrow.jpg" alt="Makeup img" width="318" height="300" class="imggel">
+                <h2 class="eye">RareBeauty Eyebrow pencil</h2>
+                <h3 class="eye">19.00$</h3>
+                <div class="middle">
+                    <div class="text" onclick=""><i class="fa-solid fa-cart-shopping" title="Add To Cart"></i></div>
+                    <div class="text" onclick="showPopup(['brow1'])"><i class="fa-sharp fa-solid fa-eye"title="View more"></i></div>
+                    <div class="text" onclick=""><i class="fa-solid fa-heart" title="Add To Whishlist"></i></div>
+                </div>
+            
+        </div>
+    </div>
+        <div class="eyebrow">
+            <div class="container">
+                <img src="maybelineeye.jpeg" alt="Makeup img" width="318" height="300" class="imggel">
+                <h2 class="eye">Maybeline Eyebrow mascara</h2>
+                <h3 class="eye">20.00$</h3>
+                <div class="middle">
+                    <div class="text" onclick=""><i class="fa-solid fa-cart-shopping" title="Add To Cart"></i></div>
+                    <div class="text" onclick="showPopup(['brow2'])"><i class="fa-sharp fa-solid fa-eye"title="View more"></i></div>
+                    <div class="text" onclick=""><i class="fa-solid fa-heart" title="Add To Whishlist"></i></div>
+                </div>
+            
+        </div>
+    </div>
+    
+    <div class="Tools-cards">
+        <div class="container">
+            <img src="kikobrush1.jpg" alt="Makeup img" width="318" height="300" class="imggel">
+            <h2 class="FaceBrush">Kiko Brush Set</h2>
+            <h3 class="FaceBrush">33.00$</h3>
+            <div class="middle">
+                <div class="text" onclick=""><i class="fa-solid fa-cart-shopping" title="Add To Cart"></i></div>
+                <div class="text" onclick="showPopup(['brush1'])"><i class="fa-sharp fa-solid fa-eye" title="View more"></i></div>
+                <div class="text" onclick=""><i class="fa-solid fa-heart" title="Add To Whishlist"></i></div>
+            </div>
+        </div>  
+    </div>
+
+        <div class="Tools-cards">
+            <div class="container">
+                <img src="spongefanty.jpg" alt="Makeup img" width="318" height="300" class="imggel">
+                <h2 class="Sponges">Fenty Beauty Blender </h2>
+                <h3 class="Sponges">24.00$</h3>
+                <div class="middle">
+                    <div class="text" onclick=""><i class="fa-solid fa-cart-shopping" title="Add To Cart"></i></div>
+                    <div class="text" onclick="showPopup(['brush2'])"><i class="fa-sharp fa-solid fa-eye" title="View more"></i></div>
+                    <div class="text" onclick=""><i class="fa-solid fa-heart" title="Add To Whishlist"></i></div>
+                </div>
+            </div>  
+        </div>
+        <div class="Tools-cards">
+            <div class="container">
+                <img src="diorcurler.jpg" alt="Makeup img" width="318" height="300" class="imggel">
+                <h2 class="Curlers">Dior EyeLash Curler</h2>
+                <h3 class="Curlers">30.00$</h3>
+                <div class="middle">
+                    <div class="text" onclick=""><i class="fa-solid fa-cart-shopping" title="Add To Cart"></i></div>
+                    <div class="text" onclick="showPopup(['brush3'])"><i class="fa-sharp fa-solid fa-eye" title="View more"></i></div>
+                    <div class="text" onclick=""><i class="fa-solid fa-heart" title="Add To Whishlist"></i></div>
+                </div>
+            </div>  
+        </div>
+</div>
+
 
     </section>
+    <!----------------------------------------------------------------------------------------------- -->
+    <div class="Products-window " id="brow">
+        <h2 class="p1"> Kiko Eyebrow Designer Gel Mascara  <span class="price">15.00$</span></h2>
+        <div class="popup">
+            
+            <span class="close-btn" onclick="hidePopup(['brow'])">&times;</span>
+            <img src="kikogel.jpg" alt="Makeup img" width="350" height="320">
+           
+           
+            <div>
+            <h1 class="btn1" id="b1" onclick="des()">Description </h1>
+            <h1 class="btn2" id="b2" onclick="use()">how to use</h1>
+            <div id="i77" class="nourhan"> -Eyebrow fixing gel with satin finish.
+
+                <br>
+                -Perfect for shaping, filling and defining the eyebrows, enhancing them with a sophisticated satin finish.
+                <br>
+                
+                -The lightweight gel ensures perfect hold without leaving marks.
+                
+                <br>
+                -The unique mini brush ensures more defined and precise application, for a flawless and extremely professional result.
+                <br>
+                
+                -Non-drying and non-sticky.
+                
+                <br>
+                -Ophthalmologically tested.
+                
+                </div>
+                <div id="i7" class="noor">The unique mini applicator allows you to groom, shape and define your eyebrows, for an even more precise and sophisticated finish.</div>
+                </div>
+
+        </div>
+        <div class="rev">
+            <h1 class="o">ADD TO <i class="fa-solid fa-cart-shopping" title="cart" style="color:rgb(222, 128, 128)"></i>
+                <i class="fa-regular fa-heart" title="wishlist"  style="color:rgb(222, 128, 128)" ></i> </h1>
+            <h1>Reviews <i class="fa-brands fa-tiktok"></i> </h1>
+             
+        </div> 
+    </div>
+    <!------------------------------------------------------------------------------------------------------------------- -->
+    <div class="Products-window " id="brow1">
+        <h2 class="p1"> Rare Beauty Brow Harmony Precision Pencil <span class="price">19.00$</span></h2>
+        <div class="popup">
+            
+            <span class="close-btn" onclick="hidePopup(['brow1'])">&times;</span>
+            <img src="rarebrow.jpg" alt="Makeup img" width="350" height="320">
+           
+           
+            <div>
+            <h1 class="btn1" id="b1" onclick="des()">Description </h1>
+            <h1 class="btn2" id="b2" onclick="use()">how to use</h1>
+            <div id="i77" class="nourhan">  Unique angled rectangle tip makes it easy to draw on individual hairs for a natural feathery look, or to shade in sparse or over-tweezed areas for a fuller effect.
+                <br>
+                                    Not too creamy, not too waxy, but just right—applying smoothly and evenly with just enough color intensity that’s easy to control.
+                                    <br>
+                                    Waterproof formula even resists sweat and oil, staying put all day without smudging, transferring, or fading.
+                                    <br>
+                                    Built-in spoolie brush for effortless brushing and diffusing for the most natural finish.
+                
+                </div>
+                <div id="i7" class="noor">  Twist pencil to reveal a small amount of product. Use the precision angled tip to fill…</div>
+                </div>
+
+        </div>
+        <div class="rev">
+            <h1 class="o">ADD TO <i class="fa-solid fa-cart-shopping" title="cart" style="color:rgb(222, 128, 128)"></i>
+                <i class="fa-regular fa-heart" title="wishlist"  style="color:rgb(222, 128, 128)" ></i> </h1>
+            <h1>Reviews <i class="fa-brands fa-tiktok"></i> </h1>
+             
+        </div> 
+    </div>
+        <!------------------------------------------------------------------------------------------------------------------- -->
+      
+        <div class="Products-window " id="brow2">
+            <h2 class="p1"> MAYBELLINE GEL BROW MASCARA  <span class="price">20.00$</span></h2>
+            <div class="popup">
+                
+                <span class="close-btn" onclick="hidePopup(['brow2'])">&times;</span>
+                <img src="maybelineeye.jpeg" alt="Makeup img" width="350" height="320">
+               
+               
+                <div>
+                <h1 class="btn1" id="b1" onclick="des()">Description </h1>
+                <h1 class="btn2" id="b2" onclick="use()">how to use</h1>
+                <div id="i77" class="nourhan"> Brow sculpting made for the NYC hustle! 
+                    Tame, and shape brows fast. 
+                    This clear gel brow mascara features a mini sculpting brush that precisely tames and shapes brows 
+                    without hassle. With this quick and easy taming brow gel mascara you can get flawless brows on the go.</div>
+    <div id="i7" class="noor">Brush gel into brows with short upward strokes </div>
+    </div>
+    
+            </div>
+            <div class="rev">
+                <h1 class="o">ADD TO <i class="fa-solid fa-cart-shopping" title="cart" style="color:rgb(222, 128, 128)"></i>
+                    <i class="fa-regular fa-heart" title="wishlist"  style="color:rgb(222, 128, 128)" ></i> </h1>
+                <h1>Reviews <i class="fa-brands fa-tiktok"></i> </h1>
+                 
+            </div>
+                
+        </div>
+        <div class="Products-window " id="eyes1">
+            <h2 class="p1">Rare Beauty Universal Volumizing Mascara  <span class="price">11.00$</span></h2>
+            <div class="popup">
+                
+                <span class="close-btn" onclick="hidePopup(['eyes1'])">&times;</span>
+                <img src="mascararare.jpeg" alt="Makeup img" width="350" height="320">
+               
+               
+                <div>
+                <h1 class="btn1" id="b1" onclick="des()">Description </h1>
+                <h1 class="btn2" id="b2" onclick="use()">how to use</h1>
+                <div id="i77" class="nourhan"> Created for every lash type, this all-in-one mascara pairs a weightless,
+                    <br> easy-to-build formula with a universal eye-hugging brush to lift, lengthen, curl, 
+                    <br>and volumize every lash from every angle.
+                    
+                    </div>
+                    <div id="i7" class="noor">Starting at the base of the lashes, pull mascara brush through from root to tip…</div>
+                    </div>
+    
+            </div>
+            <div class="rev">
+                <h1 class="o">ADD TO <i class="fa-solid fa-cart-shopping" title="cart" style="color:rgb(222, 128, 128)"></i>
+                    <i class="fa-regular fa-heart" title="wishlist"  style="color:rgb(222, 128, 128)" ></i> </h1>
+                <h1>Reviews <i class="fa-brands fa-tiktok"></i> </h1>
+                 
+            </div> 
+        </div>
+        <!-- ----------------------------------------------------------------------------------------------------------- -->
+    
+        <div class="Products-window " id="eyes2">
+            <h2 class="p1">Kiko Long Lasting Duo Eyeliner<span class="price">30.00$</span></h2>
+            <div class="popup">
+                
+                <span class="close-btn" onclick="hidePopup(['eyes2'])">&times;</span>
+                <img src="kikolinear.jpeg" alt="Makeup img" width="350" height="320">
+               
+               
+                <div>
+                <h1 class="btn1" id="b1" onclick="des()">Description </h1>
+                <h1 class="btn2" id="b2" onclick="use()">how to use</h1>
+                <div id="i77" class="nourhan"> Long-lasting* waterproof* eyeliner pen.
+    <br>
+                    Ideal for:
+                    defining your gaze and enhancing your eye shape with perfect flicks and intense lines.
+                <br>    
+                    It's special because:
+                    <br>
+                    -it has a pigmented, shiny texture that adheres flawlessly to the eyelids;
+                    <br>
+                    -its two felt tips, one with a bold square shape and the other brush-like, ensure precise and even lines for an endless array of fashionable smudge-free looks;
+                    <br>
+                    -it is water-resistant* but can easily be removed;
+                
+                    
+                    </div>
+                    <div id="i7" class="noor">Apply the eyeliner along the outer rim of the eye, following the lash line and creating a flick towards the temple. Use the two tips to play with thickness and intensity.</div>
+                    </div>
+    
+            </div>
+            <div class="rev">
+                <h1 class="o">ADD TO <i class="fa-solid fa-cart-shopping" title="cart" style="color:rgb(222, 128, 128)"></i>
+                    <i class="fa-regular fa-heart" title="wishlist"  style="color:rgb(222, 128, 128)" ></i> </h1>
+                <h1>Reviews <i class="fa-brands fa-tiktok"></i> </h1>
+                 
+            </div> 
+        </div>
+            <!-- ----------------------------------------------------------------------------------------------------------- -->
+    
+            <div class="Products-window " id="eyes3">
+                <h2 class="p1">Rare Beauty Discovery Eyeshadow Palette <span class="price">11.00$</span></h2>
+                <div class="popup">
+                    
+                    <span class="close-btn" onclick="hidePopup(['eyes3'])">&times;</span>
+                    <img src="shadowmay.jpeg" alt="Makeup img" width="350" height="320">
+                   
+                   
+                    <div>
+                    <h1 class="btn1" id="b1" onclick="des()">Description </h1>
+                    <h1 class="btn2" id="b2" onclick="use()">how to use</h1>
+                    <div id="i77" class="nourhan"> An eyeshadow palette of seven rich, buttery shades in a range of long-lasting finishes,
+                        <br> each inspired by our iconic Soft Pinch Liquid Blush collection.
+                        </div>
+                        <div id="i7" class="noor">
+                            For best results, prep lids with a thin layer of Always an Optimist Weightless Eye Primer. Then apply…
+                            </div>
+                        </div>
+        
+                </div>
+                <div class="rev">
+                    <h1 class="o">ADD TO <i class="fa-solid fa-cart-shopping" title="cart" style="color:rgb(222, 128, 128)"></i>
+                        <i class="fa-regular fa-heart" title="wishlist"  style="color:rgb(222, 128, 128)" ></i> </h1>
+                    <h1>Reviews <i class="fa-brands fa-tiktok"></i> </h1>
+                     
+                </div> 
+            </div>
+    
+                <!-- ----------------------------------------------------------------------------------------------------------- -->
+                <div class="Products-window " id="eyes4">
+                    <h2 class="p1">Kiko Magnetic False Eyelashes<span class="price">11.00$</span></h2>
+                    <div class="popup">
+                        
+                        <span class="close-btn" onclick="hidePopup(['eyes4'])">&times;</span>
+                        <img src="kikolashe.jpeg" alt="Makeup img" width="350" height="320">
+                       
+                       
+                        <div>
+                        <h1 class="btn1" id="b1" onclick="des()">Description </h1>
+                        <h1 class="btn2" id="b2" onclick="use()">how to use</h1>
+                        <div id="i77" class="nourhan"> Magnetic false lashes for use with the KIKO MILANO magnetic eyeliner.
+    <br>
+                            Ideal for:
+                            creating intensified, super cool looks with ease.
+                            <br>
+                            They're special because:
+                            <br>
+                            -made from synthetic fibre, they’re light and soft to the touch;
+                            <br>
+                            -they perfectly follow the outer lash line, adding natural-to-bold finishes;
+                            <br>
+                            -they can be reapplied several times for hypnotic eyes at any occasion;
+                            
+                            </div>
+                            <div id="i7" class="noor">1. Draw a line with the KIKO MILANO MAGNETIC EYELINER and leave to dry completely. 
+                                <br>2. Apply the MAGNETIC FALSE EYELASHES on the eyeliner line using your finger or the KIKO MILANO FALSE EYELASHES APPLICATOR.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rev">
+                        <h1 class="o">ADD TO <i class="fa-solid fa-cart-shopping" title="cart" style="color:rgb(222, 128, 128)"></i>
+                            <i class="fa-regular fa-heart" title="wishlist"  style="color:rgb(222, 128, 128)" ></i> </h1>
+                        <h1>Reviews <i class="fa-brands fa-tiktok"></i> </h1>
+                         
+                    </div> 
+                </div>
+                 <!-- ----------------------------------------------------------------------------------------------------------- -->
+    
+            <div class="Products-window " id="eyes5">
+                <h2 class="p1">Rare Beauty Weightless Eye Primer <span class="price">21.00$</span></h2>
+                <div class="popup">
+                    
+                    <span class="close-btn" onclick="hidePopup(['eyes5'])">&times;</span>
+                    <img src="rareprimer.jpeg" alt="Makeup img" width="350" height="320">
+                   
+                   
+                    <div>
+                    <h1 class="btn1" id="b1" onclick="des()">Description </h1>
+                    <h1 class="btn2" id="b2" onclick="use()">how to use</h1>
+                    <div id="i77" class="nourhan"> An eyeshadow palette of seven rich, buttery shades in a range of long-lasting finishes,
+                        <br> each inspired by our iconic Soft Pinch Liquid Blush collection.
+                        </div>
+                        <div id="i7" class="noor">
+                            For best results, prep lids with a thin layer of Always an Optimist Weightless Eye Primer. Then apply…
+                            </div>
+                        </div>
+        
+                </div>
+                <div class="rev">
+                    <h1 class="o">ADD TO <i class="fa-solid fa-cart-shopping" title="cart" style="color:rgb(222, 128, 128)"></i>
+                        <i class="fa-regular fa-heart" title="wishlist"  style="color:rgb(222, 128, 128)" ></i> </h1>
+                    <h1>Reviews <i class="fa-brands fa-tiktok"></i> </h1>
+                     
+                </div> 
+            </div>
+    
+                <!-- ----------------------------------------------------------------------------------------------------------- -->
+                <div class="Products-window " id="eyes6">
+                    <h2 class="p1">Kiko Matte Eyeliner & Kajal<span class="price">15.00$</span></h2>
+                    <div class="popup">
+                        
+                        <span class="close-btn" onclick="hidePopup(['eyes6'])">&times;</span>
+                        <img src="kikopencil.jpeg" alt="Makeup img" width="350" height="320">
+                       
+                       
+                        <div>
+                        <h1 class="btn1" id="b1" onclick="des()">Description </h1>
+                        <h1 class="btn2" id="b2" onclick="use()">how to use</h1>
+                        <div id="i77" class="nourhan"> Intense eyeliner and kajal eye pencil.
+    <br>>
+                            Ideal for:
+                            adding depth and enhancing your eye shape with just one product.
+                            <br>
+                            It's special because:
+                            <br>
+                             -its formula is enriched with plant waxes;
+                            <br>
+                            -smooth and creamy, its highly pigmented texture blends instantly into the skin, for full, rich colour from the very first stroke;
+                            <br>
+                            -it can be used on the inner and outer rim of the eye;
+                            <br>
+                            -it's very easy to blend thanks to the practical sponge applicator on the end.
+                            </div>
+                            <div id="i7" class="noor">
+                                Apply from the inner corner of the eye outwards, along the upper and lower lash lines.
+                                <br> Blend with the built-in applicator.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rev">
+                        <h1 class="o">ADD TO <i class="fa-solid fa-cart-shopping" title="cart" style="color:rgb(222, 128, 128)"></i>
+                            <i class="fa-regular fa-heart" title="wishlist"  style="color:rgb(222, 128, 128)" ></i> </h1>
+                        <h1>Reviews <i class="fa-brands fa-tiktok"></i> </h1>
+                         
+                    </div> 
+                </div>
+                <div class="Products-window " id="face1">
+                    <h2 class="p1"> Fenty Beauty Founadtion <span class="price">40.00$</span></h2>
+                    <div class="popup">
+                        
+                        <span class="close-btn" onclick="hidePopup(['face1'])">&times;</span>
+                        <img src="fentyFounjpg.jpg" alt="Makeup img" width="350" height="320">
+                       
+                       
+                        <div>
+                        <h1 class="btn1" id="b1" onclick="des()">Description </h1>
+                        <h1 class="btn2" id="b2" onclick="use()">how to use</h1>
+                        <div id="i77" class="nourhan"> Step into your best light. A longwear, medium coverage foundation that gives golden hour glow all day long and stays fresh. 
+                            It hydrates, brightens and improves skin tone both instantly and over time, while resisting sweat, humidity and transfer. 
+                            This lightweight, waterpoof formula instantly reduces the appearance of shine and gives a whole new kind of radiance. 
+                            This is just-right, notch-above-natural luminosity in a bottle..</div>
+                <div id="i7" class="noor">For medium coverage: Apply 1 pump to the back of your hand. Dip a damp Precision Makeup Sponge 100 into the product and begin applying at the center of your face, or wherever coverage is desired, pressing foundation into skin and blending outward.
+                <br>
+                    For full coverage: Apply 1- 2 pumps directly on the Foundation Brush 145 and blend. Add more to build your desired coverage. </div>
+                </div>
+                
+                    </div>
+                    <div class="rev">
+                        <h1 class="o">ADD TO <i class="fa-solid fa-cart-shopping" title="cart" style="color:rgb(222, 128, 128)"></i>
+                            <i class="fa-regular fa-heart" title="wishlist"  style="color:rgb(222, 128, 128)" ></i> </h1>
+                        <h1>Reviews <i class="fa-brands fa-tiktok"></i> </h1>
+                         
+                    </div>
+                        
+                </div>
+                
+                <div class="Products-window " id="face2">
+                    <h2 class="p1"> Fenty Beauty Concelar  <span class="price">30.00$</span></h2>
+                    <div class="popup">
+                        
+                        <span class="close-btn" onclick="hidePopup(['face2'])">&times;</span>
+                        <img src="fentycon.jpg" alt="Makeup img" width="350" height="320">
+                       
+                       
+                        <div>
+                        <h1 class="btn1" id="b1" onclick="des()">Description </h1>
+                        <h1 class="btn2" id="b2" onclick="use()">how to use</h1>
+                        <div id="i77" class="nourhan"> Do less, but get more with We’re Even Hydrating Longwear Concealer—the ultimate makeup-meets-skincare hack. It melts into skin, instantly evening, brightening and hiding dark circles +
+                             puffiness for up to 12 hours. Available in 50 buildable medium coverage shades with a second-skin finish. 
+                            Buildable medium coverage with a natural, second-skin finish
+                            Extreme longwear formula that resists creasing, fading, sweat + humidity 
+                            Hydrates</div>
+                <div id="i7" class="noor">Dot or swipe formula anywhere you want to conceal and brighten…think under eyes, blemishes, or all over.
+                    <br>
+                    Blend with Precision Concealer Brush 180, fingers or sponge (best for all-over coverage)
+                    <br>
+                    Pro Tip: If you have oily skin, set with Invisimatte Instant Setting + Blotting Powder.  </div>
+                </div>
+                
+                    </div>
+                    <div class="rev">
+                        <h1 class="o">ADD TO <i class="fa-solid fa-cart-shopping" title="cart" style="color:rgb(222, 128, 128)"></i>
+                            <i class="fa-regular fa-heart" title="wishlist"  style="color:rgb(222, 128, 128)" ></i> </h1>
+                        <h1>Reviews <i class="fa-brands fa-tiktok"></i> </h1>
+                         
+                    </div>
+                        
+                </div>
+                <div class="Products-window " id="face3">
+                    <h2 class="p1"> Dior Primer   <span class="price">38.00$</span></h2>
+                    <div class="popup">
+                        
+                        <span class="close-btn" onclick="hidePopup(['face3'])">&times;</span>
+                        <img src="primerdiorjpg.jpg" alt="Makeup img" width="350" height="320">
+                       
+                       
+                        <div>
+                        <h1 class="btn1" id="b1" onclick="des()">Description </h1>
+                        <h1 class="btn2" id="b2" onclick="use()">how to use</h1>
+                        <div id="i77" class="nourhan">Dior Backstage Face & Body Primer is the universal Dior primer with a radiant blurring effect. It has a non-greasy texture that blends seamlessly with the skin for a foundation with flawless hold and long-wearing makeup.
+                
+                            Infused with a combination of powders, both mattifying and luminous, the formula of this primer instantly brightens the skin while blurring imperfections. It also contains pigmented beauty-enhancing powders to visibly improve the evenness of the complexion.</div>
+                <div id="i7" class="noor">Apply after your skincare routine and before makeup using the fingertips to delicately massage the face: an instant touch-up effect, skin appears smoothed..</div>
+                </div>
+                
+                    </div>
+                    <div class="rev">
+                        <h1 class="o">ADD TO <i class="fa-solid fa-cart-shopping" title="cart" style="color:rgb(222, 128, 128)"></i>
+                            <i class="fa-regular fa-heart" title="wishlist"  style="color:rgb(222, 128, 128)" ></i> </h1>
+                        <h1>Reviews <i class="fa-brands fa-tiktok"></i> </h1>
+                         
+                    </div>
+                        
+                </div>
+                <div class="Products-window " id="face4">
+                    <h2 class="p1"> Rare Beauty Setting Spray  <span class="price">14.00$</span></h2>
+                    <div class="popup">
+                        
+                        <span class="close-btn" onclick="hidePopup(['face4'])">&times;</span>
+                        <img src="spayrare8.jpg" alt="Makeup img" width="350" height="320">
+                       
+                       
+                        <div>
+                        <h1 class="btn1" id="b1" onclick="des()">Description </h1>
+                        <h1 class="btn2" id="b2" onclick="use()">how to use</h1>
+                        <div id="i77" class="nourhan"> 
+                
+                            Cloud-like hydrating mist instantly calms and nourishes skin, while making it look and feel more plump, smooth, and ready for makeup.
+                <br>
+                            Boosts the life of your foundation—more seamless, less cakey. Just fresh all day.
+                            <br>
+                            Perks up your skin—and your senses, too, thanks to its soft, uplifting botanical scent.
+                            <br>
+                            Natural, radiant finish without feeling greasy or sticky.
+                          </div>
+                <div id="i7" class="noor">Shake well to fully mix. With eyes closed, spritz 2-4 times at least 10 inches away from your face.
+                <br>
+                    This one's a true multitasker! Mist it on whenever, wherever: As a pre-makeup step, 
+                    or in between layers of makeup to help everything meld together, or to set it all in place. 
+                    And of course—throughout the day for a quick pick-me-up. You can use it without makeup, too! </div>
+                </div>
+                
+                    </div>
+                    <div class="rev">
+                        <h1 class="o">ADD TO <i class="fa-solid fa-cart-shopping" title="cart" style="color:rgb(222, 128, 128)"></i>
+                            <i class="fa-regular fa-heart" title="wishlist"  style="color:rgb(222, 128, 128)" ></i> </h1>
+                        <h1>Reviews <i class="fa-brands fa-tiktok"></i> </h1>
+                         
+                    </div>
+                        
+                </div>
+                <div class="Products-window " id="face5">
+                    <h2 class="p1"> Kiko Highlighter  <span class="price">17.00$</span></h2>
+                    <div class="popup">
+                        
+                        <span class="close-btn" onclick="hidePopup(['face5'])">&times;</span>
+                        <img src="kikohighlighter.jpg" alt="Makeup img" width="350" height="320">
+                       
+                       
+                        <div>
+                        <h1 class="btn1" id="b1" onclick="des()">Description </h1>
+                        <h1 class="btn2" id="b2" onclick="use()">how to use</h1>
+                        <div id="i77" class="nourhan"> 
+                
+                            The new sensory texture of this powdered oil is creamy and easy to blend.
+                            
+                            Its innovative formula highlights the face with a velvety touch. Its blend of softening ingredients creates an exceptionally soft and gliding powder that leaves a long lasting feeling of comfort. 
+                            
+                            The high concentration of pearls helps to create points of light and guarantees optimum colour release with a buildable effect for every type of makeup, from soft contouring to a more pronounced effect.
+                
+                            </div>
+                <div id="i7" class="noor">Apply Glow Fusion Powder Highlighter with the correct brush for each part of your face:
+                
+                    - Face 08 Precision Powder Brush for the centre of the forehead, the bridge of the nose, the top of the cheekbones and the chin;
+                    
+                    - Face 12 Powder Fan Brush to finish the top of the cheekbones, the nose and forehead;
+                    
+                    - Eyes 52 Shader Brush for the eyebrow arch, the inner corner of the eye and the Cupid's bow. </div>
+                </div>
+                
+                    </div>
+                    <div class="rev">
+                        <h1 class="o">ADD TO <i class="fa-solid fa-cart-shopping" title="cart" style="color:rgb(222, 128, 128)"></i>
+                            <i class="fa-regular fa-heart" title="wishlist"  style="color:rgb(222, 128, 128)" ></i> </h1>
+                        <h1>Reviews <i class="fa-brands fa-tiktok"></i> </h1>
+                         
+                    </div>
+                        
+                </div>
+                <div class="Products-window " id="face6">
+                    <h2 class="p1"> Kiko Powder <span class="price">25.00$</span></h2>
+                    <div class="popup">
+                        
+                        <span class="close-btn" onclick="hidePopup(['face6'])">&times;</span>
+                        <img src="kikopowder.jpg" alt="Makeup img" width="350" height="320">
+                       
+                       
+                        <div>
+                        <h1 class="btn1" id="b1" onclick="des()">Description </h1>
+                        <h1 class="btn2" id="b2" onclick="use()">how to use</h1>
+                        <div id="i77" class="nourhan"> Perfecting face powder with a natural radiant finish.
+                <br>          
+                          
+                            -silky and extremely lightweight, its sheer texture suits every complexion;
+                            -its innovative formula is enriched with raspberry seed oil, rose hybrid flower extract and light-catching particles which give the face a sophisticated radiance;
+                            -luxurious, mattifying and pleasant to apply, it camouflages imperfections and sets your make-up;
+                           
+                           </div>
+                <div id="i7" class="noor">Apply the product evenly all over the face, as and when desired. For an even more natural finish, use the appropriate tip of the 4-in-1 brush from the collection's Days in Bloom Flowery Brush Set.
+                 </div>
+                </div>
+                
+                    </div>
+                    <div class="rev">
+                        <h1 class="o">ADD TO <i class="fa-solid fa-cart-shopping" title="cart" style="color:rgb(222, 128, 128)"></i>
+                            <i class="fa-regular fa-heart" title="wishlist"  style="color:rgb(222, 128, 128)" ></i> </h1>
+                        <h1>Reviews <i class="fa-brands fa-tiktok"></i> </h1>
+                         
+                    </div>
+                        
+                </div>
+                <div class="Products-window " id="face7">
+                    <h2 class="p1"> Charlotte Tilbury Contouer wand <span class="price">42.00$</span></h2>
+                    <div class="popup">
+                        
+                        <span class="close-btn" onclick="hidePopup(['face7'])">&times;</span>
+                        <img src="cont.jpg" alt="Makeup img" width="350" height="320">
+                       
+                       
+                        <div>
+                        <h1 class="btn1" id="b1" onclick="des()">Description </h1>
+                        <h1 class="btn2" id="b2" onclick="use()">how to use</h1>
+                        <div id="i77" class="nourhan"> 
+                            Darlings, my Hollywood Contour Wand in Light to Medium is the perfect lightweight, blendable, buildable formula to create a well-contoured face. Swipe onto the hollows of the cheeks for an INSTANT HOLLYWOOD EFFECT!
+                            <br>
+                Siloxanes create lightweight & dry feel upon application for easy blending
+                <br>
+                Ideal if you want to create a buildable, natural contour
+                            
+                          </div>
+                <div id="i7" class="noor">To use, start by sucking in your cheekbones & sweeping the magic cushion applicator on the hollows in a horizontal line towards your hairline.
+                <br>
+                    Apply in vertical stripes on the sides of your nose & loop underneath, then apply on the sides of your forehead, temples & jawline.
+                    <br>
+                    Finish by applying on the eye crease to fake a deeper socket, then use the Hollywood Complexion Brush to buff & blend it all in for a seamless finish. </div>
+                </div>
+                
+                    </div>
+                    <div class="rev">
+                        <h1 class="o">ADD TO <i class="fa-solid fa-cart-shopping" title="cart" style="color:rgb(222, 128, 128)"></i>
+                            <i class="fa-regular fa-heart" title="wishlist"  style="color:rgb(222, 128, 128)" ></i> </h1>
+                        <h1>Reviews <i class="fa-brands fa-tiktok"></i> </h1>
+                         
+                    </div>
+                        
+                </div>
+                <div class="Products-window " id="face8">
+                    <h2 class="p1"> Kiko Bronzer   <span class="price">20.00$</span></h2>
+                    <div class="popup">
+                        
+                        <span class="close-btn" onclick="hidePopup(['face8'])">&times;</span>
+                        <img src="bronzerkiko.jpg" alt="Makeup img" width="350" height="320">
+                       
+                       
+                        <div>
+                        <h1 class="btn1" id="b1" onclick="des()">Description </h1>
+                        <h1 class="btn2" id="b2" onclick="use()">how to use</h1>
+                        <div id="i77" class="nourhan">
+                            Ideal for:enhancing your features and giving the face a natural and radiant sun-kissed look.
+                            <br>
+                             -its formula is enriched with hyaluronic acid and jojoba oil that contains emollient properties;
+                            <br>
+                             -the blended texture with iridescent streaks provides a natural luminous finish;
+                            <br>
+                             -it’s silky, enveloping and very pleasant on the skin, while also being easy to blend;
+                            <br>
+                             -it comes in a practical case with a mirror and is ideal for on-the-go use.</div>
+                <div id="i7" class="noor">Pick up the bronzer with a powder brush, such as the Face Powder Travel Brush by KIKO MILANO, and apply it to your face and neck, blending gently. </div>
+                </div>
+                
+                    </div>
+                    <div class="rev">
+                        <h1 class="o">ADD TO <i class="fa-solid fa-cart-shopping" title="cart" style="color:rgb(222, 128, 128)"></i>
+                            <i class="fa-regular fa-heart" title="wishlist"  style="color:rgb(222, 128, 128)" ></i> </h1>
+                        <h1>Reviews <i class="fa-brands fa-tiktok"></i> </h1>
+                         
+                    </div>
+                        
+                </div>
+                <div class="Products-window " id="face9">
+                    <h2 class="p1"> Rare Beauty Liquid Blush   <span class="price">23.00$</span></h2>
+                    <div class="popup">
+                        
+                        <span class="close-btn" onclick="hidePopup(['face9'])">&times;</span>
+                        <img src="rarelush.jpg" alt="Makeup img" width="350" height="320">
+                       
+                       
+                        <div>
+                        <h1 class="btn1" id="b1" onclick="des()">Description </h1>
+                        <h1 class="btn2" id="b2" onclick="use()">how to use</h1>
+                        <div id="i77" class="nourhan"> Airy, lightweight liquid formula blends and builds effortlessly for a soft flush of color.
+                <br>
+                            Infused with long-lasting color pigments for all-day wear—a little goes a long way.
+                            <br>
+                            Mistake-proof, it layers beautifully over liquid/powder formulas without disturbing makeup.</div>
+                <div id="i7" class="noor">Gently remove excess product from applicator.
+                <br>
+                    Use the doe-foot applicator and place 1-2 dots on each cheek.
+                    <br>
+                    Use fingertips and gently pat into skin for a seamless finish. </div>
+                </div>
+                
+                    </div>
+                    <div class="rev">
+                        <h1 class="o">ADD TO <i class="fa-solid fa-cart-shopping" title="cart" style="color:rgb(222, 128, 128)"></i>
+                            <i class="fa-regular fa-heart" title="wishlist"  style="color:rgb(222, 128, 128)" ></i> </h1>
+                        <h1>Reviews <i class="fa-brands fa-tiktok"></i> </h1>
+                         
+                    </div>
+                        
+                </div>
+                <div class="Products-window " id="PContainer1">
+                    <h2 class="p1"> Rare Beauty Lip stick  <span class="price">20.00$</span></h2>
+                    <div class="popup">
+                        
+                        <span class="close-btn" onclick="hidePopup(['PContainer1'])">&times;</span>
+                        <img src="rarestickjpg.jpg" alt="Makeup img" width="350" height="320">
+                       
+                       
+                        <div>
+                        <h1 class="btn1" id="b1" onclick="des()">Description </h1>
+                        <h1 class="btn2" id="b2" onclick="use()">how to use</h1>
+                        <div id="i77" class="nourhan"> Cushions lips with creamy, soft matte color in one swipe.
+            <br>
+                            Innovative flexible formula adapts to the shape of your lips for plush, weightless color that moves as you do.
+                            <br>
+                            Lasts and lasts without budging while keeping lips soft, nourished, and moisturized all day. Never drying or cakey..</div>
+            <div id="i7" class="noor">Apply directly to your lips for the most intense payoff. For just a touch of soft matte color, apply with your finger in a blotting motion. </div>
+            </div>
+            
+                    </div>
+                    <div class="rev">
+                        <h1 class="o">ADD TO <i class="fa-solid fa-cart-shopping" title="cart" style="color:rgb(222, 128, 128)"></i>
+                            <i class="fa-regular fa-heart" title="wishlist"  style="color:rgb(222, 128, 128)" ></i> </h1>
+                        <h1>Reviews <i class="fa-brands fa-tiktok"></i> </h1>
+                         
+                    </div>
+                        
+                </div>
+                
+                <div class="Products-window " id="PContainer2">
+                    <h2 class="p1"> Rare Beauty Lip Liner   <span class="price">15.00$</span></h2>
+                    <div class="popup">
+                        
+                        <span class="close-btn" onclick="hidePopup(['PContainer2'])">&times;</span>
+                        <img src="rareliner.jpg" alt="Makeup img" width="350" height="320">
+                       
+                       
+                        <div>
+                        <h1 class="btn1" id="b1" onclick="des()">Description </h1>
+                        <h1 class="btn2" id="b2" onclick="use()">how to use</h1>
+                        <div id="i77" class="nourhan"> BIncredibly smooth, balm-like glide applies evenly—no skipping or tugging!—perfect for outlining lips or coloring them in.
+            <br>
+                            Instantly defines and shapes lips with comfortable, high-pigment color and a soft matte finish.
+                          <br>  
+                            Long-lasting, waterproof formula not only stays put all day without smudging—it helps keep your lipstick in place, too!
+                            <br>
+                            Lightweight and non-drying so lips stay soft and supple.
+                            <br>
+                            Complete with a built-in sharpener.</div>
+            <div id="i7" class="noor">Twist up to reveal product. Outline lips starting from the corner of the top lip. Fill in lips using a corresponding lipstick shade (we recommend pairing with Kind Words Matte Lipstick in a matching shade)! </div>
+            </div>
+            
+                    </div>
+                    <div class="rev">
+                        <h1 class="o">ADD TO <i class="fa-solid fa-cart-shopping" title="cart" style="color:rgb(222, 128, 128)"></i>
+                            <i class="fa-regular fa-heart" title="wishlist"  style="color:rgb(222, 128, 128)" ></i> </h1>
+                        <h1>Reviews <i class="fa-brands fa-tiktok"></i> </h1>
+                         
+                    </div>
+                        
+                </div>
+                <div class="Products-window " id="PContainer3">
+                    <h2 class="p1"> MAYBELLINE LIFTER GLOSS®   <span class="price">11.00$</span></h2>
+                    <div class="popup">
+                        
+                        <span class="close-btn" onclick="hidePopup(['PContainer3'])">&times;</span>
+                        <img src="lifterglossjpg.jpg" alt="Makeup img" width="350" height="320">
+                       
+                       
+                        <div>
+                        <h1 class="btn1" id="b1" onclick="des()">Description </h1>
+                        <h1 class="btn2" id="b2" onclick="use()">how to use</h1>
+                        <div id="i77" class="nourhan">Hydrated lips. Fuller look. This breakthrough formula with Hyaluronic Acid visibly smooths lip
+                             surface and enhances lip contour with high shine for hydrated, fuller looking lips. Plus, its XL wand transforms lips in an easy, one swipe application</div>
+            <div id="i7" class="noor">Step 1. Apply lip gloss with the XL Wand™ applicator in the center of your upper lip and follow the contours of your mouth.
+                <br>
+                Step 2. Glide the lip gloss across the entire bottom lip.</div>
+            </div>
+            
+                    </div>
+                    <div class="rev">
+                        <h1 class="o">ADD TO <i class="fa-solid fa-cart-shopping" title="cart" style="color:rgb(222, 128, 128)"></i>
+                            <i class="fa-regular fa-heart" title="wishlist"  style="color:rgb(222, 128, 128)" ></i> </h1>
+                        <h1>Reviews <i class="fa-brands fa-tiktok"></i> </h1>
+                         
+                    </div>
+                        
+                </div>
+                <div class="Products-window " id="PContainer4">
+                    <h2 class="p1"> Dior Lip Oil  <span class="price">40.00$</span></h2>
+                    <div class="popup">
+                        
+                        <span class="close-btn" onclick="hidePopup(['PContainer4'])">&times;</span>
+                        <img src="oil.jpg" alt="Makeup img" width="350" height="320">
+                       
+                       
+                        <div>
+                        <h1 class="btn1" id="b1" onclick="des()">Description </h1>
+                        <h1 class="btn2" id="b2" onclick="use()">how to use</h1>
+                        <div id="i77" class="nourhan"> 
+            
+                            Genuine lip care infused with cherry oil, Dior Addict Lip Glow Oil instantly nourishes, protects, softens and revitalizes the lips.
+                            <br>
+                            This lip oil teams an intense lip care formula with a natural, flattering color finish for an ultra-luminous result. Dior Addict Lip Glow Oil adapts to all lip colors to bring out their rosy glow. Its non-greasy, non-sticky oil texture pushes the boundaries of shine and creates a smoothing film that shapes the lips with an almost magnifying mirror-shine effect.
+                            <br>
+                          </div>
+            <div id="i7" class="noor">1. Can be worn on its own for a glossy, mirror-shine effect.
+                <br>
+                2. Can be worn as a primer by removing excess product before applying lipstick, for smoothed and hydrated lips.
+                <br>
+                3. Can be worn over the corresponding shade of Dior Addict Lip Glow to play with the color and shine. </div>
+            </div>
+            
+                    </div>
+                    <div class="rev">
+                        <h1 class="o">ADD TO <i class="fa-solid fa-cart-shopping" title="cart" style="color:rgb(222, 128, 128)"></i>
+                            <i class="fa-regular fa-heart" title="wishlist"  style="color:rgb(222, 128, 128)" ></i> </h1>
+                        <h1>Reviews <i class="fa-brands fa-tiktok"></i> </h1>
+                         
+                    </div>
+                        
+                </div>
+                <div class="Products-window " id="PContainer5">
+                    <h2 class="p1"> Dior Plumping Gloss   <span class="price">40.00$</span></h2>
+                    <div class="popup">
+                        
+                        <span class="close-btn" onclick="hidePopup(['PContainer5'])">&times;</span>
+                        <img src="plumperrr.jpg" alt="Makeup img" width="350" height="320">
+                       
+                       
+                        <div>
+                        <h1 class="btn1" id="b1" onclick="des()">Description </h1>
+                        <h1 class="btn2" id="b2" onclick="use()">how to use</h1>
+                        <div id="i77" class="nourhan"> The iconic Dior Addict Lip Maximizer plumping lip gloss gets a refresh with a new 90% natural-origin formula, a reimagined case and updated shades.
+            <br>
+                         Free of sulfates SLS and SLES, parabens, formaldehydes, formaldehyde-releasing agents, phthalates, mineral oil, retinyl palmitate, oxybenzone, coal tar, hydroquinone, triclosan, and triclocarban, and contains less than one percent of synthetic fragrances. 
+                          
+                            </div>
+            <div id="i7" class="noor">Apply directly on the lips as a lip gloss with mirror-like shine. -Use as a lip primer, by removing excess product before applying lipstick for smooth and hydrated lips. 
+                CAUTION: External use on non-irritated lips only. Avoid contact with the eyes. In case of irritation other than a tingling sensation or localized heat linked to the product, discontinue use. </div>
+            </div>
+            
+                    </div>
+                    <div class="rev">
+                        <h1 class="o">ADD TO <i class="fa-solid fa-cart-shopping" title="cart" style="color:rgb(222, 128, 128)"></i>
+                            <i class="fa-regular fa-heart" title="wishlist"  style="color:rgb(222, 128, 128)" ></i> </h1>
+                        <h1>Reviews <i class="fa-brands fa-tiktok"></i> </h1>
+                         
+                    </div>
+                        
+                </div>
+                <div class="Products-window " id="PContainer6">
+                    <h2 class="p1"> Benetint <span class="price">24.00$</span></h2>
+                    <div class="popup">
+                        
+                        <span class="close-btn" onclick="hidePopup(['PContainer6'])">&times;</span>
+                        <img src="benetint.jpg" alt="Makeup img" width="350" height="320">
+                       
+                       
+                        <div>
+                        <h1 class="btn1" id="b1" onclick="des()">Description </h1>
+                        <h1 class="btn2" id="b2" onclick="use()">how to use</h1>
+                        <div id="i77" class="nourhan"> Originally developed for an exotic dancer, this was the first-ever product sold in our original San Francisco boutique when we opened in 1976...and the sheer,
+                             non-drying formula is versatile, buildable, and made to last.</div>
+            <div id="i7" class="noor">Just a few dots on lips and cheeks gives you a natural-looking flush of rosy color (think about how your lips look after eating a cherry popsicle...like that). </div>
+            </div>
+            
+                    </div>
+                    <div class="rev">
+                        <h1 class="o">ADD TO <i class="fa-solid fa-cart-shopping" title="cart" style="color:rgb(222, 128, 128)"></i>
+                            <i class="fa-regular fa-heart" title="wishlist"  style="color:rgb(222, 128, 128)" ></i> </h1>
+                        <h1>Reviews <i class="fa-brands fa-tiktok"></i> </h1>
+                         
+                    </div>
+                        
+                </div>
+                <div class="Products-window " id="PContainer7">
+                    <h2 class="p1"> Summer Fridays Lip Balm   <span class="price">24.00$</span></h2>
+                    <div class="popup">
+                        
+                        <span class="close-btn" onclick="hidePopup(['PContainer7'])">&times;</span>
+                        <img src="balmm.jpg" alt="Makeup img" width="350" height="320">
+                       
+                       
+                        <div>
+                        <h1 class="btn1" id="b1" onclick="des()">Description </h1>
+                        <h1 class="btn2" id="b2" onclick="use()">how to use</h1>
+                        <div id="i77" class="nourhan"> 
+                            What it is: A silky vegan balm that hydrates and soothes dry lips in seconds.
+                            
+                            <br>
+                            
+                            Skincare Concerns: Dryness and Dullness
+                            
+                            <br>
+                            
+                            Highlighted Ingredients:
+                            - Shea and Murumuru Seed Butters: Natural moisturizers that soothe, relieve, and condition parched lips.
+                            <br>
+                            - Vegan Waxes: Soften and boost shine all day with a smooth, never-greasy texture.
+                            
+                            
+                            
+                          </div>
+            <div id="i7" class="noor">-Use when your lips need extra hydration throughout the day—or as an overnight mask. </div>
+            </div>
+            
+                    </div>
+                    <div class="rev">
+                        <h1 class="o">ADD TO <i class="fa-solid fa-cart-shopping" title="cart" style="color:rgb(222, 128, 128)"></i>
+                            <i class="fa-regular fa-heart" title="wishlist"  style="color:rgb(222, 128, 128)" ></i> </h1>
+                        <h1>Reviews <i class="fa-brands fa-tiktok"></i> </h1>
+                         
+                    </div>
+                        
+                </div>
+                <div class="Products-window " id="PContainer8">
+                    <h2 class="p1"> Kiko Unlimited Double Touch   <span class="price">17.00$</span></h2>
+                    <div class="popup">
+                        
+                        <span class="close-btn" onclick="hidePopup(['PContainer8'])">&times;</span>
+                        <img src="liqkiko.jpg" alt="Makeup img" width="350" height="320">
+                       
+                       
+                        <div>
+                        <h1 class="btn1" id="b1" onclick="des()">Description </h1>
+                        <h1 class="btn2" id="b2" onclick="use()">how to use</h1>
+                        <div id="i77" class="nourhan"> Base colour: the formula, enriched with a combination of film-like polymers, ensures maximum comfort, optimum adherence to the lips and even colour. Smudge proof, with a very quick drying time.
+            <br>
+                            Lip gloss: the softening action formula gives the lips a bright and radiant finish. 
+                            <br>
+                            Even and smooth-gliding application. 
+                            <br>
+                            The packaging comes with two applicators suited to different textures</div>
+            <div id="i7" class="noor">For perfect lips:
+            <br>
+                1- Apply the colour base to cleansed, moisturized lips. Wait a minute to allow the liquid lipstick to dry completely.
+                <br>
+                2- Apply the lip gloss on top of the colour base for an extra-shiny result. </div>
+            </div>
+            
+                    </div>
+                    <div class="rev">
+                        <h1 class="o">ADD TO <i class="fa-solid fa-cart-shopping" title="cart" style="color:rgb(222, 128, 128)"></i>
+                            <i class="fa-regular fa-heart" title="wishlist"  style="color:rgb(222, 128, 128)" ></i> </h1>
+                        <h1>Reviews <i class="fa-brands fa-tiktok"></i> </h1>
+                         
+                    </div>
+                        
+                </div>
+                <div class="Products-window " id="brush1">
+                    <h2 class="p1">Kiko Brush set<span class="price"> 33.00$</span></h2>
+                    <div class="popup">
+                        
+                        <span class="close-btn" onclick="hidePopup(['brush1'])">&times;</span>
+                        <img src="kikobrush1.jpg" alt="Makeup img" width="350" height="320">
+                       
+                       
+                        <div>
+                        <h1 class="btn1" id="b1" onclick="des()">Description </h1>
+                        <h1 class="btn2" id="b2" onclick="use()">how to use</h1>
+                        <div id="i77" class="nourhan">  
+                            2 mono brushes and 3 duo brushes for a total of 8 different  applicators for face, eye and lip makeup.
+                           <br>
+                         the Travel Brush Set is the solution to easily reapply flawless makeup on the go, without sacrificing style or practicality.
+                            Contains:
+            <br>01 FOUNDATION BRUSH 
+            <br>02 POWDER BRUSH
+            <br>03 SHADING BRUSH DUO
+            <br>04 BLENDING BRUSH DUO
+            <br>05 EYELINER - LIP BRUSH DUO
+                            
+                            </div>
+                            <div id="i7" class="noor">01 FOUNDATION BRUSH:
+                                Flat brush ideal for application of liquid or cream foundation.
+                                <br>
+                                02 POWDER BRUSH:
+                                Brush with a rounded tip, perfect for applying all types of powders.
+                                <br>
+                                03 SHADING BRUSH DUO:
+                                Duo brush with: a flat tip that allows for precise and controlled application of eyeshadows and concealers.
+                                <br>
+                                04 BLENDING BRUSH DUO:
+                                Duo brush with: a flat tip perfect for applying eyeshadows. 
+                                <br>
+                                05 EYELINER - LIP BRUSH DUO:
+                                At one end, the brush with an angled tip is aimed at applying eyeliner. </div>
+                            </div>
+            
+                    </div>
+                    <div class="rev">
+                        <h1 class="o">ADD TO <i class="fa-solid fa-cart-shopping" title="cart" style="color:rgb(222, 128, 128)"></i>
+                            <i class="fa-regular fa-heart" title="wishlist"  style="color:rgb(222, 128, 128)" ></i> </h1>
+                        <h1>Reviews <i class="fa-brands fa-tiktok"></i> </h1>
+                         
+                    </div> 
+                </div>
+                <!-- ----------------------------------------------------------------------------------------------------------- -->
+            
+                <div class="Products-window " id="brush2">
+                    <h2 class="p1">Fenty Beauty Blender<span class="price"> 24.00$</span></h2>
+                    <div class="popup">
+                        
+                        <span class="close-btn" onclick="hidePopup(['brush2'])">&times;</span>
+                        <img src="spongefanty.jpg" alt="Makeup img" width="350" height="320">
+                       
+                       
+                        <div>
+                        <h1 class="btn1" id="b1" onclick="des()">Description </h1>
+                        <h1 class="btn2" id="b2" onclick="use()">how to use</h1>
+                        <div id="i77" class="nourhan"> TRIPLE-EDGED SPONGE FOR TARGETED COVERAGE. <br>
+                            DUAL-EDGED SPONGE WITH VELVETY END FOR EFFORTLESS SETTING.
+                            
+                            </div>
+                            <div id="i7" class="noor">Conceal, contour, and set with next-level precision:
+            <br>
+                                For max precision, use the triple-edged mini beauty sponge—the tear-drop point is great for the most spot-on coverage in even the toughest-to-reach areas.
+                                <br>
+                                For controlled blending and setting, try the dual-edged mini beauty sponge, which comes with an innovative velvety end designed to apply setting powder!
+                               <br>
+                                Use damp for buildable coverage or dry for full coverage.</div>
+                            </div>
+            
+                    </div>
+                    <div class="rev">
+                        <h1 class="o">ADD TO <i class="fa-solid fa-cart-shopping" title="cart" style="color:rgb(222, 128, 128)"></i>
+                            <i class="fa-regular fa-heart" title="wishlist"  style="color:rgb(222, 128, 128)" ></i> </h1>
+                        <h1>Reviews <i class="fa-brands fa-tiktok"></i> </h1>
+                         
+                    </div> 
+                </div>
+                    <!-- ----------------------------------------------------------------------------------------------------------- -->
+            
+                    <div class="Products-window " id="brush3">
+                        <h2 class="p1">Dior EyeLash Curler <span class="price">30.00$</span></h2>
+                        <div class="popup">
+                            
+                            <span class="close-btn" onclick="hidePopup(['brush3'])">&times;</span>
+                            <img src="diorcurler.jpg" alt="Makeup img" width="350" height="320">
+                           
+                           
+                            <div>
+                            <h1 class="btn1" id="b1" onclick="des()">Description </h1>
+                            <h1 class="btn2" id="b2" onclick="use()">how to use</h1>
+                            <div id="i77" class="nourhan"> The Dior Backstage Eyelash Curler is the Dior makeup artists'
+                                <br> secret weapon for perfectly curled lashes in one simple step.
+                                </div>
+                                <div id="i7" class="noor">
+                                    Use the lash curler before applying mascara to maximize the makeup result.
+                                    </div>
+                                </div>
+                
+                        </div>
+                        <div class="rev">
+                            <h1 class="o">ADD TO <i class="fa-solid fa-cart-shopping" title="cart" style="color:rgb(222, 128, 128)"></i>
+                                <i class="fa-regular fa-heart" title="wishlist"  style="color:rgb(222, 128, 128)" ></i> </h1>
+                            <h1>Reviews <i class="fa-brands fa-tiktok"></i> </h1>
+                             
+                        </div> 
+                    </div>
 
 </body>
 </html>

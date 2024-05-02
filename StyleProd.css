@@ -63,9 +63,9 @@ header{
       text-align: center;
       color: rgb(245, 242, 237);
   }
-  .eye{
+  .ey{
       text-align: center;
-      color: rgb(208, 177, 177);
+      color: rgb(245, 242, 237);
   }
   .lips{
       text-align: center;
@@ -240,6 +240,7 @@ img{
    justify-content: center;
   
 }
+
 .pr{
     display: flex;
     flex-direction: row;
