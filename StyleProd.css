@@ -141,40 +141,40 @@ header{
     text-align: center;
     color: rgb(245, 242, 237); 
   } */
-  .Eyes-cards{
+  /* .Eyes-cards{
     box-shadow: 0 5px 25px rgba(1 1 1/15%);
     border-radius: 20px;
     background-color: rgb(255, 202, 202);
     margin: 15px;
     height: 25em;
     transition: transform 0.3s ease;
-}
+} */
 .Eyes-cards:hover {
     transform: scale(1.05);
   }
   .Mascara{
     text-align: center;
-    color: rgb(245, 242, 237); 
+    color: rgb(208, 177, 177);; 
   }
   .EyeLinear{
     text-align: center;
-    color: rgb(245, 242, 237); 
+    color: rgb(208, 177, 177);; 
   }
   .EyeShadow{
     text-align: center;
-    color: rgb(245, 242, 237); 
+    color: rgb(208, 177, 177);; 
   }
   .EyeLashes{
     text-align: center;
-    color: rgb(245, 242, 237); 
+    color: rgb(208, 177, 177);; 
   }
   .EyePrimer{
     text-align: center;
-    color: rgb(245, 242, 237); 
+    color: rgb(208, 177, 177);; 
   }
   .kohl{
     text-align: center;
-    color: rgb(245, 242, 237); 
+    color: rgb(208, 177, 177);; 
   }
   .prodip{
     display: flex;
