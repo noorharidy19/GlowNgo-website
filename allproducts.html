@@ -11,6 +11,10 @@
 <body>
     <header>
         <a href="#" class="logo" ><img src="logo.jpeg" width="180" height="80"></a>
+        <span class="search">
+            <input type="text" placeholder="Search">
+            <i class="fa-solid fa-search"></i>
+        </span>
         <nav class="navigation">
             <a href="Home.html">Home</a>
             <a href="Products.html">Products</a>
@@ -22,8 +26,14 @@
         </nav>
     </header>
     <section class="face">
+        <select class="sortt" id="sortSelect" onchange="x(this.value, 'p')">
+            <option>Select</option>
+            <option>A-Z</option>
+            <option>BY BRAND</option>
+            <option>By price(LOWER->HIGHER)</option>
+            <option>By price(HIGHER->LOWER)</option>
+        </select>
         <div class="p">
-            <div class="products">
                 <div class="face-cards">
                     <div class="container">
                         <img src="fentyFounjpg.jpg" alt="Makeup img" width="318" height="300" class="imggel">
@@ -132,8 +142,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="products">
                 <div class="Eyes-cards">
                     <div class="container">
                         <img src="mascararare.jpeg" alt="Makeup img" width="318" height="300" class="imggel">
@@ -206,10 +214,6 @@
                         </div>
                     </div>  
                 </div>
-            </div>
-        </div>
-
-        <div class="p">
             <div class="lip">
                 <div class="container">
                     <img src="rarestickjpg.jpg" alt="Makeup img" width="318" height="300" class="imggel">
@@ -388,6 +392,7 @@
             </div>  
         </div>
 </div>
+
 
 
     </section>

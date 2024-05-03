@@ -20,22 +20,6 @@ function hideP(containerIds) {
         document.getElementById(id).style.display = "none";
     });
 }
-// function showPopup1() {
-//     document.getElementById("PContainerrr").style.display = "block";
-// }
-
-// function hidePopup1() {
-//     document.getElementById("PContainerrr").style.display = "none";
-//     document.getElementById("PContainerrrr").style.display = "none";
-// }
-// function showP1() {
-//     document.getElementById("PContt").style.display = "block";
-// }
-
-// function hideP1() {
-//     document.getElementById("PContt").style.display = "none";
-   
-// }
 
 function des(){
     var nourhanElements = document.getElementsByClassName("nourhan");//description->nourhan
@@ -75,14 +59,6 @@ function use(){
     }
 }
 
-
-// function usee(){
-//     document.getElementById("PContainerr").style.display = "block";
-  
-   
-// }
-
-
 function x(selectedOption, container) {
     if (selectedOption) {
         switch (selectedOption) {
@@ -109,14 +85,23 @@ function x(selectedOption, container) {
         console.log("Please select an option");
     }
 }
-
-function sortDivsAlphabetically(container) {
+function sortDivsAlphabetically(containerClass) {
     console.log("Sorting divs alphabetically...");
-    var parentContainer = document.querySelector(container);
+    var parentContainer = document.querySelector('.' + containerClass);
+    if (!parentContainer) {
+        console.log("Parent container not found");
+        return;
+    }
     var divs = Array.from(parentContainer.children);
+    if (!divs.length) {
+        console.log("No child divs found");
+        return;
+    }
     divs.sort(function(a, b) {
-        var textA = a.querySelector('h3').textContent.toUpperCase();
-        var textB = b.querySelector('h3').textContent.toUpperCase();
+        var h2A = a.querySelector('h2');
+        var h2B = b.querySelector('h2');
+        var textA = h2A ? h2A.textContent.toUpperCase() : '';
+        var textB = h2B ? h2B.textContent.toUpperCase() : '';
         if (textA < textB) {
             return -1;
         }
@@ -133,12 +118,25 @@ function sortDivsAlphabetically(container) {
     });
 }
 
-function sortProductsByPrice(container) {
-    var parentContainer = document.querySelector(container);
+
+
+function sortProductsByPrice(containerClass) {
+    console.log("Sorting products by price...");
+    var parentContainer = document.querySelector('.' + containerClass);
+    if (!parentContainer) {
+        console.log("Parent container not found");
+        return;
+    }
     var productElements = Array.from(parentContainer.children);
+    if (!productElements.length) {
+        console.log("No child divs found");
+        return;
+    }
     productElements.sort(function(a, b) {
-        var priceA = parseFloat(a.querySelector('p').textContent.replace('$', ''));
-        var priceB = parseFloat(b.querySelector('p').textContent.replace('$', ''));
+        var h3A = a.querySelector('h3');
+        var h3B = b.querySelector('h3');
+        var priceA = h3A ? parseFloat(h3A.textContent.replace('$', '')) : 0;
+        var priceB = h3B ? parseFloat(h3B.textContent.replace('$', '')) : 0;
         return priceA - priceB;
     });
     productElements.forEach(function(product) {
@@ -146,16 +144,50 @@ function sortProductsByPrice(container) {
     });
 }
 
-function sortProductsByPriceDescending(container) {
-    var parentContainer = document.querySelector(container);
+function sortProductsByPrice(containerClass) {
+    console.log("Sorting products by price...");
+    var parentContainer = document.querySelector('.' + containerClass);
+    if (!parentContainer) {
+        console.log("Parent container not found");
+        return;
+    }
     var productElements = Array.from(parentContainer.children);
+    if (!productElements.length) {
+        console.log("No child divs found");
+        return;
+    }
     productElements.sort(function(a, b) {
-        var priceA = parseFloat(a.querySelector('p').textContent.replace('$', ''));
-        var priceB = parseFloat(b.querySelector('p').textContent.replace('$', ''));
-        return priceB - priceA; 
+        var h3A = a.querySelector('h3');
+        var h3B = b.querySelector('h3');
+        var priceA = h3A ? parseFloat(h3A.textContent.replace('$', '')) : 0;
+        var priceB = h3B ? parseFloat(h3B.textContent.replace('$', '')) : 0;
+        return priceA - priceB;
     });
     productElements.forEach(function(product) {
         parentContainer.appendChild(product);
     });
 }
 
+function sortProductsByPriceDescending(containerClass) {
+    console.log("Sorting products by price (descending)...");
+    var parentContainer = document.querySelector('.' + containerClass);
+    if (!parentContainer) {
+        console.log("Parent container not found");
+        return;
+    }
+    var productElements = Array.from(parentContainer.children);
+    if (!productElements.length) {
+        console.log("No child divs found");
+        return;
+    }
+    productElements.sort(function(a, b) {
+        var h3A = a.querySelector('h3');
+        var h3B = b.querySelector('h3');
+        var priceA = h3A ? parseFloat(h3A.textContent.replace('$', '')) : 0;
+        var priceB = h3B ? parseFloat(h3B.textContent.replace('$', '')) : 0;
+        return priceB - priceA; 
+    });
+    productElements.forEach(function(product) {
+        parentContainer.appendChild(product);
+    });
+}

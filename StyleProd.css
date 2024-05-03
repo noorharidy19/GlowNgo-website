@@ -59,7 +59,7 @@ header{
       text-align: center;
       color: rgb(245, 242, 237);
   }
-  .face{
+  .fac{
       text-align: center;
       color: rgb(245, 242, 237);
   }
@@ -67,7 +67,7 @@ header{
       text-align: center;
       color: rgb(245, 242, 237);
   }
-  .lips{
+  .lipss{
       text-align: center;
       color: rgb(245, 242, 237); 
   
@@ -238,6 +238,7 @@ img{
     flex-direction: row;
     flex-wrap: wrap;
    justify-content: center;
+   margin-top: 70px;
   
 }
 
@@ -246,7 +247,7 @@ img{
     flex-direction: row;
     flex-wrap: wrap;
    justify-content: center;
-   margin-top: 70px;
+   
 }
 .lipp{
     box-shadow: 0 5px 25px rgba(1 1 1/15%);
@@ -437,15 +438,43 @@ font-size:90%;
 
 color:rgb(221, 93, 140);
 }
+
 .sortt {
-    background-color: white; 
-    border: 1px solid rgb(196, 195, 195); 
-    padding: 5px; 
-    margin-left: 30px;
-    border-radius: 5px; 
-    width: 150px; 
-    font-size: 14px; 
-    color: #333333; 
-  
+  background-color: rgb(248, 249, 250);
+  border: 1px solid rgb(206, 212, 218);
+  padding: 10px;
+  margin-top: 70px;
+  margin-left: 50px;
+  border-radius: 5px;
+  width: 300px;
+  font-size: 20px;
+  color: rgb(51, 51, 51);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.sortt:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  background-color: rgb(248, 249, 250);
+  border-radius: 20px;
+  padding: 5px;
+  width: 200px;
+}
+
+.search input[type="text"] {
+  border: none;
+  background-color: transparent;
+  flex-grow: 1;
+  padding: 5px;
+  border-radius: 15px;
+}
+
+.search i {
+  margin-left: 5px;
 }
 

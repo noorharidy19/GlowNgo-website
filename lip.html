@@ -11,6 +11,10 @@
 <body>
     <header>
         <a href="#" class="logo" ><img src="logo.jpeg" width="180" height="80"></a>
+        <span class="search">
+            <input type="text" placeholder="Search">
+            <i class="fa-solid fa-search"></i>
+        </span>
         <nav class="navigation">
             <a href="Home.html">Home</a>
             <a href="Products.html">Products</a>
@@ -23,6 +27,13 @@
     </header>
     
     <section class="lips">
+        <select class="sortt" id="sortSelect" onchange="x(this.value, 'prodip')">
+            <option>Select</option>
+            <option>A-Z</option>
+            <option>BY BRAND</option>
+            <option>By price(LOWER->HIGHER)</option>
+            <option>By price(HIGHER->LOWER)</option>
+        </select>
         
         <div class="prodip">
             <div class="lip">

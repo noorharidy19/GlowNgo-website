@@ -11,6 +11,10 @@
 <body>
     <header>
         <a href="#" class="logo" ><img src="logo.jpeg" width="180" height="80"></a>
+        <span class="search">
+            <input type="text" placeholder="Search">
+            <i class="fa-solid fa-search"></i>
+        </span>
         <nav class="navigation">
             <a href="Home.html">Home</a>
             <a href="Products.html">Products</a>
@@ -21,6 +25,13 @@
         </nav>
     </header>
     <section class="Eyes">
+        <select class="sortt" id="sortSelect" onchange="x(this.value, 'products')">
+            <option>Select</option>
+            <option>A-Z</option>
+            <option>BY BRAND</option>
+            <option>By price(LOWER->HIGHER)</option>
+            <option>By price(HIGHER->LOWER)</option>
+        </select>
         <div class="products">
             <div class="Eyes-cards">
                 <div class="container">
@@ -85,7 +96,7 @@
             <div class="Eyes-cards">
                 <div class="container">
                     <img src="kikopencil.jpeg" alt="Makeup img" width="318" height="300" class="imggel">
-                    <h2 class="kohl">Eye Pencil</h2>
+                    <h2 class="kohl">Kiko Eye Pencil</h2>
                     <h3 class="kohl">15.00$</h3>
                     <div class="middle">
                         <div class="text" onclick=""><i class="fa-solid fa-cart-shopping" title="Add To Cart"></i></div>
