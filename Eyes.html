@@ -25,15 +25,21 @@
         </nav>
     </header>
     <section class="Eyes">
-        <select class="sortt" id="sortSelect" onchange="x(this.value, 'products')">
+        <select class="sortt" id="sortSelect" onchange="x(this.value,'brandOptions', 'products')">
             <option>Select</option>
             <option>A-Z</option>
+            <option>Z-A</option>
             <option>BY BRAND</option>
             <option>By price(LOWER->HIGHER)</option>
             <option>By price(HIGHER->LOWER)</option>
         </select>
+        <select id="brandOptions" style="display: none;">
+            <option>Select</option>
+            <option value="kiko">Kiko</option>
+            <option value="rarebeauty">Rare Beauty</option>
+          </select>
         <div class="products">
-            <div class="Eyes-cards">
+            <div class="AllProducts rarebeauty">
                 <div class="container">
                     <img src="mascararare.jpeg" alt="Makeup img" width="318" height="300" class="imggel">
                     <h2 class="Mascara">Rare Beauty Mascara</h2>
@@ -45,7 +51,7 @@
                     </div>
                 </div>  
             </div>
-            <div class="Eyes-cards">
+            <div class="AllProducts kiko">
                 <div class="container">
                 <a href="EyeLinear.html"><img src="kikolinear.jpeg" alt="EyeLinear img" width="318" height="300" class="imggel"></a>
                 <h2 class="EyeLinear">Kiko EyeLinear</h2>
@@ -57,7 +63,7 @@
                 </div>
             </div>  
          </div>
-            <div class="Eyes-cards">
+            <div class="AllProducts rarebeauty">
                 <div class="container">
                     <img src="shadowmay.jpeg" alt="Makeup img" width="318" height="300" class="imggel">
                     <h2 class="EyeShadow">RareBeauty EyeShadow</h2>
@@ -69,7 +75,7 @@
                     </div>
                 </div>  
             </div>
-            <div class="Eyes-cards">
+            <div class="AllProducts kiko">
                 <div class="container">
                     <img src="kikolashe.jpeg" alt="Makeup img" width="318" height="300" class="imggel">
                     <h2 class="EyeLashes">Kiko EyeLashes</h2>
@@ -81,7 +87,7 @@
                     </div>
                 </div>  
             </div>
-            <div class="Eyes-cards">
+            <div class="AllProducts rarebeauty">
                 <div class="container">
                     <img src="rareprimer.jpeg" alt="Makeup img" width="318" height="300" class="imggel">
                     <h2 class="EyePrimer">RareBeauty EyePrimer</h2>
@@ -93,7 +99,7 @@
                     </div>
                 </div>  
             </div>
-            <div class="Eyes-cards">
+            <div class="AllProducts kiko">
                 <div class="container">
                     <img src="kikopencil.jpeg" alt="Makeup img" width="318" height="300" class="imggel">
                     <h2 class="kohl">Kiko Eye Pencil</h2>

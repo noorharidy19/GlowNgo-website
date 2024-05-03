@@ -59,27 +59,47 @@ function use(){
     }
 }
 
-function x(selectedOption, container) {
+function x(selectedOption, brandDropdownId, container) {
+    var brandDropdown = document.getElementById(brandDropdownId);
+    var containerElement = document.getElementById(container);
     if (selectedOption) {
         switch (selectedOption) {
             case "A-Z":
                 sortDivsAlphabetically(container);
                 console.log("Sorting A-Z");
                 break;
+            case "Z-A":
+                sortDivsAlphabeticallyZA(container);
+                console.log("Sorting Z-A");
+                break;
             case "By price(LOWER->HIGHER)":
                 sortProductsByPrice(container);
                 console.log("Sorting by price (lower to higher)");
                 break;
             case "BY BRAND":
-                console.log("Sorting by brand");
+                if (brandDropdown) {
+                    brandDropdown.style.display = "inline-block";
+                }
+                if (containerElement) {
+                    containerElement.style.display = "none";
+                }
+                console.log("Showing brand dropdown");
                 break;
             case "By price(HIGHER->LOWER)":
                 sortProductsByPriceDescending(container);
                 console.log("Sorting by price (higher to lower)");
                 break;
             default:
+                if (brandDropdown) {
+                    brandDropdown.style.display = "none";
+                }
+                if (containerElement) {
+                    containerElement.style.display = "flex";
+                }
+                console.log("Hiding brand dropdown");
                 console.log("Please select an option");
                 break;
+               
         }
     } else {
         console.log("Please select an option");
@@ -92,6 +112,7 @@ function sortDivsAlphabetically(containerClass) {
         console.log("Parent container not found");
         return;
     }
+    var originalOrder = Array.from(parentContainer.children); 
     var divs = Array.from(parentContainer.children);
     if (!divs.length) {
         console.log("No child divs found");
@@ -110,6 +131,70 @@ function sortDivsAlphabetically(containerClass) {
         }
         return 0;
     });
+    function resetToOriginalOrder() {
+        while (parentContainer.firstChild) {
+            parentContainer.removeChild(parentContainer.firstChild);
+        }
+        originalOrder.forEach(function(div) {
+            parentContainer.appendChild(div);
+        });
+    }
+    document.getElementById('sortSelect').addEventListener('change', function() {
+        var selectedOption = this.value;
+        if (selectedOption === 'Select') {
+            resetToOriginalOrder();
+        }
+    });
+    while (parentContainer.firstChild) {
+        parentContainer.removeChild(parentContainer.firstChild);
+    }
+    divs.forEach(function(div) {
+        parentContainer.appendChild(div);
+    });
+}
+function sortDivsAlphabeticallyZA(containerClass) {
+    console.log("Sorting divs alphabetically Z to A...");
+    var parentContainer = document.querySelector('.' + containerClass);
+    if (!parentContainer) {
+        console.log("Parent container not found");
+        return;
+    }
+    var originalOrder = Array.from(parentContainer.children); 
+    var divs = Array.from(parentContainer.children);
+    if (!divs.length) {
+        console.log("No child divs found");
+        return;
+    }
+    divs.sort(function(a, b) {
+        var h2A = a.querySelector('h2');
+        var h2B = b.querySelector('h2');
+        var textA = h2A ? h2A.textContent.toUpperCase() : '';
+        var textB = h2B ? h2B.textContent.toUpperCase() : '';
+        if (textA < textB) {
+            return 1; 
+        }
+        if (textA > textB) {
+            return -1; 
+        }
+        return 0;
+    });
+
+    function resetToOriginalOrder() {
+        while (parentContainer.firstChild) {
+            parentContainer.removeChild(parentContainer.firstChild);
+        }
+        originalOrder.forEach(function(div) {
+            parentContainer.appendChild(div);
+        });
+    }
+
+    document.getElementById('sortSelect').addEventListener('change', function() {
+        var selectedOption = this.value;
+        if (selectedOption === 'Select') {
+            resetToOriginalOrder();
+        }
+    });
+
     while (parentContainer.firstChild) {
         parentContainer.removeChild(parentContainer.firstChild);
     }
@@ -119,7 +204,6 @@ function sortDivsAlphabetically(containerClass) {
 }
 
 
-
 function sortProductsByPrice(containerClass) {
     console.log("Sorting products by price...");
     var parentContainer = document.querySelector('.' + containerClass);
@@ -127,6 +211,7 @@ function sortProductsByPrice(containerClass) {
         console.log("Parent container not found");
         return;
     }
+    var originalOrder = Array.from(parentContainer.children); 
     var productElements = Array.from(parentContainer.children);
     if (!productElements.length) {
         console.log("No child divs found");
@@ -139,34 +224,28 @@ function sortProductsByPrice(containerClass) {
         var priceB = h3B ? parseFloat(h3B.textContent.replace('$', '')) : 0;
         return priceA - priceB;
     });
+
+    function resetToOriginalOrder() {
+        while (parentContainer.firstChild) {
+            parentContainer.removeChild(parentContainer.firstChild);
+        }
+        originalOrder.forEach(function(product) {
+            parentContainer.appendChild(product);
+        });
+    }
+
+    document.getElementById('sortSelect').addEventListener('change', function() {
+        var selectedOption = this.value;
+        if (selectedOption === 'Select') {
+            resetToOriginalOrder();
+        }
+    });
+
     productElements.forEach(function(product) {
         parentContainer.appendChild(product);
     });
 }
 
-function sortProductsByPrice(containerClass) {
-    console.log("Sorting products by price...");
-    var parentContainer = document.querySelector('.' + containerClass);
-    if (!parentContainer) {
-        console.log("Parent container not found");
-        return;
-    }
-    var productElements = Array.from(parentContainer.children);
-    if (!productElements.length) {
-        console.log("No child divs found");
-        return;
-    }
-    productElements.sort(function(a, b) {
-        var h3A = a.querySelector('h3');
-        var h3B = b.querySelector('h3');
-        var priceA = h3A ? parseFloat(h3A.textContent.replace('$', '')) : 0;
-        var priceB = h3B ? parseFloat(h3B.textContent.replace('$', '')) : 0;
-        return priceA - priceB;
-    });
-    productElements.forEach(function(product) {
-        parentContainer.appendChild(product);
-    });
-}
 
 function sortProductsByPriceDescending(containerClass) {
     console.log("Sorting products by price (descending)...");
@@ -175,6 +254,7 @@ function sortProductsByPriceDescending(containerClass) {
         console.log("Parent container not found");
         return;
     }
+    var originalOrder = Array.from(parentContainer.children);
     var productElements = Array.from(parentContainer.children);
     if (!productElements.length) {
         console.log("No child divs found");
@@ -185,9 +265,74 @@ function sortProductsByPriceDescending(containerClass) {
         var h3B = b.querySelector('h3');
         var priceA = h3A ? parseFloat(h3A.textContent.replace('$', '')) : 0;
         var priceB = h3B ? parseFloat(h3B.textContent.replace('$', '')) : 0;
-        return priceB - priceA; 
+        return priceB - priceA;
     });
+
+    function resetToOriginalOrder() {
+        while (parentContainer.firstChild) {
+            parentContainer.removeChild(parentContainer.firstChild);
+        }
+        originalOrder.forEach(function(product) {
+            parentContainer.appendChild(product);
+        });
+    }
+
+    document.getElementById('sortSelect').addEventListener('change', function() {
+        var selectedOption = this.value;
+        if (selectedOption === 'Select') {
+            resetToOriginalOrder();
+        }
+    });
+
     productElements.forEach(function(product) {
         parentContainer.appendChild(product);
     });
 }
+
+// ---------------------------------------------------------------------------------------------------------------
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('sortSelect').addEventListener('change', function() {
+        var selectedOption = this.value;
+        if (selectedOption === 'BY BRAND') {
+            document.getElementById('brandOptions').style.display = 'inline-block';
+        } else {
+            document.getElementById('brandOptions').style.display = 'none';
+            if(selectedOption === 'Select') {
+                showAllProducts();
+            } else {
+                filterProducts(selectedOption);
+            }
+        }
+    });
+
+    document.getElementById('brandOptions').addEventListener('change', function() {
+        var selectedBrand = this.value;
+        filterProductsByBrand(selectedBrand);
+    });
+
+    function filterProducts(option) {
+        var products = document.querySelectorAll('.AllProducts');
+        products.forEach(function(product) {
+            product.style.display = 'block';
+        });
+    }
+
+    function filterProductsByBrand(brand) {
+        var products = document.querySelectorAll('.AllProducts');
+        products.forEach(function(product) {
+            if (!product.classList.contains(brand)) {
+                product.style.display = 'none';
+            } else {
+                product.style.display = 'block';
+            }
+        });
+    }
+
+    function showAllProducts() {
+        var products = document.querySelectorAll('.AllProducts');
+        products.forEach(function(product) {
+            product.style.display = 'block';
+        });
+    }
+});
+

@@ -27,16 +27,25 @@
     </header>
     
     <section class="lips">
-        <select class="sortt" id="sortSelect" onchange="x(this.value, 'prodip')">
+        <select class="sortt" id="sortSelect" onchange="x(this.value,'brandOptions', 'prodip')">
             <option>Select</option>
             <option>A-Z</option>
+            <option>Z-A</option>
             <option>BY BRAND</option>
             <option>By price(LOWER->HIGHER)</option>
             <option>By price(HIGHER->LOWER)</option>
         </select>
-        
+        <select id="brandOptions" style="display: none;">
+            <option>Select</option>
+            <option value="kiko">Kiko</option>
+            <option value="rarebeauty">Rare Beauty</option>
+            <option value="maybeline">Maybeline</option>
+            <option value="SummerFridays">Summer Fridays</option>
+            <option value="Benetint">Benetint</option>
+            <option value="Dior">Dior</option>
+          </select>
         <div class="prodip">
-            <div class="lip">
+            <div class="AllProducts rarebeauty">
                 <div class="container">
                     <img src="rarestickjpg.jpg" alt="Makeup img" width="318" height="300" class="imggel">
                 <h2 class="lipprod">Rare Beauty Lip Stick</h2>
@@ -49,7 +58,7 @@
                     </div>
                 </div>
             </div>
-            <div class="lip">
+            <div class="AllProducts rarebeauty">
                 <div class="container">
                     <img src="rareliner.jpg" alt="Makeup img" width="318" height="300" class="imggel">
                     <h2 class="lipprod">Rare Beauty Lip Liner</h2>
@@ -61,7 +70,7 @@
                     </div>
                 </div>
             </div>
-            <div class="lip">
+            <div class="AllProducts maybeline">
                 <div class="container">
                 <img src="lifterglossjpg.jpg" alt="Makeup img" width="318" height="300" class="imggel">
                 <h2 class="lipprod">Maybelline Lifter Gloss</h2>
@@ -73,7 +82,7 @@
                 </div>
             </div>
             </div>
-            <div class="lip">
+            <div class="AllProducts Dior">
                 <div class="container">
                     <img src="oil.jpg" alt="Makeup img" width="318" height="300" class="imggel">
                     <h2 class="lipprod">Dior Lip Oil</h2>
@@ -85,7 +94,7 @@
                     </div>
             </div>
             </div>
-            <div class="lip">
+            <div class="AllProducts Dior">
                 <div class="container">
                     <img src="plumperrr.jpg" alt="Makeup img" width="318" height="300" class="imggel">
                     <h2 class="lipprod">Dior Plumping Gloss</h2>
@@ -97,7 +106,7 @@
                     </div>
             </div>
             </div>
-            <div class="lip">
+            <div class="AllProducts Benetint">
                 <div class="container">
                     <img src="benetint.jpg" alt="Makeup img" width="318" height="300" class="imggel">
                     <h2 class="lipprod">Benetint</h2>
@@ -110,7 +119,7 @@
             </div>
             </div>
             
-            <div class="lip">
+            <div class="AllProducts SummerFridays">
                 <div class="container">
                     <img src="balmm.jpg" alt="Makeup img" width="318" height="300" class="imggel">
                     <h2 class="lipprod">Summer Fridays Lip Balm</h2>
@@ -122,7 +131,7 @@
                     </div>
             </div>
             </div>
-            <div class="lip">
+            <div class="AllProducts kiko">
                 <div class="container">
                     <img src="liqkiko.jpg" alt="Makeup img" width="318" height="300" class="imggel">
                     <h2 class="lipprod">Kiko Unlimited Double Touch</h2>

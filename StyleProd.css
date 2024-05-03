@@ -94,9 +94,9 @@ header{
     height: 25em;
     transition: transform 0.3s ease;
 } */
-.face-cards:hover {
+/* .face-cards:hover {
     transform: scale(1.05);
-  }
+  } */
   .image{
     display: block;
     border-radius: 20px;
@@ -149,9 +149,9 @@ header{
     height: 25em;
     transition: transform 0.3s ease;
 } */
-.Eyes-cards:hover {
+/* .Eyes-cards:hover {
     transform: scale(1.05);
-  }
+  } */
   .Mascara{
     text-align: center;
     color: rgb(208, 177, 177); 
@@ -193,9 +193,9 @@ header{
     
     transition: transform 0.3s ease;
 } */
-.lip:hover {
+/* .lip:hover {
     transform: scale(1.05);
-}
+} */
 .lipprod{
     text-align: center;
     color:rgb(208, 177, 177);
@@ -226,7 +226,7 @@ img{
     height: 25em;
     transition: transform 0.3s ease;
 } */
-.eyebrow:hover {
+.AllProducts:hover {
     transform: scale(1.05);
 }
 .eye{
@@ -266,9 +266,9 @@ img{
   height: 25em;
   transition: transform 0.3s ease;
 } */
-.Tools-cards:hover {
+/* .Tools-cards:hover {
   transform: scale(1.05);
-}
+} */
 .FaceBrush{
   text-align: center;
   color: rgb(208, 177, 177);
@@ -477,4 +477,16 @@ color:rgb(221, 93, 140);
 .search i {
   margin-left: 5px;
 }
-
+/* ------------------------------------------------------------------------------------------------- */
+#brandOptions {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  margin-top: 10px; 
+}
+select option:hover {
+  background-color: #f0f0f0;
+}

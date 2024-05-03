@@ -26,15 +26,23 @@
         </nav>
     </header>
     <section class="brow">
-        <select class="sortt" id="sortSelect" onchange="x(this.value, 'browprod')">
+        <select class="sortt" id="sortSelect" onchange="x(this.value, 'brandOptions', 'browprod')">
             <option>Select</option>
             <option>A-Z</option>
+            <option>Z-A</option>
             <option>BY BRAND</option>
             <option>By price(LOWER->HIGHER)</option>
             <option>By price(HIGHER->LOWER)</option>
         </select>
+        <select id="brandOptions" style="display: none;">
+            <option>Select</option>
+            <option value="kiko">Kiko</option>
+            <option value="rarebeauty">Rare Beauty</option>
+            <option value="maybeline">Maybeline</option>
+          </select>
+    
         <div class="browprod">
-            <div class="eyebrow">
+            <div class="AllProducts kiko">
                 <div class="container">
                     <img src="kikogel.jpg" alt="Makeup img" width="318" height="300" class="imggel">
                     <h2 class="eye">kiko Eyebrow Gel</h2>
@@ -46,7 +54,7 @@
                     </div>
                 </div>
             </div>
-            <div class="eyebrow">
+            <div class="AllProducts rarebeauty">
                 <div class="container">
                     <img src="rarebrow.jpg" alt="Makeup img" width="318" height="300" class="imggel">
                     <h2 class="eye">RareBeauty Eyebrow pencil</h2>
@@ -59,7 +67,7 @@
                 
             </div>
         </div>
-            <div class="eyebrow">
+            <div class="AllProducts maybeline">
                 <div class="container">
                     <img src="maybelineeye.jpeg" alt="Makeup img" width="318" height="300" class="imggel">
                     <h2 class="eye">Maybeline Eyebrow mascara</h2>

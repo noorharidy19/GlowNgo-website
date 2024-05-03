@@ -28,16 +28,25 @@
         </nav>
     </header>
     <section class="face">
-        <select class="sortt" id="sortSelect" onchange="x(this.value, 'products')">
+        <select class="sortt" id="sortSelect" onchange="x(this.value,'brandOptions', 'products')">
             <option>Select</option>
             <option>A-Z</option>
+            <option>Z-A</option>
             <option>BY BRAND</option>
             <option>By price(LOWER->HIGHER)</option>
             <option>By price(HIGHER->LOWER)</option>
         </select>
+        <select id="brandOptions" style="display: none;">
+            <option>Select</option>
+            <option value="kiko">Kiko</option>
+            <option value="rarebeauty">Rare Beauty</option>
+            <option value="Fenty">Fenty Beauty</option>
+            <option value="Charlotte">Charlotte Tilbury</option>
+            <option value="Dior">Dior</option>
+          </select>
         <div class="products">
             
-            <div class="face-cards">
+            <div class="AllProducts Fenty">
                 <div class="container">
                     <img src="fentyFounjpg.jpg" alt="Makeup img" width="318" height="300" class="imggel">
                     <h2 class="facee">Fenty Beauty Founadtion</h2>
@@ -49,7 +58,7 @@
                     </div>
                 </div>
             </div>
-            <div class="face-cards">
+            <div class="AllProducts Fenty">
                 <div class="container">
                     <img src="fentycon.jpg" alt="Concelar img" width="318" height="300" class="imggel">
                     <h2 class="facee">Fenty Beauty Concelar</h2>
@@ -61,7 +70,7 @@
                     </div>
                 </div>
             </div>
-            <div class="face-cards">
+            <div class="AllProducts Dior">
                 <div class="container">
                     <img src="primerdiorjpg.jpg" alt="Makeup img" width="318" height="300" class="imggel">
                     <h2 class="facee">Dior Primer</h2>
@@ -73,7 +82,7 @@
                     </div>
                 </div>
             </div>
-            <div class="face-cards">
+            <div class="AllProducts rarebeauty">
                 <div class="container">
                     <img src="spayrare8.jpg" alt="Concelar img" width="318" height="300"  class="imggel">
                     <h2 class="facee">Rare Beauty Setting Spray</h2>
@@ -85,7 +94,7 @@
                     </div>
                 </div>
             </div>
-            <div class="face-cards">
+            <div class="AllProducts kiko">
                 <div class="container">
                     <img src="kikohighlighter.jpg" alt="Makeup img" width="318" height="300" class="imggel">
                     <h2 class="facee">Kiko Highlighter</h2>
@@ -97,7 +106,7 @@
                     </div>
                 </div>
             </div>
-            <div class="face-cards">
+            <div class="AllProducts kiko">
                 <div class="container">
                     <img src="kikopowder.jpg" alt="Concelar img" width="318" height="300"  class="imggel">
                     <h2 class="facee">Kiko Powder</h2>
@@ -109,7 +118,7 @@
                     </div>
                 </div>
             </div>
-            <div class="face-cards">
+            <div class="AllProducts Charlotte">
                 <div class="container">
                     <img src="cont.jpg" alt="Makeup img" width="318" height="300"  class="imggel">
                     <h2 class="facee">Charlotte Tilbury Contouer wand</h2>
@@ -121,7 +130,7 @@
                     </div>
                 </div>
             </div>
-            <div class="face-cards">
+            <div class="AllProducts kiko">
                 <div class="container">
                     <img src="bronzerkiko.jpg" alt="Concelar img" width="318" height="300" class="imggel">
                     <h2 class="facee">Kiko Bronzer</h2>
@@ -133,7 +142,7 @@
                     </div>
                 </div>
             </div>
-            <div class="face-cards">
+            <div class="AllProducts rarebeauty">
                 <div class="container">
                     <img src="rarelush.jpg" alt="Makeup img" width="318" height="300" class="imggel">
                     <h2 class="facee">Rare Beauty Liquid Blush</h2>

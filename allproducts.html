@@ -26,15 +26,27 @@
         </nav>
     </header>
     <section class="face">
-        <select class="sortt" id="sortSelect" onchange="x(this.value, 'p')">
+        <select class="sortt" id="sortSelect" onchange="x(this.value,'brandOptions', 'p')">
             <option>Select</option>
             <option>A-Z</option>
+            <option>Z-A</option>
             <option>BY BRAND</option>
             <option>By price(LOWER->HIGHER)</option>
             <option>By price(HIGHER->LOWER)</option>
         </select>
+        <select id="brandOptions" style="display: none;">
+            <option>Select</option>
+            <option value="kiko">Kiko</option>
+            <option value="rarebeauty">Rare Beauty</option>
+            <option value="Fenty">Fenty Beauty</option>
+            <option value="Charlotte">Charlotte Tilbury</option>
+            <option value="maybeline">Maybeline</option>
+            <option value="SummerFridays">Summer Fridays</option>
+            <option value="Benetint">Benetint</option>
+            <option value="Dior">Dior</option>
+          </select>
         <div class="p">
-                <div class="face-cards">
+                <div class="AllProducts Fenty">
                     <div class="container">
                         <img src="fentyFounjpg.jpg" alt="Makeup img" width="318" height="300" class="imggel">
                         <h2 class="facee">Fenty Beauty Founadtion</h2>
@@ -46,7 +58,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="face-cards">
+                <div class="AllProducts Fenty">
                     <div class="container">
                         <img src="fentycon.jpg" alt="Concelar img" width="318" height="300" class="imggel">
                         <h2 class="facee">Fenty Beauty Concelar</h2>
@@ -58,7 +70,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="face-cards">
+                <div class="AllProducts Dior">
                     <div class="container">
                         <img src="primerdiorjpg.jpg" alt="Makeup img" width="318" height="300" class="imggel">
                         <h2 class="facee">Dior Primer</h2>
@@ -70,7 +82,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="face-cards">
+                <div class="AllProducts rarebeauty">
                     <div class="container">
                         <img src="spayrare8.jpg" alt="Concelar img" width="318" height="300"  class="imggel">
                         <h2 class="facee">Rare Beauty Setting Spray</h2>
@@ -82,7 +94,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="face-cards">
+                <div class="AllProducts kiko">
                     <div class="container">
                         <img src="kikohighlighter.jpg" alt="Makeup img" width="318" height="300" class="imggel">
                         <h2 class="facee">Kiko Highlighter</h2>
@@ -94,7 +106,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="face-cards">
+                <div class="AllProducts kiko">
                     <div class="container">
                         <img src="kikopowder.jpg" alt="Concelar img" width="318" height="300"  class="imggel">
                         <h2 class="facee">Kiko Powder</h2>
@@ -106,7 +118,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="face-cards">
+                <div class="AllProducts Charlotte">
                     <div class="container">
                         <img src="cont.jpg" alt="Makeup img" width="318" height="300"  class="imggel">
                         <h2 class="facee">Charlotte Tilbury Contouer wand</h2>
@@ -118,7 +130,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="face-cards">
+                <div class="AllProducts kiko">
                     <div class="container">
                         <img src="bronzerkiko.jpg" alt="Concelar img" width="318" height="300" class="imggel">
                         <h2 class="facee">Kiko Bronzer</h2>
@@ -130,7 +142,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="face-cards">
+                <div class="AllProducts rarebeauty">
                     <div class="container">
                         <img src="rarelush.jpg" alt="Makeup img" width="318" height="300" class="imggel">
                         <h2 class="facee">Rare Beauty Liquid Blush</h2>
@@ -142,7 +154,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="Eyes-cards">
+                <div class="AllProducts rarebeauty">
                     <div class="container">
                         <img src="mascararare.jpeg" alt="Makeup img" width="318" height="300" class="imggel">
                         <h2 class="Mascara">Rare Beauty Mascara</h2>
@@ -154,7 +166,7 @@
                         </div>
                     </div>  
                 </div>
-                <div class="Eyes-cards">
+                <div class="AllProducts kiko">
                     <div class="container">
                     <a href="EyeLinear.html"><img src="kikolinear.jpeg" alt="EyeLinear img" width="318" height="300" class="imggel"></a>
                     <h2 class="EyeLinear">Kiko EyeLinear</h2>
@@ -166,7 +178,7 @@
                     </div>
                 </div>  
              </div>
-                <div class="Eyes-cards">
+                <div class="AllProducts rarebeauty">
                     <div class="container">
                         <img src="shadowmay.jpeg" alt="Makeup img" width="318" height="300" class="imggel">
                         <h2 class="EyeShadow">RareBeauty EyeShadow</h2>
@@ -178,7 +190,7 @@
                         </div>
                     </div>  
                 </div>
-                <div class="Eyes-cards">
+                <div class="AllProducts kiko">
                     <div class="container">
                         <img src="kikolashe.jpeg" alt="Makeup img" width="318" height="300" class="imggel">
                         <h2 class="EyeLashes">Kiko EyeLashes</h2>
@@ -190,7 +202,7 @@
                         </div>
                     </div>  
                 </div>
-                <div class="Eyes-cards">
+                <div class="AllProducts rarebeauty">
                     <div class="container">
                         <img src="rareprimer.jpeg" alt="Makeup img" width="318" height="300" class="imggel">
                         <h2 class="EyePrimer">RareBeauty EyePrimer</h2>
@@ -202,7 +214,7 @@
                         </div>
                     </div>  
                 </div>
-                <div class="Eyes-cards">
+                <div class="AllProducts kiko">
                     <div class="container">
                         <img src="kikopencil.jpeg" alt="Makeup img" width="318" height="300" class="imggel">
                         <h2 class="kohl">Eye Pencil</h2>
@@ -214,7 +226,7 @@
                         </div>
                     </div>  
                 </div>
-            <div class="lip">
+            <div class="AllProducts rarebeauty">
                 <div class="container">
                     <img src="rarestickjpg.jpg" alt="Makeup img" width="318" height="300" class="imggel">
                 <h2 class="lipprod">Rare Beauty Lip Stick</h2>
@@ -227,7 +239,7 @@
                     </div>
                 </div>
             </div>
-            <div class="lip">
+            <div class="AllProducts rarebeauty">
                 <div class="container">
                     <img src="rareliner.jpg" alt="Makeup img" width="318" height="300" class="imggel">
                     <h2 class="lipprod">Rare Beauty Lip Liner</h2>
@@ -239,7 +251,7 @@
                     </div>
                 </div>
             </div>
-            <div class="lip">
+            <div class="AllProducts maybeline">
                 <div class="container">
                 <img src="lifterglossjpg.jpg" alt="Makeup img" width="318" height="300" class="imggel">
                 <h2 class="lipprod">Maybelline Lifter Gloss</h2>
@@ -251,7 +263,7 @@
                 </div>
             </div>
             </div>
-            <div class="lip">
+            <div class="AllProducts Dior">
                 <div class="container">
                     <img src="oil.jpg" alt="Makeup img" width="318" height="300" class="imggel">
                     <h2 class="lipprod">Dior Lip Oil</h2>
@@ -263,7 +275,7 @@
                     </div>
             </div>
             </div>
-            <div class="lip">
+            <div class="AllProducts Dior">
                 <div class="container">
                     <img src="plumperrr.jpg" alt="Makeup img" width="318" height="300" class="imggel">
                     <h2 class="lipprod">Dior Plumping Gloss</h2>
@@ -275,7 +287,7 @@
                     </div>
             </div>
             </div>
-            <div class="lip">
+            <div class="AllProducts Benetint">
                 <div class="container">
                     <img src="benetint.jpg" alt="Makeup img" width="318" height="300" class="imggel">
                     <h2 class="lipprod">Benetint</h2>
@@ -288,7 +300,7 @@
             </div>
             </div>
             
-            <div class="lip">
+            <div class="AllProducts SummerFridays">
                 <div class="container">
                     <img src="balmm.jpg" alt="Makeup img" width="318" height="300" class="imggel">
                     <h2 class="lipprod">Summer Fridays Lip Balm</h2>
@@ -300,7 +312,7 @@
                     </div>
             </div>
             </div>
-            <div class="lip">
+            <div class="AllProducts kiko">
                 <div class="container">
                     <img src="liqkiko.jpg" alt="Makeup img" width="318" height="300" class="imggel">
                     <h2 class="lipprod">Kiko Unlimited Double Touch</h2>
@@ -315,7 +327,7 @@
        
 
         
-        <div class="eyebrow">
+        <div class="AllProducts kiko">
             <div class="container">
                 <img src="kikogel.jpg" alt="Makeup img" width="318" height="300" class="imggel">
                 <h2 class="eye">kiko Eyebrow Gel</h2>
@@ -327,7 +339,7 @@
                 </div>
             </div>
         </div>
-        <div class="eyebrow">
+        <div class="AllProducts rarebeauty">
             <div class="container">
                 <img src="rarebrow.jpg" alt="Makeup img" width="318" height="300" class="imggel">
                 <h2 class="eye">RareBeauty Eyebrow pencil</h2>
@@ -340,7 +352,7 @@
             
         </div>
     </div>
-        <div class="eyebrow">
+        <div class="AllProducts maybeline">
             <div class="container">
                 <img src="maybelineeye.jpeg" alt="Makeup img" width="318" height="300" class="imggel">
                 <h2 class="eye">Maybeline Eyebrow mascara</h2>
@@ -354,7 +366,7 @@
         </div>
     </div>
     
-    <div class="Tools-cards">
+    <div class="AllProducts kiko">
         <div class="container">
             <img src="kikobrush1.jpg" alt="Makeup img" width="318" height="300" class="imggel">
             <h2 class="FaceBrush">Kiko Brush Set</h2>
@@ -367,7 +379,7 @@
         </div>  
     </div>
 
-        <div class="Tools-cards">
+        <div class="AllProducts Fenty">
             <div class="container">
                 <img src="spongefanty.jpg" alt="Makeup img" width="318" height="300" class="imggel">
                 <h2 class="Sponges">Fenty Beauty Blender </h2>
@@ -379,7 +391,7 @@
                 </div>
             </div>  
         </div>
-        <div class="Tools-cards">
+        <div class="AllProducts Dior">
             <div class="container">
                 <img src="diorcurler.jpg" alt="Makeup img" width="318" height="300" class="imggel">
                 <h2 class="Curlers">Dior EyeLash Curler</h2>
