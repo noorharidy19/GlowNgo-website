@@ -13,9 +13,20 @@
         <a href="#" class="logo" ><img src="logo.jpeg" width="180" height="80"></a>
         <nav class="navigation">
             <a href="Homepage.html">Home</a>
-            <a href="Products.html">Products</a>
+            <div class="dropdown-menu">
+                <a href="products.html" class="dropdownbtn">Products</a>
+                <div class="dropdown-contents">
+                    <a href="face.html">
+                        <img src="face.jpg"> <br>Face
+                    </a>
+                    <a href="brow.html"> <img src="brows.jpg" > <br>Brows</a>
+                    <a href="lip.html"><img src="lips.jpg" ><br>Lips</a>
+                    <a href="tools.html"><img src="tools1.jpg"><br>Tools</a>
+                    <a href="eyes.html"><img src="eye.jpg" ><br>Eyes</a>
+                </div>
+            </div>
             <a href="About.html">About</a>
-            <a href="MyAccount.html"><i class="fa-solid fa-user"></i></a>
+            <a href="#" onclick="showPopup('popupContainerSignIn')"><i class="fa-solid fa-user"></i></a>
             <a href="Cart.html" title="shopping cart"><i class="fa-solid fa-cart-shopping"></i></a>
         </nav>
     </header> 

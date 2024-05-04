@@ -86,3 +86,11 @@ function showProd1() {
     }
     productContainer.style.marginLeft = `-${ProdIndex1 * 250}px`;
 }
+
+$(document).ready(function(){
+    $('.dropdown-menu').hover(function(){
+        $(this).find('.dropdown-contents').css('display', 'block');
+    }, function(){
+        $(this).find('.dropdown-contents').css('display', 'none');
+    });
+});
