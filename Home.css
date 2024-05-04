@@ -34,50 +34,46 @@ header{
   .navigation a:hover{
       color: rgba(146, 77, 89, 0.964);
   }
-  .product-hover {
+  .navigation {
+    display: flex;
+    align-items: center;
+}
+  
+.dropdown-menu {
     position: relative;
+    display: inline-block;
+   
 }
 
-.products-dropdown {
+.dropdown-contents {
     display: none;
     position: absolute;
-    top: calc(100% + 10px);
-    left: 5px;
-    background-color: #fff;
-    border: 2px solid white;
-    padding: 10px;
-    z-index: 100;
+    top: calc(100% + 5px); 
+  
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ 
 }
 
-.product-hover:hover .products-dropdown {
+.dropdown-menu:hover .dropdown-contents {
     display: block;
 }
 
-.products-table {
-    width: 20%;
-    border: 5px solid white;
-}
-
-.products-table img {
-    width: 65px;
-    height: auto;
+.dropdown-contents a {
+    color:  rgba(146, 77, 89, 0.964);
+    padding: 11px 15px;
     display: block;
-    margin: 0 auto;
-    background-color: pink;
+    font-size: 15px;
 }
 
-.products-table td {
-    padding: 3px;
-    border-collapse: collapse;
-    color: white;
-    font-size: 12px;
-    text-align: center;
-    background-color: pink;
+.dropdown-contents a:hover {
+    background-color: #f1f1f1;
 }
-
-.products-table td img + span {
-    display: block;
-    margin-top: 5px;
+.dropdown-contents a img {
+    width: 30px; 
+    height: 30px; 
+    margin-right: 5px; 
 }
   body {
     font-family: Helvetica, sans-serif;
@@ -226,11 +222,11 @@ input[type="password"],
 input[type="email"],
 input[type="tel"],
 select,
-button,
-.socialmedia  {
+button
+ {
     width: 100%;
     padding: 15px;
-    margin: 10px 0;
+    margin: 10px 0px;
     font-size: 18px;
     border: 1px solid rgb(210, 167, 167); 
     border-radius: 5px;
@@ -264,7 +260,7 @@ input[type="checkbox"] {
 button {
     width: 100%;
     padding: 25px;
-    margin: 13px 0;
+    margin: 13px 0px;
     font-size: 18px;
     border: 1px solid rgb(210, 167, 167); 
     border-radius: 5px;
@@ -280,30 +276,9 @@ button:hover {
     background-color: green;
 } 
 
-.socialmedia {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    font-size: 15px;
-    border: 1px solid rgb(210, 167, 167);
-    border-radius: 5px;
-    background-color: white;
-    color: black;
-    cursor: pointer;
-    display: inline-block;
-    font-family: Helvetica, sans-serif; 
-    font-weight: bold;
-}
-
-.socialmedia img {
-    display: flexbox;
-    margin: 0 auto;
-    width: 20px; 
-    height: auto; 
-}
-
 .create-account .help-center {
-    margin-top: 20px;
+   top: 130px;
+    margin:50px;
     padding: 25px;
     font-size: 16px;
     text-decoration: underline;
@@ -313,7 +288,7 @@ button:hover {
 .forget {
    
     right: 20px; 
-    top: 62%; 
+    top: 68%; 
     transform: translateY(-50%);
     font-size: 15px;
     text-decoration: underline;

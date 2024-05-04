@@ -12,9 +12,21 @@
         <a href="#" class="logo" ><img src="logo.jpeg" width="180" height="80"></a>
         <nav class="navigation">
             <a href="Home.html">Home</a>
-            <a href="Products.html" class="product-hover">Products
-                <div id="productDropdownContent" class="products-dropdown"></div>
-            </a>
+            <div class="dropdown-menu">
+
+   
+                <a href="products.html" class="dropdownbtn">Products</a>
+                <div class="dropdown-contents">
+                    <a href="face.html">
+                        <img src="face.jpg"> <br>Face
+                    </a>
+                    <a href="brow.html"> <img src="brows.jpg" > <br>Brows</a>
+                    <a href="lip.html"><img src="lips.jpg" ><br>Lips</a>
+                    <a href="tools.html"><img src="tools1.jpg"><br>Tools</a>
+                    <a href="eyes.html"><img src="eye.jpg" ><br>Eyes</a>
+                </div>
+           
+        </div>
             <a href="About.html">About</a>
             <a href="MyAccount.html"><i class="fa-solid fa-user"></i></a>
             <a href="#" onclick="showPopup('popupContainerSignIn')"><i class="fa-solid fa-user"></i></a>
@@ -49,15 +61,16 @@
                 <input type="password" id="password" placeholder="Password">
                 
                 <button type="submit">Login</button>
+                <br>
                 <div class="forget"> <a href="Forget.html">Forgot Password</a></div>
-
+                <br>
+                <a href="gmail.html"><i class="fa-solid fa-envelope fa-2xl"style="color: #3601f4;"></i></a>
+                <a href="facebook.html"><i class="fa-brands fa-facebook fa-2xl" style="color: #3601f4;"></i></a>
             </form>
+            <br>
             <span id="usernameErr" class="error"></span>
-            
-            <div class="social-login">
-                <button class="socialmedia"> <img src="facebook.png" alt="Facebook">Login with Facebook</button>
-                <button class="socialmedia"><img src="gmail.png" alt="Gmail">Login with Gmail</button>
-            </div>
+            <br>
+            <br>
             <div class="create-account">
                 Don't have an account? <a href="#" onclick="hidePopup('popupContainerSignIn'); showPopup('popupContainerSignUp')">Create an account</a>
             </div>
@@ -89,13 +102,14 @@
                 <input type="checkbox" id="terms" required>
                 <label for="terms">I accept the terms and conditions </label><br><br>
                 <button type="submit">Sign Up</button>
+                <br>
+                <a href="gmail.html"><i class="fa-solid fa-envelope fa-2xl"style="color: #3601f4;"></i></a>
+                <a href="facebook.html"><i class="fa-brands fa-facebook fa-2xl" style="color: #3601f4;"></i></a>
             </form>
+            <br>
             <span id="errorField" class="error"></span>
             <div>or sign up with social media account</div>
-            <div class="social-login">
-                <button class="socialmedia"> <img src="facebook.png" alt="Facebook"> Facebook</button>
-                <button class="socialmedia"><img src="gmail.png" alt="Gmail"> Gmail</button>
-            </div>
+            
             <div class="signin">
                 Already Have an account <a href="#" onclick="hidePopup('popupContainerSignUp'); showPopup('popupContainerSignIn')">Log in</a>
             </div>
@@ -107,7 +121,15 @@
 
 
     <script src="Home.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
+        $(document).ready(function(){
+            $('.dropdown-menu').hover(function(){
+                $(this).find('.dropdown-contents').css('display', 'block');
+            }, function(){
+                $(this).find('.dropdown-contents').css('display', 'none');
+            });
+        });
         function showPopup(id) {
             document.getElementById(id).style.display = 'block';
         }

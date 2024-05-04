@@ -121,7 +121,7 @@ function validateForm1() {
         document.getElementById("errorField").innerText = errorMessage;
         return false;
     }
-    window.open("trial2.html", "_self");
+    window.open("Home.html", "_self");
     
     return false; 
 }
@@ -132,12 +132,22 @@ function validateForm2() {
 
     var error = false;
 
-    if (username !== "nourhan" || password !== "1234") {
-        printError("usernameErr", "Invalid username or password, Please Try Again! ");
+    if (username == "nourhan.mohamed" && password !== "1234") {
+        printError("usernameErr", "Invalid password, Please Try Again! ");
         error = true;
-    } else {
+
+    } else if (username!=="nourhan.mohamed"&& password !=="1234")
+    {printError("usernameErr", "Invalid username or password, Please Try Again! ");
+    error = true;
+    }
+    else if (username !=="nourhan.amr"&&password !=="nour1234")
+    {printError("usernameErr", "Invalid username or password, Please Try Again! ");
+    error = true;
+    }
+    else {
         printError("usernameErr", "");
     }
+
 
     if (error) {
         return false; 
