@@ -519,6 +519,7 @@ select option:hover {
   margin-right: 10px;
   
 }
-#shade3,#shade2,#shade,#shade4,#shade5 {
+
+#shade3,#shade2,#shade,#shade4,#shade5,#shadesh,#shade6,#shade7,#shade21,#shadelip2,#shadelip3,#shadegloss2,#shadegloss3,#shadeoil2,#shadeoil3,#shadeplump2,#shadeplump3,#shadetint1,#shadesf2,#shadesf3,#shadeliq2,#shadeliq3{
   display: none;
 }
