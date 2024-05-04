@@ -84,14 +84,24 @@
         <!------------------------------------------------------------------------------------------------------------------- -->
 
     <div class="Products-window " id="brow">
-        <h2 class="p1"> Kiko Eyebrow Designer Gel Mascara  <span class="price">15.00$</span></h2>
+        <h2 class="p1"> Kiko Eyebrow Designer Gel Mascara  <span class="price">15.00$ </span>  </h2>
+       
+       
         <div class="popup">
             
             <span class="close-btn" onclick="hidePopup(['brow'])">&times;</span>
-            <img src="kikogel.jpg" alt="Makeup img" width="350" height="320">
+            
+            <div class="image-container">
+                <img src="kikogel.jpg" alt="Makeup img" width="320" height="300" class="hide1" id="shadee">
+                <img src="gelshade.jpg" alt="Makeup img" width="320" height="300" class="hidee" id="shade">
+                
+                <div class="circle-container">
+                  <img class="circle-image" src="gelshade.jpg" alt="Description of image" onclick=" showShade(['shade'],['hide1'])">
+                  <img class="circle-image" src="kikogel.jpg" alt="Description of image" onclick=" showShade(['shadee'],['hidee'])">
+                </div>
+              </div>
            
-           
-            <div>
+        <div>
             <h1 class="btn1" id="b1" onclick="des()">Description </h1>
             <h1 class="btn2" id="b2" onclick="use()">how to use</h1>
             <div id="i77" class="nourhan"> -Eyebrow fixing gel with satin finish.
@@ -129,7 +139,18 @@
         <div class="popup">
             
             <span class="close-btn" onclick="hidePopup(['brow1'])">&times;</span>
-            <img src="rarebrow.jpg" alt="Makeup img" width="350" height="320">
+            <div class="image-container">
+                <img src="rarebrow.jpg" alt="Makeup img" width="320" height="300"  id="shade1" class="hide2">
+                <img src="warmbrown.jpg" alt="Makeup img" width="320" height="300" id="shade2" class="hide2">
+                <img src="softblack.jpg" alt="Makeup img" width="320" height="300" id="shade3" class="hide2">
+                
+                <div class="circle-container">
+                  <img class="circle-image" src="browshade.jpg" alt="Description of image" onclick=" showShade(['shade1'],['hide2'])">
+                  <img class="circle-image" src="browshad2.jpg" alt="Description of image" onclick=" showShade(['shade2'],['hide2'])">
+                  <img class="circle-image" src="browshade3.jpg" alt="Description of image" onclick=" showShade(['shade3'],['hide2'])">
+                </div>
+              </div>
+            
            
            
             <div>
@@ -162,9 +183,18 @@
             <div class="popup">
                 
                 <span class="close-btn" onclick="hidePopup(['brow2'])">&times;</span>
-                <img src="maybelineeye.jpeg" alt="Makeup img" width="350" height="320">
-               
-               
+                <div class="image-container">
+                    <img src="maybelineeye.jpeg" alt="Makeup img" width="320" height="300" class="hide3" id="shadee1">
+                    <img src="shade1eyebrowjpg.jpg" alt="Makeup img" width="320" height="300" class="hide3" id="shade4">
+                    <img src="shade2eyebrow.jpg" alt="Makeup img" width="320" height="300" class="hide3" id="shade5">
+                    
+                    <div class="circle-container">
+                        <img class="circle-image" src="maybelineeye.jpeg" alt="Description of image" onclick=" showShade(['shadee1'],['hide3'])">
+                        <img class="circle-image" src="shade1eyebrowjpg.jpg" alt="Description of image" onclick=" showShade(['shade4'],['hide3'])">
+                        <img class="circle-image" src="shade2eyebrow.jpg" alt="Description of image" onclick=" showShade(['shade5'],['hide3'])">
+                    </div>
+                </div>
+                   
                 <div>
                 <h1 class="btn1" id="b1" onclick="des()">Description </h1>
                 <h1 class="btn2" id="b2" onclick="use()">how to use</h1>
