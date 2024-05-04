@@ -20,6 +20,19 @@ function hideP(containerIds) {
         document.getElementById(id).style.display = "none";
     });
 }
+function showShade(containerIds, containerClass) {
+    var hideElements = document.getElementsByClassName(containerClass);
+    for (var i = 0; i < hideElements.length; i++) {
+        hideElements[i].style.display = "none";
+    }
+
+    containerIds.forEach(function(id) {
+        document.getElementById(id).style.display = "block";
+    });
+    
+    
+}
+
 
 function des(){
     var nourhanElements = document.getElementsByClassName("nourhan");//description->nourhan
