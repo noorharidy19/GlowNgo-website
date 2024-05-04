@@ -14,82 +14,77 @@ header{
     left: 0;
   }
   .logo{
-      color: rgb(187, 157, 157);
-      text-decoration: none;
-      font-size: 1.8em;
-      font-weight: 700;
+    color: rgb(187, 157, 157);
+    text-decoration: none;
+    font-size: 1.8em;
+    font-weight: 700;
       
       
   
   }
   .navigation a{
-      color: rgb(208, 177, 177);
-      text-decoration: none;
-      font-size: 1.3em;
-      padding-left: 40px;
-      padding-right: 30;
-      font-weight: 700;
-
+    color: rgb(208, 177, 177);
+    text-decoration: none;
+    font-size: 1.3em;
+    padding-left: 40px;
+    padding-right: 30;
+    font-weight: 700;
+    
+  
   }
   .navigation a:hover{
-      color: rgba(146, 77, 89, 0.964);
+    color: rgba(146, 77, 89, 0.964);
   }
-  .product-hover {
-    position: relative;
+
+  .navigation {
+    display: flex;
+    align-items: center;
 }
 
-.products-dropdown {
-    display: none;
-    position: absolute;
-    top: calc(100% + 10px);
-    left: 5px;
-    background-color: #fff;
-    border: 2px solid white;
-    padding: 10px;
-    z-index: 100;
-}
-
-.product-hover:hover .products-dropdown {
-    display: block;
-}
-
-.products-table {
-    width: 20%;
-    border: 5px solid white;
-}
-
-.products-table img {
-    width: 65px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    background-color: pink;
-}
-
-.products-table td {
-    padding: 3px;
-    border-collapse: collapse;
-    color: white;
-    font-size: 12px;
-    text-align: center;
-    background-color: pink;
-}
-
-.products-table td img + span {
-    display: block;
-    margin-top: 5px;
-}
   body {
     font-family: Helvetica, sans-serif;
     padding: 5%;
     text-align: center;
     font-size: 50;
+}
+.dropdownbtn {
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  .dropdown-menu {
+    position: relative;
+    display: inline-block;
+  }
+.dropdown-contents {
+    display: none;
+    position: absolute;
+    top: calc(100% + 5px); 
     background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-menu:hover .dropdown-contents {
+    display: block;
+}
+
+.dropdown-contents a {
+    color:  rgba(146, 77, 89, 0.964);
+    padding: 11px 15px;
+    display: block;
+    font-size: 15px;
+}
+
+.dropdown-contents a:hover {
+    background-color: #f1f1f1;
+}
+.dropdown-contents a img {
+    width: 30px; 
+    height: 30px; 
+    margin-right: 5px; 
 }
 
 #slideshow {
@@ -139,28 +134,26 @@ header{
     position: absolute;
     top: 50%;
     width: auto;
-    padding: 16px;
+    padding: 15px;
     margin-top: -22px;
     color: white;
     font-weight: bold;
     font-size: 25px;
     transition: 1s ease;
-    border-radius: 0 3px 3px 0;
+    border-radius:5px;
     user-select: none;
     
 }
 
 .next {
     right: 0;
-    border-radius: 3px 0 0 3px;
 }
 .prev {
     left: 0;
-    border-radius: 3px 0 0 3px;
 }
 
 .prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .dash-container {
@@ -188,143 +181,43 @@ header{
     background-color: #717171;
 }
 
-@keyframes slide {
-    20% {
-        margin-left: 0px;
-    }
-    40% {
-        margin-left: calc(-1500px * 1);
-    }
-    60% {
-        margin-left: calc(-1500px * 2);
-    }
-}
-.popup-container {
-    display: none;
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: whitesmoke;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    width: 70%; 
-    max-width: 400px;
-    border: 2px solid rgb(210, 167, 167);
-    font-family: Helvetica, sans-serif; 
-   
-}
-
-.popup {
-    text-align: center;
-}
-
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="tel"],
-select,
-button,
-.socialmedia  {
-    width: 100%;
-    padding: 15px;
-    margin: 10px 0;
-    font-size: 18px;
-    border: 1px solid rgb(210, 167, 167); 
-    border-radius: 5px;
-    box-sizing: border-box;
-    font-family: Helvetica, sans-serif; 
-}
-
-input[type="checkbox"] {
-    margin-right: 5px;
-}
-
-.signin,
-.help-center {
-    font-size: 14px;
-    font-family: Helvetica, sans-serif; 
-}
-
-@media screen and (max-width: 768px) {
-    .popup-container {
-        max-width: 50%;
-    }
-}
-
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-}
-
-button {
-    width: 100%;
-    padding: 25px;
-    margin: 13px 0;
-    font-size: 18px;
-    border: 1px solid rgb(210, 167, 167); 
-    border-radius: 5px;
-    background-color: whitesmoke;
-    color: black;
-    cursor: pointer;
-    display: inline-block;
-    font-family: Helvetica, sans-serif; 
-    font-weight: bold;
-}
-
-button:hover {
-    background-color: green;
-} 
-
-.socialmedia {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    font-size: 15px;
-    border: 1px solid rgb(210, 167, 167);
-    border-radius: 5px;
-    background-color: white;
-    color: black;
-    cursor: pointer;
-    display: inline-block;
-    font-family: Helvetica, sans-serif; 
-    font-weight: bold;
-}
-
-.socialmedia img {
-    display: flexbox;
+#Products {
+    overflow: hidden;
+    width: 1350px;
+    height: 300px;
+    position: relative;
     margin: 0 auto;
-    width: 20px; 
-    height: auto; 
+    border:0 ;
+    padding: 0;
+    align-items: center;
 }
 
-.create-account .help-center {
-    margin-top: 20px;
-    padding: 25px;
-    font-size: 16px;
-    text-decoration: underline;
-    font-family: Helvetica, sans-serif; 
-    font-weight: bold;
+.shop{ 
+    border-radius: 5px;
+    border-color: black;
+    background-color: rgb(252, 252, 252);
+    margin: 5px;
+    margin-top: 13px;
+    height: 275px;
+    width: 250px;
+    align-items: center;
+    transition: transform 0.3s ease;
+    float: left;
 }
-.forget {
-   
-    right: 20px; 
-    top: 62%; 
-    transform: translateY(-50%);
-    font-size: 15px;
-    text-decoration: underline;
-    font-family: Helvetica, sans-serif;
-    position:absolute;
-    
+ 
+.shop:hover {
+    box-shadow: 0 5px 25px rgba(1 1 1/15%);
+    transform: scale(1.05);
+}
+.shop-wrapper, .shop-wrapper1 {
+    width: calc(1300px * 2);
+    height: 300px;
 }
 
-
-
-.error {
-    color: red;
-    font-family: Helvetica, sans-serif; 
+p{
+    text-align: right;
+    font-size: 12px;
+}
+p:hover {
+    font-size: 15px; 
 }
