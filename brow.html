@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <a href="#" class="logo" ><img src="logo.jpeg" width="180" height="80"></a>
+        <a href="#" class="logo" ><img src="images/logo.jpeg" width="180" height="80"></a>
         <span class="search">
             <input type="text" placeholder="Search">
             <i class="fa-solid fa-search"></i>
@@ -20,7 +20,8 @@
             <a href="Products.html">Products</a>
             <a href="About.html">About</a>
             <a href="MyAccount.html"><i class="fa-solid fa-user"></i></a>
-            <a href="Cart.html" title="shopping cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            <div id="overlay" style="display: none;"></div>
+            <a href="#" title="shopping cart" onclick="showPopup(['CART'])"><i class="fa-solid fa-cart-shopping"></i></a>
             
 
         </nav>
@@ -44,11 +45,12 @@
         <div class="browprod">
             <div class="AllProducts kiko">
                 <div class="container">
-                    <img src="kikogel.jpg" alt="Makeup img" width="318" height="300" class="imggel">
+                    <img src="images/kikogel.jpg" alt="Makeup img" width="318" height="300" class="imggel">
                     <h2 class="eye">kiko Eyebrow Gel</h2>
                     <h3 class="eye">15.00$</h3>
                     <div class="middle">
                         <div class="text" onclick=""><i class="fa-solid fa-cart-shopping" title="Add To Cart"></i></div>
+                        <div id="overlay" style="display: none;"></div>
                         <div class="text" onclick="showPopup(['brow'])"><i class="fa-sharp fa-solid fa-eye" title="View more"></i></div>
                         <div class="text" onclick=""><i class="fa-solid fa-heart" title="Add To Whishlist"></i></div>
                     </div>
@@ -56,11 +58,12 @@
             </div>
             <div class="AllProducts rarebeauty">
                 <div class="container">
-                    <img src="rarebrow.jpg" alt="Makeup img" width="318" height="300" class="imggel">
+                    <img src="images/rarebrow.jpg" alt="Makeup img" width="318" height="300" class="imggel">
                     <h2 class="eye">RareBeauty Eyebrow pencil</h2>
                     <h3 class="eye">19.00$</h3>
                     <div class="middle">
                         <div class="text" onclick=""><i class="fa-solid fa-cart-shopping" title="Add To Cart"></i></div>
+                        <div id="overlay" style="display: none;"></div>
                         <div class="text" onclick="showPopup(['brow1'])"><i class="fa-sharp fa-solid fa-eye"title="View more"></i></div>
                         <div class="text" onclick=""><i class="fa-solid fa-heart" title="Add To Whishlist"></i></div>
                     </div>
@@ -69,11 +72,12 @@
         </div>
             <div class="AllProducts maybeline">
                 <div class="container">
-                    <img src="maybelineeye.jpeg" alt="Makeup img" width="318" height="300" class="imggel">
+                    <img src="images/maybelineeye.jpeg" alt="Makeup img" width="318" height="300" class="imggel">
                     <h2 class="eye">Maybeline Eyebrow mascara</h2>
                     <h3 class="eye">20.00$</h3>
                     <div class="middle">
                         <div class="text" onclick=""><i class="fa-solid fa-cart-shopping" title="Add To Cart"></i></div>
+                        <div id="overlay" style="display: none;"></div>
                         <div class="text" onclick="showPopup(['brow2'])"><i class="fa-sharp fa-solid fa-eye" title="View more"></i></div>
                         <div class="text" onclick=""><i class="fa-solid fa-heart" title="Add To Whishlist"></i></div>
                     </div>
@@ -92,12 +96,12 @@
             <span class="close-btn" onclick="hidePopup(['brow'])">&times;</span>
             
             <div class="image-container">
-                <img src="kikogel.jpg" alt="Makeup img" width="320" height="300" class="hide1" id="shadee">
-                <img src="gelshade.jpg" alt="Makeup img" width="320" height="300" class="hidee" id="shade">
+                <img src="images/kikogel.jpg" alt="Makeup img" width="320" height="300" class="hide1" id="shadee">
+                <img src="images/gelshade.jpg" alt="Makeup img" width="320" height="300" class="hidee" id="shade">
                 
                 <div class="circle-container">
-                    <img class="circle-image" src="kikogel.jpg" alt="Description of image" onclick=" showShade(['shadee'],['hidee'])">
-                  <img class="circle-image" src="gelshade.jpg" alt="Description of image" onclick=" showShade(['shade'],['hide1'])">
+                    <img class="circle-image" src="images/kikogel.jpg" alt="Description of image" onclick=" showShade(['shadee'],['hidee'])">
+                  <img class="circle-image" src="images/gelshade.jpg" alt="Description of image" onclick=" showShade(['shade'],['hide1'])">
                   
                 </div>
               </div>
@@ -141,14 +145,14 @@
             
             <span class="close-btn" onclick="hidePopup(['brow1'])">&times;</span>
           <div class="image-container">  
-                <img src="rarebrow.jpg" alt="Makeup img" width="320" height="300"  id="shade1" class="hide2">
-                <img src="warmbrown.jpg" alt="Makeup img" width="320" height="300" id="shade2" class="hide2">
-                <img src="softblack.jpg" alt="Makeup img" width="320" height="300" id="shade3" class="hide2">
+                <img src="images/rarebrow.jpg" alt="Makeup img" width="320" height="300"  id="shade1" class="hide2">
+                <img src="images/warmbrown.jpg" alt="Makeup img" width="320" height="300" id="shade2" class="hide2">
+                <img src="images/softblack.jpg" alt="Makeup img" width="320" height="300" id="shade3" class="hide2">
                 
                 <div class="circle-container">
-                  <img class="circle-image" src="browshade.jpg" alt="Description of image" onclick=" showShade(['shade1'],['hide2'])">
-                  <img class="circle-image" src="browshad2.jpg" alt="Description of image" onclick=" showShade(['shade2'],['hide2'])">
-                  <img class="circle-image" src="browshade3.jpg" alt="Description of image" onclick=" showShade(['shade3'],['hide2'])">
+                  <img class="circle-image" src="images/browshade.jpg" alt="Description of image" onclick=" showShade(['shade1'],['hide2'])">
+                  <img class="circle-image" src="images/browshad2.jpg" alt="Description of image" onclick=" showShade(['shade2'],['hide2'])">
+                  <img class="circle-image" src="images/browshade3.jpg" alt="Description of image" onclick=" showShade(['shade3'],['hide2'])">
                 </div>
               </div>
             
@@ -185,14 +189,14 @@
                 
                 <span class="close-btn" onclick="hidePopup(['brow2'])">&times;</span>
                 <div class="image-container">
-                    <img src="maybelineeye.jpeg" alt="Makeup img" width="320" height="300" class="hide3" id="shadee1">
-                    <img src="shade1eyebrowjpg.jpg" alt="Makeup img" width="320" height="300" class="hide3" id="shade4">
-                    <img src="shade2eyebrow.jpg" alt="Makeup img" width="320" height="300" class="hide3" id="shade5">
+                    <img src="images/maybelineeye.jpeg" alt="Makeup img" width="320" height="300" class="hide3" id="shadee1">
+                    <img src="images/shade1eyebrowjpg.jpg" alt="Makeup img" width="320" height="300" class="hide3" id="shade4">
+                    <img src="images/shade2eyebrow.jpg" alt="Makeup img" width="320" height="300" class="hide3" id="shade5">
                     
                     <div class="circle-container">
-                        <img class="circle-image" src="maybelineeye.jpeg" alt="Description of image" onclick=" showShade(['shadee1'],['hide3'])">
-                        <img class="circle-image" src="shade1eyebrowjpg.jpg" alt="Description of image" onclick=" showShade(['shade4'],['hide3'])">
-                        <img class="circle-image" src="shade2eyebrow.jpg" alt="Description of image" onclick=" showShade(['shade5'],['hide3'])">
+                        <img class="circle-image" src="images/maybelineeye.jpeg" alt="Description of image" onclick=" showShade(['shadee1'],['hide3'])">
+                        <img class="circle-image" src="images/shade1eyebrowjpg.jpg" alt="Description of image" onclick=" showShade(['shade4'],['hide3'])">
+                        <img class="circle-image" src="images/shade2eyebrow.jpg" alt="Description of image" onclick=" showShade(['shade5'],['hide3'])">
                     </div>
                 </div>
                    
@@ -215,6 +219,66 @@
             </div>
                 
         </div>
+         <!-- --------------------------------CART------------------------------------ -->
+    <div class="CART " id="CART">
+        <h2 class="pcart"> Your Cart&nbsp; <i class="fa-solid fa-bag-shopping"></i></i>  </h2>
+       
+        <div class="popupp">
+            <span class="close-btn" onclick="hidePopup(['CART'])">&times;</span>
+            <div class="product-display">
+              <img src="images/fentycon.jpg" alt="Concelar img" width="218" height="200" class="imgg" id="c">
+              <img src="images/con2.jpg" alt="Concelar img" width="218" height="200" class="imgg" id="c1">
+              <div class="product1">
+                <h3>Fenty Beauty Concealer</h3>
+                <h3>Price: <span id="price1">30.00</span>$   Quantity: <span id="quantity1">1</span></h3>
+                <div class="circle-container">
+                  <img class="circle-image" src="images/fentycon.jpg" alt="Description of image" onclick="showShade(['c'],['imgg'])">
+                  <img class="circle-image" src="images/con2.jpg" alt="Description of image" onclick="showShade(['c1'],['imgg'])">
+                </div>
+                <button type="button" class="remove" onclick="changeQuantity(-1, 'quantity1', 'price1')">-</button>
+                <button type="button" class="add" onclick="changeQuantity(1, 'quantity1', 'price1')">+</button>
+                
+              </div>
+            </div>
+            <div class="product-display">
+              <img src="images/bronzerkiko.jpg" alt="Bronzer img" width="218" height="200" class="imggg" id="br1">
+              <img src="images/bronz1.jpg" alt="Bronzer img" width="218" height="200" class="imggg" id="b">
+              <div class="product1">
+                <h3>Kiko Bronzer</h3>
+                <h3>Price: <span id="price2">20.00</span>$   Quantity: <span id="quantity2">1</span></h3>
+                <div class="circle-container">
+                    <img class="circle-image" src="images/bronzerkiko.jpg" alt="Description of image" onclick=" showShade(['br1'],['imggg'])">
+                    <img class="circle-image" src="images/bronz1.jpg" alt="Description of image" onclick=" showShade(['b'],['imggg']) ">
+                    </div>
+                    <button type="button" class="remove" onclick="changeQuantity(-1, 'quantity2', 'price2')">-</button>
+                    <button type="button" class="add" onclick="changeQuantity(1, 'quantity2', 'price2')">+</button>
+                    
+              </div>
+            </div>
+            <div class="product-display">
+              <img src="images/benetint.jpg" alt="Lipstick img" width="218" height="200" class="imgggg" id="r1">
+              <img src="images/tintshade.jpg" alt="Lipstick img" width="218" height="200" class="imgggg" id="r2">
+              <div class="product1">
+                <h3>Benetint</h3>
+                <h3>Price: <span id="price3">24.00</span>$   Quantity: <span id="quantity3">1</span></h3>
+                <div class="circle-container">
+                    <img class="circle-image" src="images/benetint.jpg" alt="Description of image" onclick=" showShade(['r1'],['imgggg']) ">
+                    <img class="circle-image" src="images/tintshade.jpg" alt="Description of image" onclick=" showShade(['r2'],['imgggg']) ">
+                    </div>
+                    <button type="button" class="remove" onclick="changeQuantity(-1, 'quantity3', 'price3')">-</button>
+                    <button type="button" class="add" onclick="changeQuantity(1, 'quantity3', 'price3')">+</button>
+              </div>
+            </div>
+            <div class="total">
+                <h3>Total: <span id="total"></span>$</h3>
+            </div>
+            <div class="checkout">
+                <button type="button" onclick="">Procced to Check Out</button>
+              </div>
+          
+
+        </div>
+    </div>
 
 </body>
 </html>
