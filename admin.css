@@ -39,10 +39,10 @@ header{
 .sidenav {
     position: fixed;
     left: 0;
-    top: 100px; /* Adjusted top position to account for header height */
+    top: 100px; 
     background-color: #111;
     padding-top: 20px;
-    z-index: 1; /* Lower z-index to ensure it's behind header */
+    z-index: 1; 
 }
 
 .sidenav a {
@@ -99,4 +99,161 @@ header{
     font-size: 50px;
     display: flex;
     flex-direction: column;
+}
+.user{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom:-20px;
+    font-size: 50px;
+}
+table, th, td {
+    border: 2px solid rgb(208, 177, 177);
+  }
+  th, td{
+    padding: 10px;
+    text-align: center;
+    color:black ;
+  }
+  table{
+    margin-left:130px;
+  }
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center; /*ne5aly form f nos */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 300px; 
+    height: 600px;
+    overflow: auto;
+    
+}
+.modal1 {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center; /*ne5aly form f nos */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 300px; 
+    height: 400px;
+    overflow: auto;
+    
+}
+.form-group1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.form-group {
+    margin-bottom: 20px;
+    align-self: center; 
+}
+
+.checkbox-group {
+    margin-right: 20px;
+}
+
+.modal2 {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center; /*ne5aly form f nos */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 300px; 
+    height: 290px;
+    overflow: auto;
+    
+}
+.modal-content {
+    padding: 20px;
+    
+}
+.buttons-container {
+    text-align: right;
+}
+
+.add-button {
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: rgb(208, 177, 177);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+.edit-button{
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: rgb(208, 177, 177);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+.Remove-button{
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: rgb(208, 177, 177);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-right: 55px;
+}
+.input-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.input-field1 {
+    width: 108%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.label-field {
+
+    font-size: larger;
+}
+
+.submit-btn {
+    background-color: rgb(208, 177, 177);
+    color: white;
+    padding: 10px 20px;
+    margin:10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+    cursor: pointer;
 }
