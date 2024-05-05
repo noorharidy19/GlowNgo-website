@@ -38,6 +38,34 @@ const data = [{
     title: "Number of Orders per Month"
 };
   
-  // Display using Plotly
+ 
   Plotly.newPlot("myPlot", data, layout);
   Plotly.newPlot("myPlot1", orderChartData, orderChartLayout);
+ 
+  function showModal(containerIds) {
+    containerIds.forEach(function(id) {
+        document.getElementById(id).style.display = "block";
+    });
+}
+
+function closeModal(containerIds) {
+    containerIds.forEach(function(id) {
+        document.getElementById(id).style.display = "none";
+    });
+}
+
+const adminCheckbox = document.getElementById('admin1');
+const userCheckbox = document.getElementById('user1');
+
+adminCheckbox.addEventListener('change', function() {
+if (this.checked) {
+    userCheckbox.checked = false;
+}
+});
+
+userCheckbox.addEventListener('change', function() {
+if (this.checked) {
+    adminCheckbox.checked = false;
+}
+});
+
