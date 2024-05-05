@@ -221,3 +221,106 @@ p{
 p:hover {
     font-size: 15px; 
 }
+
+.popup-container {
+    display: none;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 70%; 
+    max-width: 400px;
+    border: 2px solid rgb(210, 167, 167);
+    font-family: Helvetica, sans-serif; 
+   
+}
+
+.popup {
+    text-align: center;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+select,
+button{
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0px;
+    font-size: 18px;
+    border: 1px solid rgb(210, 167, 167); 
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif; 
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.signin,.help-center {
+    font-size: 14px;
+    font-family: Helvetica, sans-serif; 
+}
+
+@media screen and (max-width: 768px) {
+    .popup-container {
+        max-width: 50%;
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+button {
+    width: 100%;
+    padding: 25px;
+    margin: 13px 0px;
+    font-size: 18px;
+    border: 1px solid rgb(210, 167, 167); 
+    border-radius: 5px;
+    background-color: whitesmoke;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Helvetica, sans-serif; 
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: rgb(215, 180, 180);
+} 
+
+.create-account .help-center {
+    margin:50px;
+    padding: 25px;
+    font-size: 16px;
+    text-decoration: underline;
+    font-family: Helvetica, sans-serif; 
+    font-weight: bold;
+}
+.forget {
+   
+    right: 20px; 
+    top: 73%; 
+    transform: translateY(-50%);
+    font-size: 15px;
+    text-decoration: underline;
+    font-family: Helvetica, sans-serif;
+    position:absolute;
+    
+}
+.error {
+    color: red;
+    font-family: Helvetica, sans-serif; 
+}

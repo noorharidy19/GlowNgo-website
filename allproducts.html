@@ -408,13 +408,22 @@
 
 
     </section>
-    <!----------------------------------------------------------------------------------------------- -->
+    <!--------------------------------------BROWS--------------------------------------------------------- -->
     <div class="Products-window " id="brow">
         <h2 class="p1"> Kiko Eyebrow Designer Gel Mascara  <span class="price">15.00$</span></h2>
         <div class="popup">
             
             <span class="close-btn" onclick="hidePopup(['brow'])">&times;</span>
-            <img src="kikogel.jpg" alt="Makeup img" width="350" height="320">
+            <div class="image-container">
+                <img src="kikogel.jpg" alt="Makeup img" width="320" height="300" class="hide1" id="shadee">
+                <img src="gelshade.jpg" alt="Makeup img" width="320" height="300" class="hidee" id="shade">
+                
+                <div class="circle-container">
+                    <img class="circle-image" src="kikogel.jpg" alt="Description of image" onclick=" showShade(['shadee'],['hidee'])">
+                  <img class="circle-image" src="gelshade.jpg" alt="Description of image" onclick=" showShade(['shade'],['hide1'])">
+                  
+                </div>
+              </div>
            
            
             <div>
@@ -455,7 +464,17 @@
         <div class="popup">
             
             <span class="close-btn" onclick="hidePopup(['brow1'])">&times;</span>
-            <img src="rarebrow.jpg" alt="Makeup img" width="350" height="320">
+            <div class="image-container">  
+                <img src="rarebrow.jpg" alt="Makeup img" width="320" height="300"  id="shade1" class="hide2">
+                <img src="warmbrown.jpg" alt="Makeup img" width="320" height="300" id="shade2" class="hide2">
+                <img src="softblack.jpg" alt="Makeup img" width="320" height="300" id="shade3" class="hide2">
+                
+                <div class="circle-container">
+                  <img class="circle-image" src="browshade.jpg" alt="Description of image" onclick=" showShade(['shade1'],['hide2'])">
+                  <img class="circle-image" src="browshad2.jpg" alt="Description of image" onclick=" showShade(['shade2'],['hide2'])">
+                  <img class="circle-image" src="browshade3.jpg" alt="Description of image" onclick=" showShade(['shade3'],['hide2'])">
+                </div>
+              </div>
            
            
             <div>
@@ -488,7 +507,17 @@
             <div class="popup">
                 
                 <span class="close-btn" onclick="hidePopup(['brow2'])">&times;</span>
-                <img src="maybelineeye.jpeg" alt="Makeup img" width="350" height="320">
+                <div class="image-container">
+                    <img src="maybelineeye.jpeg" alt="Makeup img" width="320" height="300" class="hide3" id="shadee1">
+                    <img src="shade1eyebrowjpg.jpg" alt="Makeup img" width="320" height="300" class="hide3" id="shade4">
+                    <img src="shade2eyebrow.jpg" alt="Makeup img" width="320" height="300" class="hide3" id="shade5">
+                    
+                    <div class="circle-container">
+                        <img class="circle-image" src="maybelineeye.jpeg" alt="Description of image" onclick=" showShade(['shadee1'],['hide3'])">
+                        <img class="circle-image" src="shade1eyebrowjpg.jpg" alt="Description of image" onclick=" showShade(['shade4'],['hide3'])">
+                        <img class="circle-image" src="shade2eyebrow.jpg" alt="Description of image" onclick=" showShade(['shade5'],['hide3'])">
+                    </div>
+                </div>
                
                
                 <div>
@@ -510,6 +539,7 @@
             </div>
                 
         </div>
+        <!-- ----------------------------EYES-------------------------------------- -->
         <div class="Products-window " id="eyes1">
             <h2 class="p1">Rare Beauty Universal Volumizing Mascara  <span class="price">11.00$</span></h2>
             <div class="popup">
@@ -714,12 +744,23 @@
                          
                     </div> 
                 </div>
+                <!--------------------------------------FACE------------------------------------------- -->
                 <div class="Products-window " id="face1">
                     <h2 class="p1"> Fenty Beauty Founadtion <span class="price">40.00$</span></h2>
                     <div class="popup">
                         
                         <span class="close-btn" onclick="hidePopup(['face1'])">&times;</span>
-                        <img src="fentyFounjpg.jpg" alt="Makeup img" width="350" height="320">
+                        <div class="image-container">
+                            <img src="fentyFounjpg.jpg" alt="Makeup img" width="320" height="300"  id="found1" class="found">
+                            <img src="found2.jpg" alt="Makeup img" width="320" height="300" id="found2" class="found">
+                            <img src="found3.jpg" alt="Makeup img" width="320" height="300" id="found3" class="found">
+                            
+                            <div class="circle-container">
+                              <img class="circle-image" src="founshade1.jpg" alt="Description of image" onclick=" showShade(['found1'],['found'])">
+                              <img class="circle-image" src="foundshade2.jpg" alt="Description of image" onclick=" showShade(['found2'],['found'])">
+                              <img class="circle-image" src="founds3.jpg" alt="Description of image" onclick=" showShade(['found3'],['found'])">
+                            </div>
+                          </div>
                        
                        
                         <div>
@@ -749,7 +790,19 @@
                     <div class="popup">
                         
                         <span class="close-btn" onclick="hidePopup(['face2'])">&times;</span>
-                        <img src="fentycon.jpg" alt="Makeup img" width="350" height="320">
+                        <div class="image-container">
+                            <img src="fentycon.jpg" alt="Makeup img" width="320" height="300"  id="con1" class="con">
+                            <img src="con1.jpg" alt="Makeup img" width="320" height="300" id="con2" class="con">
+                            <img src="con2.jpg" alt="Makeup img" width="320" height="300" id="con3" class="con">
+                            <img src="con3.jpg" alt="Makeup img" width="320" height="300" id="con4" class="con">
+                            
+                            <div class="circle-container">
+                              <img class="circle-image" src="fentycon.jpg" alt="Description of image" onclick=" showShade(['con1'],['con'])">
+                              <img class="circle-image" src="con1.jpg" alt="Description of image" onclick=" showShade(['con2'],['con'])">
+                              <img class="circle-image" src="con2.jpg" alt="Description of image" onclick=" showShade(['con3'],['con'])">
+                              <img class="circle-image" src="con3.jpg" alt="Description of image" onclick=" showShade(['con4'],['con'])">
+                            </div>
+                          </div>
                        
                        
                         <div>
@@ -781,7 +834,16 @@
                     <div class="popup">
                         
                         <span class="close-btn" onclick="hidePopup(['face3'])">&times;</span>
-                        <img src="primerdiorjpg.jpg" alt="Makeup img" width="350" height="320">
+                        <div class="image-container">
+                            <img src="primerdiorjpg.jpg" alt="Makeup img" width="320" height="300"  id="prime1" class="prime">
+                            <img src="primeBA.jpg" alt="Makeup img" width="320" height="300" id="prime2" class="prime">
+                         
+                            
+                            <div class="circle-container">
+                              <img class="circle-image" src="primerdiorjpg.jpg" alt="Description of image" onclick=" showShade(['prime1'],['prime'])">
+                              <img class="circle-image" src="primeBA.jpg" alt="Description of image" onclick=" showShade(['prime2'],['prime'])">
+                            </div>
+                          </div>
                        
                        
                         <div>
@@ -844,8 +906,19 @@
                     <div class="popup">
                         
                         <span class="close-btn" onclick="hidePopup(['face5'])">&times;</span>
-                        <img src="kikohighlighter.jpg" alt="Makeup img" width="350" height="320">
-                       
+                        <div class="image-container">
+                            <img src="kikohighlighter.jpg" alt="Makeup img" width="320" height="300"  id="high1" class="high">
+                            <img src="high1.jpg" alt="Makeup img" width="320" height="300" id="high2" class="high">
+                            <img src="high2.jpg" alt="Makeup img" width="320" height="300" id="high3" class="high">
+                            <img src="high3.jpg" alt="Makeup img" width="320" height="300" id="high4" class="high">
+                            
+                            <div class="circle-container">
+                              <img class="circle-image" src="kikohighlighter.jpg" alt="Description of image" onclick=" showShade(['high1'],['high'])">
+                              <img class="circle-image" src="high1.jpg" alt="Description of image" onclick=" showShade(['high2'],['high'])">
+                              <img class="circle-image" src="high2.jpg" alt="Description of image" onclick=" showShade(['high3'],['high'])">
+                              <img class="circle-image" src="high3.jpg" alt="Description of image" onclick=" showShade(['high4'],['high'])">
+                            </div>
+                          </div>
                        
                         <div>
                         <h1 class="btn1" id="b1" onclick="des()">Description </h1>
@@ -882,7 +955,16 @@
                     <div class="popup">
                         
                         <span class="close-btn" onclick="hidePopup(['face6'])">&times;</span>
-                        <img src="kikopowder.jpg" alt="Makeup img" width="350" height="320">
+                        <div class="image-container">
+                            <img src="kikopowder.jpg" alt="Makeup img" width="320" height="300"  id="powd1" class="powd">
+                            <img src="powder1.jpg" alt="Makeup img" width="320" height="300" id="powd2" class="powd">
+                         
+                            
+                            <div class="circle-container">
+                              <img class="circle-image" src="kikopowder.jpg" alt="Description of image" onclick=" showShade(['powd1'],['powd'])">
+                              <img class="circle-image" src="powder1.jpg" alt="Description of image" onclick=" showShade(['powd2'],['powd'])">
+                            </div>
+                          </div>
                        
                        
                         <div>
@@ -914,7 +996,17 @@
                     <div class="popup">
                         
                         <span class="close-btn" onclick="hidePopup(['face7'])">&times;</span>
-                        <img src="cont.jpg" alt="Makeup img" width="350" height="320">
+                        <div class="image-container">
+                            <img src="cont.jpg" alt="Makeup img" width="320" height="300"  id="cont1" class="cont">
+                            <img src="cont1.jpg" alt="Makeup img" width="320" height="300" id="cont2" class="cont">
+                            <img src="cont2.jpg" alt="Makeup img" width="320" height="300" id="cont3" class="cont">
+                            
+                            <div class="circle-container">
+                              <img class="circle-image" src="cont.jpg" alt="Description of image" onclick=" showShade(['cont1'],['cont'])">
+                              <img class="circle-image" src="cont1.jpg" alt="Description of image" onclick=" showShade(['cont2'],['cont'])">
+                              <img class="circle-image" src="cont2.jpg" alt="Description of image" onclick=" showShade(['cont3'],['cont'])">
+                            </div>
+                          </div>
                        
                        
                         <div>
@@ -949,7 +1041,17 @@
                     <div class="popup">
                         
                         <span class="close-btn" onclick="hidePopup(['face8'])">&times;</span>
-                        <img src="bronzerkiko.jpg" alt="Makeup img" width="350" height="320">
+                        <div class="image-container">
+                            <img src="bronzerkiko.jpg" alt="Makeup img" width="320" height="300"  id="bronz1" class="bronz">
+                            <img src="bronz1.jpg" alt="Makeup img" width="320" height="300" id="bronz2" class="bronz">
+                            <img src="bronz2.jpg" alt="Makeup img" width="320" height="300" id="bronz3" class="bronz">
+                            
+                            <div class="circle-container">
+                              <img class="circle-image" src="bronzerkiko.jpg" alt="Description of image" onclick=" showShade(['bronz1'],['bronz'])">
+                              <img class="circle-image" src="bronz1.jpg" alt="Description of image" onclick=" showShade(['bronz2'],['bronz'])">
+                              <img class="circle-image" src="bronz2.jpg" alt="Description of image" onclick=" showShade(['bronz3'],['bronz'])">
+                            </div>
+                          </div>
                        
                        
                         <div>
@@ -982,7 +1084,19 @@
                     <div class="popup">
                         
                         <span class="close-btn" onclick="hidePopup(['face9'])">&times;</span>
-                        <img src="rarelush.jpg" alt="Makeup img" width="350" height="320">
+                        <div class="image-container">
+                            <img src="rarelush.jpg" alt="Makeup img" width="320" height="300"  id="blush1" class="blush">
+                            <img src="blush1.jpg" alt="Makeup img" width="320" height="300" id="blush2" class="blush">
+                            <img src="blush2.jpg" alt="Makeup img" width="320" height="300" id="blush3" class="blush">
+                            <img src="blush3.jpg" alt="Makeup img" width="320" height="300" id="blush4" class="blush">
+                            
+                            <div class="circle-container">
+                              <img class="circle-image" src="rarelush.jpg" alt="Description of image" onclick=" showShade(['blush1'],['blush'])">
+                              <img class="circle-image" src="blush1.jpg" alt="Description of image" onclick=" showShade(['blush2'],['blush'])">
+                              <img class="circle-image" src="blush2.jpg" alt="Description of image" onclick=" showShade(['blush3'],['blush'])">
+                              <img class="circle-image" src="blush3.jpg" alt="Description of image" onclick=" showShade(['blush4'],['blush'])">
+                            </div>
+                          </div>
                        
                        
                         <div>
@@ -1009,6 +1123,7 @@
                     </div>
                         
                 </div>
+                <!-- ------------------------------LIPS------------------------------------------ -->
                 <div class="Products-window " id="PContainer1">
                     <h2 class="p1"> Rare Beauty Lip stick  <span class="price">20.00$</span></h2>
                     <div class="popup">
@@ -1259,6 +1374,7 @@
                     </div>
                         
                 </div>
+                <!-- ---------------------------------TOOLS-------------------------------- -->
                 <div class="Products-window " id="brush1">
                     <h2 class="p1">Kiko Brush set<span class="price"> 33.00$</span></h2>
                     <div class="popup">
