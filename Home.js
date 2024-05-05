@@ -95,15 +95,6 @@ $(document).ready(function(){
     });
 });
 
-function showPopup() {
-    document.getElementById("popupContainer").style.display = "block";
-}
-
-function hidePopup() {
-    document.getElementById("popupContainer").style.display = "none";
-    window.location.href = "trial2.html";
-}
-
 window.onload = function() {
     showPopup();
 };
@@ -147,38 +138,54 @@ function validateForm1() {
     
     return false; 
 }
-
-function validateForm2() {
+function Show() {
+    var showpw = document.getElementById("password");
+    if (showpw.type === "password") {
+        showpw.type = "text";
+    } else {
+        showpw.type = "password";
+    }
+}function validateForm2() {
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
 
     var error = false;
 
-    if (username == "nourhan.mohamed" && password !== "1234") {
-        printError("usernameErr", "Invalid password, Please Try Again! ");
+    if (username.trim() === "" || password.trim() === "") {
+        printError("usernameErr", "Please fill in both fields.");
         error = true;
-
-    } else if (username!=="nourhan.mohamed"&& password !=="1234")
-    {printError("usernameErr", "Invalid username or password, Please Try Again! ");
-    error = true;
-    }
-    else if (username !=="nourhan.amr"&&password !=="nour1234")
-    {printError("usernameErr", "Invalid username or password, Please Try Again! ");
-    error = true;
-    }
-    else {
-        printError("usernameErr", "");
+    } else if (username === "nourhan.mohamed" && password === "1234") {
+        window.location.href = "Home.html";
+    } else if (username === "nour.amr" && password === "nour1234") {
+        window.location.href = "admin.html";
+    } else {
+        printError("usernameErr", "Invalid username or password. Please try again.");
+        error = true;
     }
 
+    return !error;
+}
 
-    if (error) {
+function sendResetPasswordEmail() {
+    var email = document.getElementById("resetEmail").value;
+    var messageContainer = document.getElementById("messageContainer");
+    if (!isValidEmail(email)) {
+        messageContainer.innerHTML = "Please enter a valid email address.";
+        messageContainer.style.display = "block";
         return false; 
     }
-    window.open("Home.html", "_self");
-    
+   
+    messageContainer.innerHTML = "We've sent you the verification code. Please check your email and revisit our website.";
+    messageContainer.style.display = "block";
+    messageContainer.style.color="green";
+  
     return false; 
 }
 
+function isValidEmail(email) {
+    
+    return /\S+@\S+\.\S+/.test(email);
+}
 function showPopup(id) {
     document.getElementById(id).style.display = 'block';
 }

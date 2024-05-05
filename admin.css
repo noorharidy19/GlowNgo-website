@@ -1,0 +1,102 @@
+header{
+
+    position: fixed;
+    width: 95%;
+    display: flex;
+    padding: 10px 30px;
+    z-index: 999;
+    align-items: center;
+    justify-content:space-between;
+    border-bottom: 2px solid rgb(210, 167, 167);
+    background-color: white;
+  }
+  .logo{
+      color: rgb(187, 157, 157);
+      text-decoration: none;
+      font-size: 1.5em;
+      font-weight: 700;
+      margin-top: 5px;
+  }
+  .navigation a{
+      color: rgb(208, 177, 177);
+      text-decoration: none;
+      font-size: 1.3em;
+      padding-left: 40px;
+      padding-right: 30;
+      font-weight: 700;
+    
+  
+  }
+  .navigation a:hover{
+      color: rgba(146, 77, 89, 0.964);
+  
+  
+  }
+  section{
+      padding:100px 50px; 
+      margin: -15px;
+  }
+.sidenav {
+    position: fixed;
+    left: 0;
+    top: 100px; /* Adjusted top position to account for header height */
+    background-color: #111;
+    padding-top: 20px;
+    z-index: 1; /* Lower z-index to ensure it's behind header */
+}
+
+.sidenav a {
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.sidenav a:hover {
+    background-color: #444;
+}
+
+#mySidenav a {
+    position: absolute;
+    left: -80px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    margin-top: 15px;
+}
+
+#mySidenav a:hover {
+    left: 0;
+}
+
+#Products {
+    top: 20px;
+    background-color: rgb(208, 177, 177);
+}
+
+#Users {
+    top: 80px;
+    background-color: rgb(208, 177, 177);
+}
+#Orders {
+    top: 140px;
+    background-color: rgb(208, 177, 177);
+}
+.sidenav .icon {
+    margin-left: 5px;
+}
+.haridy{
+    display: flex;
+    flex-direction: row;
+}
+.admin{
+    text-align: center;
+    margin: 40px;
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+}

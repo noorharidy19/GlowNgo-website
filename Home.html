@@ -169,17 +169,18 @@
         <div class="popup">
             <span class="close-btn" onclick="hidePopup('popupContainerSignIn')">&times;</span>
             <h2>Log in</h2>
-            <form onsubmit="return validateForm2()">
-                <input type="text" id="username" placeholder="Username">
-                <input type="password" id="password" placeholder="Password">
-                
-                <button type="submit">Login</button>
-                <br>    
-                <div class="forget"> <a href="Forget.html">Forgot Password</a></div>
-                <br>
-                <a href="gmail.html"><i class="fa-solid fa-envelope fa-2xl"style="color: #3601f4;"></i></a>
-                <a href="facebook.html"><i class="fa-brands fa-facebook fa-2xl" style="color: #3601f4;"></i></a>
-            </form>
+<form onsubmit="return validateForm2()">
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <i class="fa-solid fa-eye fa-fade fa-sm" onclick="Show()"></i>
+    <button type="button" onclick="validateForm2()">Login</button>
+    <br>    
+    <div class="forget"> <a href="#" onclick="hidePopup('popupContainerSignIn'); showPopup('popupContainerForget')">Forgot Password</a></div>
+    <br>
+    <a href="gmail.html"><i class="fa-solid fa-envelope fa-2xl"style="color: #3601f4;"></i></a>
+    <a href="facebook.html"><i class="fa-brands fa-facebook fa-2xl" style="color: #3601f4;"></i></a>
+</form>
+
             <br>
             <span id="usernameErr" class="error"></span> 
             <div class="create-account">
@@ -228,7 +229,20 @@
             </div>
         </div>
     </div>
-    
+    <div class="popup-container" id="popupContainerForget">
+    <div class="popup">
+        <span class="close-btn" onclick="hidePopup('popupContainerForget')">&times;</span>
+        <h2>Reset Password</h2>
+        <form onsubmit="return sendResetPasswordEmail()">
+            <input type="email" id="resetEmail" placeholder="Enter your email" required>
+            <button type="submit">Send Email</button>
+            <div id="messageContainer" >To reset your password, enter your email address below. We will then send an email containing a link to reset your password.</div>
+        </form>
+
+    </div>
+</div>
+
+
     <script src="Home.js"></script>
 </body>
 </html>
