@@ -260,6 +260,15 @@ button{
     font-family: Helvetica, sans-serif; 
 }
 
+.fa-eye {
+    padding: 15px;
+    margin: 10px 0px;
+    position: absolute;
+    top: 41%;
+    right: 15px; 
+    transform: translateY(-50%);}
+    
+
 input[type="checkbox"] {
     margin-right: 5px;
 }
