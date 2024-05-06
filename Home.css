@@ -314,7 +314,7 @@ button{
     padding: 15px;
     margin: 10px 0px;
     position: absolute;
-    top: 41%;
+    top: 45%;
     right: 15px; 
     transform: translateY(-50%);}
     
@@ -323,7 +323,7 @@ input[type="checkbox"] {
     margin-right: 5px;
 }
 
-.signin,.help-center {
+.signin {
     font-size: 14px;
     font-family: Helvetica, sans-serif; 
 }
@@ -371,7 +371,7 @@ button:hover {
 .forget {
    
     right: 20px; 
-    top: 73%; 
+    top: 77%; 
     transform: translateY(-50%);
     font-size: 15px;
     text-decoration: underline;

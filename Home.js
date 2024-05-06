@@ -152,7 +152,7 @@ function Show() {
     var error = false;
 
     if (username.trim() === "" || password.trim() === "") {
-        printError("usernameErr", "Please fill in both fields.");
+        printError("usernameErr", "Please fill the fields.");
         error = true;
     } else if (username === "nourhan.mohamed" && password === "1234") {
         window.location.href = "Home.html";
