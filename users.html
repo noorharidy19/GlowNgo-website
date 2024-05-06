@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <a href="#" class="logo" ><img src="logo.jpeg" width="180" height="80"></a>
+        <a href="#" class="logo" ><img src="images/logo.jpeg" width="180" height="80"></a>
         <nav class="navigation">
             <a href="Home.html">Home</a>
             <a href="Products.html">Products</a>
@@ -19,7 +19,7 @@
     </header>
 <section>
     <div id="mySidenav" class="sidenav">
-        <a href="adminprod.html" id="Products">Products<i class="fa-solid fa-cart-shopping"></i></a>
+        <a href="AdminProducts.html" id="Products">Products<i class="fa-solid fa-cart-shopping"></i></a>
         <a href="users.html" id="Users">Users&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-users"></i></a>
         <a href="orders.html" id="Orders">Orders&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-basket-shopping"></i></a>
     </div>
@@ -76,6 +76,7 @@
         <td>3</td>
     </tr>
 </table>
+
 <div class="buttons-container">
     <button onclick="showModal(['myModal'])" class="add-button">Add</button>
     <button onclick="showModal(['myModal1'])" class="edit-button">Edit</button>
@@ -84,47 +85,56 @@
 <div id="myModal" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeModal(['myModal'])">&times;</span>
-        <h2>Add User</h2>
-        <form>
+        <h2 style= "color:rgb(211, 170, 170)">Add User</h2>
+        <form onsubmit="return UserValidation();">
             <div class="form-group">
                 <label class="label-field">First Name:</label>
-                <input type="text" name="firstName" placeholder="Enter First Name" class="input-field">
+                <input type="text" name="firstName" placeholder="Enter First Name" class="input-field" id="Fname">
+                <div class="error" id="fnameError"></div>
             </div>
             <div class="form-group">
                 <label class="label-field">Last Name:</label>
-                <input type="text" name="lastName" placeholder="Enter Last Name" class="input-field">
+                <input type="text" name="lastName" placeholder="Enter Last Name" class="input-field" id="Lname">
+                <div class="error" id="lnameError"></div>
             </div>
             <div class="form-group">
                 <label class="label-field">Username:</label>
-                <input type="text" name="username" placeholder="Enter Username" class="input-field">
+                <input type="text" name="username" placeholder="Enter Username" class="input-field" id="username">
+                <div class="error" id="usernameError"></div>
             </div>
             <div class="form-group">
                 <label class="label-field">Password:</label>
-                <input type="text" name="pass" placeholder="Enter Password" class="input-field">
+                <input type="text" name="pass" placeholder="Enter Password" class="input-field" id="password">
+                <div class="error" id="passwordError"></div>
             </div>
             <div class="form-group">
                 <label class="label-field">Email:</label>
-            <input type="text" name="email" placeholder="Enter Email" class="input-field">
+            <input type="text" name="email" placeholder="Enter Email" class="input-field" id="email">
+            <div class="error" id="emailError"></div>
             </div>
             <div class="form-group">
                 <label class="label-field">Address:</label>
-                <input type="text" name="address" placeholder="Enter Address" class="input-field">
+                <input type="text" name="address" placeholder="Enter Address" class="input-field" id="address">
+                <div class="error" id="addressError"></div>
             </div>
             <div class="form-group">
                 <label class="label-field">Phone Number:</label>
-            <input type="text" name="phone" placeholder="Enter Username" class="input-field">
+            <input type="text" name="phone" placeholder="Enter Username" class="input-field" id="phone">
+            <div class="error" id="phoneError"></div>
             </div>
             <div class="form-group1">
                 <label class="label-field">Admin/User:</label>
                 <div>
-                    <input type="checkbox" id="admin1" name="admin" class="input-field">
-                    <label>Admin</label>
+                    <input type="radio" id="admin1" name="role" class="input-field">
+                    <label for="admin1">Admin</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="user1" name="user" class="input-field">
-                    <label for="user">User</label>
+                    <input type="radio" id="user1" name="role" class="input-field">
+                    <label for="user1">User</label>
                 </div>
+               
             </div>
+            <div class="error" id="UserAdminError"></div>
             <div class="form-group">
                 <input type="submit" value="Submit" class="submit-btn">
             </div>
@@ -134,25 +144,29 @@
 <div id="myModal1" class="modal1">
     <div class="modal-content">
         <span class="close" onclick="closeModal(['myModal1'])">&times;</span>
-        <h2>Edit User</h2>
-        <form>
+        <h2 style="color:rgb(211, 170, 170)">Edit User</h2>
+        <form onsubmit="return UserValidationEdit();">
             <div class="form-group">
                 <label class="label-field">ID:</label>
-                <input type="text" name="newValue" placeholder="Enter ID" class="input-field">
+                <input type="text" name="newValue" placeholder="Enter ID" class="input-field" id="userid">
+                <div class="error" id="useridError"></div>
             </div>
                 <div class="form-group">
                     <label class="label-field">Select Field to Edit:</label>
-                    <select id="editField" name="editField" class="input-field1">
+                    <select id="editFieldd" name="editField" class="input-field1">
+                        <option value="select">select</option>
                         <option value="username">Username</option>
                         <option value="password">Password</option>
                         <option value="email">Email</option>
                         <option value="address">Address</option>
                         <option value="phone">Phone Number</option>
                     </select>
+                    <div class="error" id="optionError"></div>
                 </div>
                 <div class="form-group">
                     <label class="label-field">New Value:</label>
-                    <input type="text" name="newValue" placeholder="Enter New Value" class="input-field">
+                    <input type="text" name="newValue" placeholder="Enter New Value" class="input-field" id="val">
+                    <div class="error" id="valError"></div>
                 </div>
                 <div class="form-group">
                     <input type="submit" value="Submit" class="submit-btn">
@@ -163,15 +177,17 @@
     <div id="myModal2" class="modal2">
         <div class="modal-content">
             <span class="close" onclick="closeModal(['myModal2'])">&times;</span>
-            <h2>Remove User</h2>
-            <form>
-                <div class="form-group"
+            <h2 style="color:rgb(211, 170, 170)">Remove User</h2>
+            <form onsubmit="return UservalidationRemove();">
+                <div class="form-group">
                     <label class="label-field">ID:</label>
-                    <input type="text" placeholderr="Enter ID" class="input-field">
+                    <input type="text" placeholderr="Enter ID" class="input-field" id="useridd">
+                    <div class="error" id="useriddError"></div>
                 </div>
                 <div class="form-group">
                     <label class="label-field">Email:</label>
-                    <input type="text" placeholder="Enter Email" class="input-field">
+                    <input type="text" placeholder="Enter Email" class="input-field" id="emaill">
+                    <div class="error" id="emaillError"></div>
                 </div>
                 <div class="form-group">
                     <input type="submit" value="Submit" class="submit-btn">
