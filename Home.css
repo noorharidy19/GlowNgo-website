@@ -184,7 +184,7 @@ header{
 #Products {
     overflow: hidden;
     width: 1350px;   /**/
-    height: 400px;
+    height: 450px;
     position: relative;
     margin: 0 auto;
     border:0 ;
@@ -197,8 +197,8 @@ header{
     border: 7px solid rgb(222, 162, 162);  
     border-radius: 25px;
     margin: 8px;
-    margin-top: 13px;
-    height: 350px;
+    margin-top: 18px;
+    height: 400px;
     width: 241px;
     align-items: center;
     transition: transform 0.3s ease;
@@ -213,6 +213,7 @@ header{
 
 .shop   img {
     width: 95%;
+    height: 220px;
     margin-top: 5Px;
     border-radius: 20px;
     align-items: center;
@@ -259,7 +260,7 @@ header{
 }
 
 .shop-wrapper, .shop-wrapper1 {
-    width: calc(1300px * 2);
+    width: calc(1300px * 3);
     height: 300px;
 }
 
