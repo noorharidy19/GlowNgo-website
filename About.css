@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    color: rgb(208, 177, 177); 
+    background-color: white; 
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center; 
+}
+
+h1.about-title,
+h2 {
+    color: rgb(210, 167, 167); 
+}
+
+a {
+    color: rgb(208, 177, 177); 
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgba(146, 77, 89, 0.964); 
+}
+
+.contact-info {
+    margin: 0;
+    padding: 0;
+    padding-top: 20px; 
+}
+
+.contact-info p:first-child {
+    margin-top: 0; 
+}
