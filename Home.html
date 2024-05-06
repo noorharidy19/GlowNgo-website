@@ -10,23 +10,24 @@
 
 <body>
     <header>
-        <a href="#" class="logo" ><img src="logo.jpeg" width="180" height="80"></a>
+        <a href="#" class="logo" ><img src="images/logo.jpeg" width="180" height="80"></a>
         <nav class="navigation">
             <a href="Homepage.html">Home</a>
             <div class="dropdown-menu">
                 <a href="products.html" class="dropdownbtn">Products</a>
                 <div class="dropdown-contents">
                     <a href="face.html">
-                        <img src="face.jpg"> <br>Face
+                        <img src="images/face.jpg"> <br>Face
                     </a>
-                    <a href="brow.html"> <img src="brows.jpg" > <br>Brows</a>
-                    <a href="lip.html"><img src="lips.jpg" ><br>Lips</a>
-                    <a href="tools.html"><img src="tools1.jpg"><br>Tools</a>
-                    <a href="eyes.html"><img src="eye.jpg" ><br>Eyes</a>
+                    <a href="brow.html"> <img src="images/brows.jpg" > <br>Brows</a>
+                    <a href="lip.html"><img src="images/lips.jpg" ><br>Lips</a>
+                    <a href="tools.html"><img src="images/tools1.jpg"><br>Tools</a>
+                    <a href="eyes.html"><img src="images/eye.jpg" ><br>Eyes</a>
                 </div>
             </div>
             <a href="About.html">About</a>
-            <a href="#" onclick="showPopup('popupContainerSignIn')"><i class="fa-solid fa-user"></i></a>
+           
+        <a href="#" id="signInIcon" onclick="showPopup('popupContainerSignIn')"><i id="signInIconImage" class="fa-solid fa-user"></i></a>
             <a href="Cart.html" title="shopping cart"><i class="fa-solid fa-cart-shopping"></i></a>
         </nav>
     </header> 
@@ -57,112 +58,328 @@
 
         <br>
 
-    <div>
-        <br>
-        <h2>Best Sellers</h2>
-        <p><a href="allproducts.html">view more</a></p>
-        <div id="Products">
-            <div class="shop-wrapper">
-                <a href="allproducts.html"><div class="shop">
-                    <img src="Pic1.jpg" alt="Makeup img" width="200" height="200">
-                    <h2 >1Products</h2>
-                    <p>23$</p> 
-                </div></a>  
-                <div class="shop">
-                    <h2 >2 Products</h2>
-                    <a href="allproducts.html"><img src="alll.jpg" alt="Makeup img" width="50" height="50"></a>   
-                </div>
-                <div class="shop">
-                    <h2 >3 Products</h2>
-                    <a href="allproducts.html"><img src="alll.jpg" alt="Makeup img" width="50" height="50"></a>   
-                </div>
-                <div class="shop">
-                    <h2 >4 Products</h2>
-                    <a href="allproducts.html"><img src="alll.jpg" alt="Makeup img" width="50" height="50"></a>   
-                </div>
-                <div class="shop">
-                    <h2 >5 Products</h2>
-                    <a href="allproducts.html"><img src="alll.jpg" alt="Makeup img" width="318" height="50"></a>   
-                </div>
-
-                <div class="shop">
-                    <h2 >6 Products</h2>
-                    <a href="allproducts.html"><img src="alll.jpg" alt="Makeup img" width="318" height="50"></a>   
-                </div>
-                <div class="shop">
-                    <h2 >7 Products</h2>
-                    <a href="allproducts.html"><img src="alll.jpg" alt="Makeup img" width="318" height="50"></a>   
-                </div>
-                <div class="shop">
-                    <h2 >8 Products</h2>
-                    <a href="allproducts.html"><img src="alll.jpg" alt="Makeup img" width="318" height="50"></a>   
-                </div>
-                <div class="shop">
-                    <h2 >9 Products</h2>
-                    <a href="allproducts.html"><img src="alll.jpg" alt="Makeup img" width="318" height="50"></a>   
-                </div>
-                <div class="shop">
-                    <h2 >10 Products</h2>
-                    <a href="allproducts.html"><img src="alll.jpg" alt="Makeup img" width="318" height="50"></a>   
-                </div>
-            <a class="prev" onclick="plusProd(-1)"> &#10092; </a>
-            <a class="next" onclick="plusProd(1)"> &#10093; </a>
+        <div>
+            <br>
+            <h2>Our Products</h2>
+            <p><a href="allproducts.html">view more</a></p>
+            <div id="Products">
+                <div class="shop-wrapper">
+                    <div class="shop">
+                        <a href="face.html"><img src="images/fentycon.jpg" alt=""></a>
+                        <div class="des">
+                            <h5>Fenty Beauty Concelar</h5>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4>30.00$</h4>
+                        </div>
+                        <a href="Cart.html"><i class="fa-solid fa-cart-shopping  cart"></i></a>
+                    </div>  
+                    <div class="shop">
+                        <a href="Eyes.html"><img src="images/kikolinear.jpeg" alt=""></a>
+                        <div class="des">
+                            <h5>Kiko Long Lasting Duo Eyeliner</h5>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4>30.00$</h4>
+                        </div>
+                        <a href="Cart.html"><i class="fa-solid fa-cart-shopping  cart"></i></a>
+                    </div>
+                    <div class="shop">
+                        <a href="lip.html"><img src="images/benetint.jpg" alt=""></a>
+                        <div class="des">
+                            <h5>Benetint</h5>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4>24.00$</h4>
+                        </div>
+                        <a href="Cart.html"><i class="fa-solid fa-cart-shopping  cart"></i></a>  
+                    </div>
+                    <div class="shop">
+                        <a href="lip.html"><img src="images/rarestickjpg.jpg" alt=""></a>
+                        <div class="des">
+                            <h5>Rare Beauty Lip stick</h5>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4>20.00$</h4>
+                        </div>
+                        <a href="Cart.html"><i class="fa-solid fa-cart-shopping  cart"></i></a>  
+                    </div>
+                    <div class="shop">
+                        <a href="brow.html"><img src="images/rarebrow.jpg" alt=""></a>
+                        <div class="des">
+                            <h5>Rare Beauty Brow Harmony Precision Pencil</h5>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4>19.00$</h4>
+                        </div>
+                        <a href="Cart.html"><i class="fa-solid fa-cart-shopping  cart"></i></a>  
+                    </div>   
+                    <div class="shop">
+                        <a href="Eyes.html"><img src="images/rareprimer.jpeg" alt=""></a>
+                        <div class="des">
+                            <h5>Rare Beauty Weightless Eye Primer</h5>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4>21.00$</h4>
+                        </div>
+                        <a href="Cart.html"><i class="fa-solid fa-cart-shopping  cart"></i></a> 
+                    </div>
+                    <div class="shop">
+                        <a href="tools.html"><img src="images/spongefanty.jpg" alt=""></a>
+                        <div class="des">
+                            <h5>Fenty Beauty Blender</h5>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4>24.00$</h4>
+                        </div>
+                        <a href="Cart.html"><i class="fa-solid fa-cart-shopping  cart"></i></a>
+                    </div>
+                    <div class="shop">
+                        <a href="face.html"><img src="images/kikohighlighter.jpg" alt=""></a>
+                        <div class="des">
+                            <h5>Kiko Highlighter</h5>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4>17.00$</h4>
+                        </div>
+                        <a href="Cart.html"><i class="fa-solid fa-cart-shopping  cart"></i></a> 
+                    </div>
+                    <div class="shop">
+                        <a href="face.html"><img src="images/kikopowder.jpg" alt=""></a>
+                        <div class="des">
+                            <h5>Kiko Powder</h5>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4>25.00$</h4>
+                        </div>
+                        <a href="Cart.html"><i class="fa-solid fa-cart-shopping  cart"></i></a> 
+                    </div>
+                    <div class="shop">
+                        <a href="lip.html"><img src="images/plump1.jpg" alt=""></a>
+                        <div class="des">
+                            <h5>Dior Plumping Gloss</h5>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4>40.00$</h4>
+                        </div>
+                        <a href="Cart.html"><i class="fa-solid fa-cart-shopping  cart"></i></a>  
+                    </div>
+                <a class="prev" onclick="plusProd(-1)"> &#10092; </a>
+                <a class="next" onclick="plusProd(1)"> &#10093; </a>
+            </div>
+            </div> 
         </div>
-        </div> 
-    </div>
-    <div>
-        <br>
-        <h2>New Collection</h2>
-        <p><a href="allproducts.html">view more</a></p>
-        <div id="Products">
-            <div class="shop-wrapper1">
-                <a href="allproducts.html"><div class="shop">
-                    <img src="Pic1.jpg" alt="Makeup img" width="50" height="50">
-                    <h2 >1Products</h2>
-                    <p>23$</p> 
-                </div></a>  
-                <div class="shop">
-                    <h2 >2 Products</h2>
-                    <a href="allproducts.html"><img src="alll.jpg" alt="Makeup img" width="50" height="50"></a>   
-                </div>
-                <div class="shop">
-                    <h2 >3 Products</h2>
-                    <a href="allproducts.html"><img src="alll.jpg" alt="Makeup img" width="50" height="50"></a>   
-                </div>
-                <div class="shop">
-                    <h2 >4 Products</h2>
-                    <a href="allproducts.html"><img src="alll.jpg" alt="Makeup img" width="50" height="50"></a>   
-                </div>
-                <div class="shop">
-                    <h2 >5 Products</h2>
-                    <a href="allproducts.html"><img src="alll.jpg" alt="Makeup img" width="318" height="50"></a>   
-                </div>
-
-                <div class="shop">
-                    <h2 >6 Products</h2>
-                    <a href="allproducts.html"><img src="alll.jpg" alt="Makeup img" width="318" height="50"></a>   
-                </div>
-                <div class="shop">
-                    <h2 >7 Products</h2>
-                    <a href="allproducts.html"><img src="alll.jpg" alt="Makeup img" width="318" height="50"></a>   
-                </div>
-                <div class="shop">
-                    <h2 >8 Products</h2>
-                    <a href="allproducts.html"><img src="alll.jpg" alt="Makeup img" width="318" height="50"></a>   
-                </div>
-                <div class="shop">
-                    <h2 >9 Products</h2>
-                    <a href="allproducts.html"><img src="alll.jpg" alt="Makeup img" width="318" height="50"></a>   
-                </div>
-                <div class="shop">
-                    <h2 >10 Products</h2>
-                    <a href="allproducts.html"><img src="alll.jpg" alt="Makeup img" width="318" height="50"></a>   
-                </div>
-            <a class="prev" onclick="plusProd1(-1)"> &#10092; </a>
-            <a class="next" onclick="plusProd1(1)"> &#10093; </a>
+        <div>
+            <br>
+            <h2>New Collection</h2>
+            <p><a href="allproducts.html">view more</a></p>
+            <div id="Products">
+                <div class="shop-wrapper1">
+                    <div class="shop">
+                        <img src="images/balmm.jpg" alt="">
+                        <div class="des">
+                            <h5>Summer Fridays Lip Balm</h5>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4>24.00$</h4>
+                        </div>
+                        <a href="Cart.html"><i class="fa-solid fa-cart-shopping  cart"></i></a>
+                    </div>  
+                    <div class="shop">
+                        <img src="images/liqkiko.jpg" alt="">
+                        <div class="des">
+                            <h5>Kiko Unlimited Double Touch</h5>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4>17.00$</h4>
+                        </div>
+                        <a href="Cart.html"><i class="fa-solid fa-cart-shopping  cart"></i></a>
+                    </div>
+                    <div class="shop">
+                        <img src="images/cont.jpg" alt="">
+                        <div class="des">
+                            <h5>Charlotte Tilbury Contouer wand</h5>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4>42.00$</h4>
+                        </div>
+                        <a href="Cart.html"><i class="fa-solid fa-cart-shopping  cart"></i></a>  
+                    </div>
+                    <div class="shop">
+                        <img src="images/rarelush.jpg" alt="">
+                        <div class="des">
+                            <h5>Rare Beauty Liquid Blush</h5>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4>23.00$</h4>
+                        </div>
+                        <a href="Cart.html"><i class="fa-solid fa-cart-shopping  cart"></i></a>  
+                    </div>
+                    <div class="shop">
+                        <img src="images/diorcurler.jpg" alt="">
+                        <div class="des">
+                            <h5>Dior EyeLash Curler</h5>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4>30.00$</h4>
+                        </div>
+                        <a href="Cart.html"><i class="fa-solid fa-cart-shopping  cart"></i></a>  
+                    </div>   
+                    <div class="shop">
+                        <img src="images/oil.jpg" alt="">
+                        <div class="des">
+                            <h5>Dior Lip Oil</h5>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4>40.00$</h4>
+                        </div>
+                        <a href="Cart.html"><i class="fa-solid fa-cart-shopping  cart"></i></a> 
+                    </div>
+                    <div class="shop">
+                        <img src="images/kikogel.jpg" alt="">
+                        <div class="des">
+                            <h5>Kiko Eyebrow Designer Gel Mascara</h5>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4>15.00$</h4>
+                        </div>
+                        <a href="Cart.html"><i class="fa-solid fa-cart-shopping  cart"></i></a>
+                    </div>
+                    <div class="shop">
+                        <img src="images/mascararare.jpeg" alt="">
+                        <div class="des">
+                            <h5>Rare Beauty Universal Volumizing Mascara</h5>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4>11.00$</h4>
+                        </div>
+                        <a href="Cart.html"><i class="fa-solid fa-cart-shopping  cart"></i></a> 
+                    </div>
+                    <div class="shop">
+                        <img src="images/fentyFounjpg.jpg" alt="">
+                        <div class="des">
+                            <h5>Fenty Beauty Founadtion</h5>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4>40.00$</h4>
+                        </div>
+                        <a href="Cart.html"><i class="fa-solid fa-cart-shopping  cart"></i></a> 
+                    </div>
+                    <div class="shop">
+                        <img src="images/kikohighlighter.jpg" alt="">
+                        <div class="des">
+                            <h5>Kiko Highlighter</h5>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4>17.00$</h4>
+                        </div>
+                        <a href="Cart.html"><i class="fa-solid fa-cart-shopping  cart"></i></a>  
+                    </div>
+                <a class="prev" onclick="plusProd1(-1)"> &#10092; </a>
+                <a class="next" onclick="plusProd1(1)"> &#10093; </a>
+            </div>
+            </div> 
         </div>
-        </div> 
-    </div>
 
     <div class="popup-container" id="popupContainerSignIn">
  
@@ -186,9 +403,7 @@
             <div class="create-account">
                 Don't have an account? <a href="#" onclick="hidePopup('popupContainerSignIn'); showPopup('popupContainerSignUp')">Create an account</a>
             </div>
-            <div class="help-center">
-                Need Help? Our customer care is here for you! <a href="help_center.html"><br>Go to help center</a>
-            </div>
+            
         </div>
     </div>
 
@@ -224,9 +439,7 @@
             <div class="signin">
                 Already Have an account <a href="#" onclick="hidePopup('popupContainerSignUp'); showPopup('popupContainerSignIn')">Log in</a>
             </div>
-            <div class="help-center">
-                Need Help? Our customer care is here for you! <a href="help_center.html"> <br>Go to help center</a>
-            </div>
+            
         </div>
     </div>
     <div class="popup-container" id="popupContainerForget">
