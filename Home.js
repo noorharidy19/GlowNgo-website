@@ -155,7 +155,7 @@ function Show() {
         printError("usernameErr", "Please fill the fields.");
         error = true;
     } else if (username === "nourhan.mohamed" && password === "1234") {
-        window.location.href = "Home.html";
+        window.location.href = "myprofile.html";
     } else if (username === "nour.amr" && password === "nour1234") {
         window.location.href = "admin.html";
     } else {
