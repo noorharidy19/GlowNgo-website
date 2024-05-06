@@ -109,21 +109,21 @@ header{
 }
 
 .slide:nth-child(1) {
-    background-image: url("Pic1.jpg");
+    background-image: url("images/Pic1.jpg");
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
 }
  
 .slide:nth-child(2) {
-    background-image: url("Pic2.jpg");
+    background-image: url("images/Pic2.jpg");
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
 }
  
 .slide:nth-child(3) {
-    background-image: url("Pic3.jpg");
+    background-image: url("images/Pic3.jpg");
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -183,8 +183,8 @@ header{
 
 #Products {
     overflow: hidden;
-    width: 1350px;
-    height: 300px;
+    width: 1350px;   /**/
+    height: 400px;
     position: relative;
     margin: 0 auto;
     border:0 ;
@@ -193,22 +193,71 @@ header{
 }
 
 .shop{ 
-    border-radius: 5px;
-    border-color: black;
     background-color: rgb(252, 252, 252);
-    margin: 5px;
+    border: 7px solid rgb(222, 162, 162);  
+    border-radius: 25px;
+    margin: 8px;
     margin-top: 13px;
-    height: 275px;
-    width: 250px;
+    height: 350px;
+    width: 241px;
     align-items: center;
     transition: transform 0.3s ease;
     float: left;
+    position: relative;
 }
  
 .shop:hover {
     box-shadow: 0 5px 25px rgba(1 1 1/15%);
     transform: scale(1.05);
 }
+
+.shop   img {
+    width: 95%;
+    margin-top: 5Px;
+    border-radius: 20px;
+    align-items: center;
+}
+
+.des {
+    text-align: left;
+    padding: 10px 0;
+    margin-left: 5px;
+}
+
+.shop .des span {
+    font-size: 12px;
+    color: #606063;
+}
+
+ .shop .des h5 {
+    color: #1a1a1a;
+    font-size: 14px;
+}
+
+ .shop .des i {
+    
+    color: rgb(243, 181, 25);
+    font-size: 12px;
+}
+
+ .shop .des h4 {
+    font-size: 15px;
+    color: #000000;
+}
+
+.shop .cart {
+    width: 40px;
+    line-height: 40px;
+    border-radius: 40px;
+    background-color:  rgb(222, 162, 162);
+    color: rgba(146, 77, 89, 0.964);
+    border: 1px solid #e4cce7;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    z-index: 1;
+}
+
 .shop-wrapper, .shop-wrapper1 {
     width: calc(1300px * 2);
     height: 300px;

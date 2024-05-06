@@ -66,7 +66,7 @@ function showProd() {
     } else if (ProdIndex > maxIndex) {
         ProdIndex = 0;
     }
-    productContainer.style.marginLeft = `-${ProdIndex * 250}px`;
+    productContainer.style.marginLeft = `-${ProdIndex * 271}px`;
 }
 
 function plusProd1(n) {
@@ -84,7 +84,7 @@ function showProd1() {
     } else if (ProdIndex1 > maxIndex) {
         ProdIndex1 = 0;
     }
-    productContainer.style.marginLeft = `-${ProdIndex1 * 250}px`;
+    productContainer.style.marginLeft = `-${ProdIndex1 * 271}px`;
 }
 
 $(document).ready(function(){
