@@ -109,21 +109,21 @@ header{
 }
 
 .slide:nth-child(1) {
-    background-image: url("Pic1.jpg");
+    background-image: url("images/Pic1.jpg");
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
 }
  
 .slide:nth-child(2) {
-    background-image: url("Pic2.jpg");
+    background-image: url("images/Pic2.jpg");
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
 }
  
 .slide:nth-child(3) {
-    background-image: url("Pic3.jpg");
+    background-image: url("images/Pic3.jpg");
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
