@@ -17,6 +17,7 @@ function confirmCashPayment() {
     document.getElementById("successMessages").style.backgroundColor = "#4CAF50";
     document.getElementById("successHeader").innerText = "Order Successful";
     document.getElementById("successText").innerText = "Thank you for your order!";
+   
 }
 
 function confirmVisaPayment() {
@@ -103,4 +104,22 @@ function validateVisaDetails() {
     }
 
     return Validation;
+
+}
+document.querySelectorAll('.feedback li').forEach(entry => entry.addEventListener('click', e => {
+    if(!entry.classList.contains('active')) {
+        document.querySelector('.feedback li.active').classList.remove('active');
+        entry.classList.add('active');
+    }
+    e.preventDefault();
+}));
+window.onload = function() {
+    showPopup();
+};
+function showrating() {
+    document.getElementById('rating').style.display = 'block';
+}
+
+function hiderating() {
+    document.getElementById('rating').style.display = 'none';
 }

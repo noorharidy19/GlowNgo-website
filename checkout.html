@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout - Makeup Brand</title>
     <link rel="stylesheet" href="checkout.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
 </head>
 <body>
 
@@ -50,7 +51,7 @@
             <button class="payment-method-button" onclick="showVisaDetails()">Visa</button>
         </div>
         <div class="cash-details" id="cashDetails">
-            <button class="confirm-button" id="confirmButton" onclick="confirmPayment()">Confirm</button>
+            <button class="confirm-button" id="confirmButton" onclick="showrating()">Confirm</button>
         </div>
         <div class="visa-details" id="visaDetails" style="display: none;">
             <form>
@@ -82,7 +83,25 @@
     </div>
 
 </div>
-
+<div class="rating-container" id="rating" style="display: none;">
+    <div class="popup-rate">
+        <span class="close-btn" onclick="hiderating()">×</span>
+        <div class="rate">
+            <h2 style="color: green;"> Thank you for your order and payment!</h2>
+            <h3>Rate Us</h3>
+            <div class="moods">
+                <button class="mood" data-rating="5"><i class="fa-regular fa-face-grin-stars"></i></button>
+                <button class="mood" data-rating="4"><i class="fa-regular fa-face-smile"></i></button>
+                <button class="mood" data-rating="3"><i class="fa-regular fa-face-meh"></i></button>
+                <button class="mood" data-rating="2"><i class="fa-regular fa-face-frown"></i></button>
+                <button class="mood" data-rating="1"><i class="fa-regular fa-face-sad-tear"></i></button>
+            </div>
+            <br>
+            <br>
+            <button type="button" onclick = "hiderating()">Submit</button>
+        </div>
+    </div>
+</div>
 <script src="checkout.js"></script>
 
 </body>

@@ -124,3 +124,71 @@ body {
     padding: 20px;
     border-radius: 5px;
 }
+.mood-meter {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.mood-meter h2 {
+    color: #333;
+}
+
+.moods {
+    margin-top: 20px;
+}
+
+.mood {
+    font-size: 32px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+
+.mood:focus {
+    outline: none;
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.mood:hover {
+    background-color: #eee;
+}
+.rating-container {
+    display: none;
+    position: fixed;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    border: 2px solid rgb(210, 167, 167);
+    font-family: Helvetica, sans-serif; 
+}
+.button {
+    display:none;
+    width: 200%;
+    padding: 25px;
+    margin: 13px 0px;
+    font-size: 18px;
+    border: 1px solid rgb(210, 167, 167); 
+    border-radius: 5px;
+    color: black;
+    font-family: Helvetica, sans-serif; 
+    font-weight: bold;
+}
+
+.popup-rate {
+    text-align: center;
+}
+
