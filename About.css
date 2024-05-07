@@ -1,9 +1,7 @@
 body {
-    font-family: Arial, sans-serif;
-    color: rgb(208, 177, 177); 
+    /* font-family: Arial, sans-serif; */
+    
     background-color: white; 
-    margin: 0;
-    padding: 0;
 }
 
 .container {
@@ -16,6 +14,7 @@ body {
 h1.about-title,
 h2 {
     color: rgb(210, 167, 167); 
+    padding: 20px;
 }
 
 a {
@@ -35,4 +34,11 @@ a:hover {
 
 .contact-info p:first-child {
     margin-top: 0; 
+}
+.navvv{
+    padding:100px 50px; 
+      margin: -15px;
+}
+p{
+    color: rgb(208, 177, 177); 
 }

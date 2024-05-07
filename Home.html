@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Home.css">
+    <!-- <link rel="stylesheet" href="StyleProd.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <title></title>
+    <title>Home</title>
 </head>
 
 <body>
     <header>
         <a href="#" class="logo" ><img src="images/logo.jpeg" width="180" height="80"></a>
+        <span class="search">
+            <input type="text" placeholder="Search">
+            <i class="fa-solid fa-search"></i>
+        </span>
         <nav class="navigation">
-            <a href="Homepage.html">Home</a>
+            <a href="Home.html">Home</a>
             <div class="dropdown-menu">
                 <a href="products.html" class="dropdownbtn">Products</a>
                 <div class="dropdown-contents">
@@ -26,12 +31,13 @@
                 </div>
             </div>
             <a href="About.html">About</a>
-           
-        <a href="#" id="signInIcon" onclick="showPopup('popupContainerSignIn')"><i id="signInIconImage" class="fa-solid fa-user"></i></a>
-            <a href="Cart.html" title="shopping cart"><i class="fa-solid fa-cart-shopping"></i></a>
+           <div id="overlay" style="display: none;"></div>
+        <a href="#" id="signInIcon" onclick="showPopupSignin('popupContainerSignIn')"><i id="signInIconImage" class="fa-solid fa-user"></i></a>
+        <a href="#" title="shopping cart" onclick="showPopup(['CART'])"><i class="fa-solid fa-cart-shopping"></i></a>
+        <a href="#" title="Wishlist" onclick="showPopup(['WISHLIST'])"><i class="fa-solid fa-heart"></i></i></a>
         </nav>
     </header> 
-
+ <section class="Home">
     <div id="slideshow">
         <div class="slide-wrapper">
             <div class="slide">
@@ -55,6 +61,7 @@
             <span class="dash" onclick="currentSlide(3)"></span>
         </div>
     </div>
+</section>
 
         <br>
 
@@ -384,15 +391,15 @@
     <div class="popup-container" id="popupContainerSignIn">
  
         <div class="popup">
-            <span class="close-btn" onclick="hidePopup('popupContainerSignIn')">&times;</span>
+            <span class="close-btn" onclick="hidePopupsignin('popupContainerSignIn')">&times;</span>
             <h2>Log in</h2>
 <form onsubmit="return validateForm2()">
-    <input type="text" id="username" placeholder="Username">
-    <input type="password" id="password" placeholder="Password">
+    <input type="text" id="username" placeholder="Username" class="text">
+    <input type="password" id="password" placeholder="Password" class="text">
     <i class="fa-solid fa-eye fa-fade fa-sm" onclick="Show()"></i>
     <button type="button" onclick="validateForm2()">Login</button>
     <br>    
-    <div class="forget"> <a href="#" onclick="hidePopup('popupContainerSignIn'); showPopup('popupContainerForget')">Forgot Password</a></div>
+    <div class="forget"> <a href="#" onclick="hidePopupsignin('popupContainerSignIn'); showPopupSignin('popupContainerForget')">Forgot Password</a></div>
     <br>
     <a href="gmail.html"><i class="fa-solid fa-envelope fa-2xl"style="color: #3601f4;"></i></a>
     <a href="facebook.html"><i class="fa-brands fa-facebook fa-2xl" style="color: #3601f4;"></i></a>
@@ -401,7 +408,7 @@
             <br>
             <span id="usernameErr" class="error"></span> 
             <div class="create-account">
-                Don't have an account? <a href="#" onclick="hidePopup('popupContainerSignIn'); showPopup('popupContainerSignUp')">Create an account</a>
+                Don't have an account? <a href="#" onclick="hidePopupsignin('popupContainerSignIn'); showPopupSignin('popupContainerSignUp')">Create an account</a>
             </div>
             
         </div>
@@ -410,10 +417,10 @@
     <div class="popup-container" id="popupContainerSignUp">
         
         <div class="popup">
-            <span class="close-btn" onclick="hidePopup('popupContainerSignUp')">&times;</span>
+            <span class="close-btn" onclick="hidePopupsignin('popupContainerSignUp')">&times;</span>
             <h2>Sign Up</h2>
             <form onsubmit="return validateForm1()">
-                <input type="text" id="name" placeholder="Name" required>
+                <input type="text" id="name" placeholder="Name" required class="text">
                 <input type="email" id="email" placeholder="Email" required>
                 <input type="password" id="password" placeholder="Password" required>
                 <input type="password" id="confirm_password" placeholder="Confirm Password" required>
@@ -437,14 +444,14 @@
             <div>or sign up with social media account</div>
             
             <div class="signin">
-                Already Have an account <a href="#" onclick="hidePopup('popupContainerSignUp'); showPopup('popupContainerSignIn')">Log in</a>
+                Already Have an account <a href="#" onclick="hidePopupsignin('popupContainerSignUp'); showPopupSignin('popupContainerSignIn')">Log in</a>
             </div>
             
         </div>
     </div>
     <div class="popup-container" id="popupContainerForget">
     <div class="popup">
-        <span class="close-btn" onclick="hidePopup('popupContainerForget')">&times;</span>
+        <span class="close-btn" onclick="hidePopupsignin('popupContainerForget')">&times;</span>
         <h2>Reset Password</h2>
         <form onsubmit="return sendResetPasswordEmail()">
             <input type="email" id="resetEmail" placeholder="Enter your email" required>
@@ -454,8 +461,122 @@
 
     </div>
 </div>
+    <!-- --------------------------------CART------------------------------------ -->
+    <div class="CART " id="CART">
+        <h2 class="pcart"> Your Cart&nbsp; <i class="fa-solid fa-bag-shopping"></i></i>  </h2>
+       
+        <div class="popupp">
+            <span class="close-btn" onclick="hidePopup(['CART'])">&times;</span>
+            <div class="product-display">
+              <img src="images/fentycon.jpg" alt="Concelar img" width="218" height="200" class="imgg" id="c">
+              <img src="images/con2.jpg" alt="Concelar img" width="218" height="200" class="imgg" id="c1">
+              <div class="product1">
+                <h3>Fenty Beauty Concealer</h3>
+                <h3>Price: <span id="price1">30.00</span>$   Quantity: <span id="quantity1">1</span></h3>
+                <div class="circle-container">
+                  <img class="circle-image" src="images/fentycon.jpg" alt="Description of image" onclick="showShade(['c'],['imgg'])">
+                  <img class="circle-image" src="images/con2.jpg" alt="Description of image" onclick="showShade(['c1'],['imgg'])">
+                </div>
+                <button type="button" class="remove" onclick="changeQuantity(-1, 'quantity1', 'price1')">-</button>
+                <button type="button" class="add" onclick="changeQuantity(1, 'quantity1', 'price1')">+</button>
+                
+              </div>
+            </div>
+            <div class="product-display">
+              <img src="images/bronzerkiko.jpg" alt="Bronzer img" width="218" height="200" class="imggg" id="br1">
+              <img src="images/bronz1.jpg" alt="Bronzer img" width="218" height="200" class="imggg" id="b">
+              <div class="product1">
+                <h3>Kiko Bronzer</h3>
+                <h3>Price: <span id="price2">20.00</span>$   Quantity: <span id="quantity2">1</span></h3>
+                <div class="circle-container">
+                    <img class="circle-image" src="images/bronzerkiko.jpg" alt="Description of image" onclick=" showShade(['br1'],['imggg'])">
+                    <img class="circle-image" src="images/bronz1.jpg" alt="Description of image" onclick=" showShade(['b'],['imggg']) ">
+                    </div>
+                    <button type="button" class="remove" onclick="changeQuantity(-1, 'quantity2', 'price2')">-</button>
+                    <button type="button" class="add" onclick="changeQuantity(1, 'quantity2', 'price2')">+</button>
+                    
+              </div>
+            </div>
+            <div class="product-display">
+              <img src="images/benetint.jpg" alt="Lipstick img" width="218" height="200" class="imgggg" id="r1">
+              <img src="images/tintshade.jpg" alt="Lipstick img" width="218" height="200" class="imgggg" id="r2">
+              <div class="product1">
+                <h3>Benetint</h3>
+                <h3>Price: <span id="price3">24.00</span>$   Quantity: <span id="quantity3">1</span></h3>
+                <div class="circle-container">
+                    <img class="circle-image" src="images/benetint.jpg" alt="Description of image" onclick=" showShade(['r1'],['imgggg']) ">
+                    <img class="circle-image" src="images/tintshade.jpg" alt="Description of image" onclick=" showShade(['r2'],['imgggg']) ">
+                    </div>
+                    <button type="button" class="remove" onclick="changeQuantity(-1, 'quantity3', 'price3')">-</button>
+                    <button type="button" class="add" onclick="changeQuantity(1, 'quantity3', 'price3')">+</button>
+              </div>
+            </div>
+            <div class="total">
+                <h3>Total: <span id="total"></span>$</h3>
+            </div>
+            <div class="checkout">
+                <button type="button" onclick="">Procced to Check Out</button>
+              </div>
+          
+
+        </div>
+    </div> -->
+ <!-- --------------------------------WISHLIST------------------------------------ -->
+ <div class="WISHLIST " id="WISHLIST">
+    <h2 class="pcart"> Your Wishlist&nbsp; <i class="fa-regular fa-heart"></i>  </h2>
+    <div class="popupp">
+        <span class="close-btn" onclick="hidePopup(['WISHLIST'])">&times;</span>
+        <div class="product-display">
+          <img src="images/rareprimer.jpeg" alt="Concelar img" width="218" height="200" class="imgg1" id="c2">
+          <img src="images/rareshadeprimer.jpg" alt="Concelar img" width="218" height="200" class="imgg1" id="c12">
+          <div class="product1">
+            <h3>Rare Beauty Primer</h3>
+            <h3>Price: <span id="price1">21.00</span>$</h3>
+            <div class="circle-container">
+              <img class="circle-image" src="images/rareprimer.jpeg" alt="Description of image" onclick="showShade(['c2'],['imgg1'])">
+              <img class="circle-image" src="images/rareshadeprimer.jpg" alt="Description of image" onclick="showShade(['c12'],['imgg1'])">
+            </div>
+            <button type="button" class="re">Remove</button>
+            <button type="button" class="ad">Add to Cart</button>
+            
+          </div>
+        </div>
+        <div class="product-display">
+          <img src="images/spongefanty.jpg" alt="Bronzer img" width="218" height="200" class="imggg" id="br1">
+          <div class="product1">
+            <h3>Feanty Beauty Blender</h3>
+            <h3>Price: <span id="price2">24.00</span>$</h3>
+            <br>
+            <br>
+                <button type="button" class="re">Remove</button>
+                <button type="button" class="ad">Add to Cart</button>
+                
+          </div>
+        </div>
+        <div class="product-display">
+          <img src="images/kikogel.jpg" alt="Lipstick img" width="218" height="200" class="imgggg2" id="r12">
+          <img src="images/gelshade.jpg" alt="Lipstick img" width="218" height="200" class="imgggg2" id="r22">
+          <div class="product1">
+            <h3>Kiko Eyebrow Gel</h3>
+            <h3>Price: <span id="price3">15.00</span>$</span></h3>
+            <div class="circle-container">
+                <img class="circle-image" src="images/kikogel.jpg" alt="Description of image" onclick=" showShade(['r12'],['imgggg2']) ">
+                <img class="circle-image" src="images/gelshade.jpg" alt="Description of image" onclick=" showShade(['r22'],['imgggg2']) ">
+                </div>
+                <button type="button" class="re">Remove</button>
+                <button type="button" class="ad">Add to Cart</button>
+          </div>
+        </div>
+        <div class="ADD">
+            <button type="button" onclick="">ADD PRODUCT</button>
+            <button type="button" onclick="">ADD ALL TO CART</button>
+          </div>
+  
+    </div>
+  </div> 
 
 
     <script src="Home.js"></script>
+    <script src="Prod.js"></script>
 </body>
 </html>
