@@ -218,3 +218,215 @@ button + button {
 #password-form input[type="password"] {
     margin-bottom: 20px;
 }
+.CART {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 600px; 
+    height: 650px;
+    overflow: auto;
+  }
+  
+  .pcart {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+  }
+  .WISHLIST {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 600px; 
+    height: 650px;
+    overflow: auto;
+  }
+  
+  
+  .popupp {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .imgg {
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  .imggg {
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  .imgggg {
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  .imgg1 {
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  .imgggg2 {
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  .checkout {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .checkout button {
+    background-color: rgb(255, 105, 180); 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .checkout button:hover {
+    background-color: rgb(255, 182, 193);
+  }
+  .product-display {
+    display: flex;
+    gap: 20px;
+  }
+  .product1 {
+    margin-top: 30px;
+    text-align: left;
+  }
+  .remove, .add {
+    background-color:rgb(196, 194, 194); 
+    border: none;
+    padding: 5px 10px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+   padding-left: 50px;
+   padding-right: 50px;
+  
+  }
+  
+  .remove:hover, .add:hover {
+    background-color: rgb(108, 117, 125);
+  }
+  
+  .product-display h3{
+    color: rgb(108, 117, 125);
+  }
+  #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+  .ADD {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .ADD button {
+    background-color: rgb(255, 105, 180); 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .ADD button:hover {
+    background-color: rgb(255, 182, 193);
+  }
+  .re, .ad {
+    background-color:rgb(196, 194, 194); 
+    border: none;
+    padding: 5px 10px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+   padding-left: 20px;
+   padding-right: 20px;
+  
+  }
+  
+  .re:hover, .ad:hover {
+    background-color: rgb(108, 117, 125);
+  }
+  .search {
+    display: flex;
+    align-items: center;
+    background-color: rgb(248, 249, 250);
+    border-radius: 20px;
+    padding: 5px;
+    width: 200px;
+    }
+    
+    .search input[type="text"] {
+    border: none;
+    background-color: transparent;
+    flex-grow: 1;
+    padding: 5px;
+    border-radius: 15px;
+    }
+    
+    .search i {
+    margin-left: 5px;
+    }
+  .search {
+    display: flex;
+    align-items: center;
+    background-color: rgb(248, 249, 250);
+    border-radius: 20px;
+    padding: 5px;
+    width: 200px;
+    }
+    
+    .search input[type="text"] {
+    border: none;
+    background-color: transparent;
+    flex-grow: 1;
+    padding: 5px;
+    border-radius: 15px;
+    }
+    
+    .search i {
+    margin-left: 5px;
+    }
+
+
+
+
+
