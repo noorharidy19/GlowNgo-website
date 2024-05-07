@@ -36,8 +36,9 @@ function showShade(containerIds, containerClass) {
 }
 
 
-function des(){
-    var nourhanElements = document.getElementsByClassName("nourhan");//description->nourhan
+function des() {
+    var darkMode = localStorage.getItem('darkMode') === 'true';
+    var nourhanElements = document.getElementsByClassName("nourhan");
     var btn1Elements = document.getElementsByClassName("btn1");
     var btn2Elements = document.getElementsByClassName("btn2");
     var noorElements = document.getElementsByClassName("noor");
@@ -45,18 +46,19 @@ function des(){
         nourhanElements[i].style.display = "inline-block";
     }
     for (var i = 0; i < btn1Elements.length; i++) {
-        btn1Elements[i].style.backgroundColor = "pink";
+        btn1Elements[i].style.backgroundColor = darkMode ? "darkgray" : "pink";
     }
     for (var i = 0; i < btn2Elements.length; i++) {
-        btn2Elements[i].style.backgroundColor = "whitesmoke";
+        btn2Elements[i].style.backgroundColor = darkMode ? "whitesmoke" : "whitesmoke";
     }
     for (var i = 0; i < noorElements.length; i++) {
         noorElements[i].style.display = "none";
     }
 }
 
-function use(){
-    var noorElements = document.getElementsByClassName("noor");//how to use->noor
+function use() {
+    var darkMode = localStorage.getItem('darkMode') === 'true';
+    var noorElements = document.getElementsByClassName("noor");
     var btn2Elements = document.getElementsByClassName("btn2");
     var btn1Elements = document.getElementsByClassName("btn1");
     var nourhanElements = document.getElementsByClassName("nourhan");
@@ -64,16 +66,15 @@ function use(){
         noorElements[i].style.display = "inline-block";
     }
     for (var i = 0; i < btn2Elements.length; i++) {
-        btn2Elements[i].style.backgroundColor = "pink";
+        btn2Elements[i].style.backgroundColor = darkMode ? "darkgray" : "pink";
     }
     for (var i = 0; i < btn1Elements.length; i++) {
-        btn1Elements[i].style.backgroundColor = "whitesmoke";
+        btn1Elements[i].style.backgroundColor = darkMode ? "whitesmoke" : "whitesmoke";
     }
     for (var i = 0; i < nourhanElements.length; i++) {
         nourhanElements[i].style.display = "none";
     }
 }
-
 function x(selectedOption, brandDropdownId, container) {
     var brandDropdown = document.getElementById(brandDropdownId);
     var containerElement = document.getElementById(container);
@@ -387,3 +388,306 @@ function getTotalPrice() {
   window.onload = function() {
     getTotalPrice();
   };
+//   function toggleDarkMode() {
+//     var darkModeToggle = document.getElementById('dark-mode-toggle');
+//     document.body.classList.toggle('dark-mode', darkModeToggle.checked);
+//     localStorage.setItem('darkMode', darkModeToggle.checked);
+//     // Rest of your dark mode styling...
+// }
+
+// window.onload = function() {
+//     var darkModeToggle = document.getElementById('dark-mode-toggle');
+//     var darkMode = localStorage.getItem('darkMode') === 'true';
+//     darkModeToggle.checked = darkMode;
+//     document.body.classList.toggle('dark-mode', darkMode);
+//     if (darkMode) toggleDarkMode();
+// }
+
+  function toggleDarkMode() {
+    var darkModeToggle = document.getElementById('dark-mode-toggle');
+    document.body.classList.toggle('dark-mode', darkModeToggle.checked);
+    localStorage.setItem('darkMode', darkModeToggle.checked);
+    // rest of your code...
+
+    var darkModeToggle = document.getElementById('dark-mode-toggle');
+    var myElements = document.getElementsByClassName('myElement');
+    var elements = document.getElementsByClassName('bodyy');
+    var cards= document.getElementsByClassName('shopp');
+    var logoo = document.getElementsByClassName('logo');
+    var nav = document.getElementsByClassName('nav1');
+    var img = document.getElementsByClassName('imggel');
+    var eye= document.getElementsByClassName('eye');
+    var window= document.getElementsByClassName('Products-window');
+    var text= document.getElementsByClassName('text');
+    var bt1= document.getElementsByClassName('btn1');
+    var bt2= document.getElementsByClassName('btn2');
+    var p1= document.getElementsByClassName('p1');
+    var o= document.getElementsByClassName('o');
+    var z= document.getElementsByClassName('z');
+    var lipprod= document.getElementsByClassName('lipprod');
+    var Sponges= document.getElementsByClassName('Sponges');
+    var facee= document.getElementsByClassName('facee');
+    var Eylashes= document.getElementsByClassName('EyeLashes');
+    var Mascara= document.getElementsByClassName('Mascara');
+    var kohl= document.getElementsByClassName('kohl');
+    var EyeLiner= document.getElementsByClassName('EyeLinear');
+    var EyeShadow= document.getElementsByClassName('EyeShadow');
+    var EyePrimer= document.getElementsByClassName('EyePrimer');
+    var FaceBrush= document.getElementsByClassName('FaceBrush');
+    var Curlers= document.getElementsByClassName('Curlers');
+    var q1= document.getElementsByClassName('q1');
+    var shop= document.getElementsByClassName('shop');
+    var dropdownbtn = document.getElementsByClassName('dropdownbtn');
+    var viewmore = document.getElementsByClassName('viewmore');
+    var accountcontainer= document.getElementsByClassName('account-container');
+    var profile= document.getElementsByClassName('profile-title');
+    var info= document.getElementsByClassName('info');
+    if (darkModeToggle.checked) {
+        for(var i = 0; i < myElements.length; i++) {
+            myElements[i].style.backgroundColor = '#333333'; // lighter black
+            myElements[i].style.borderColor = 'white';
+        }
+        for(var i = 0; i < elements.length; i++) {
+            elements[i].style.backgroundColor = '#333333'; // lighter black
+        }
+        for(var i = 0; i < cards.length; i++) {
+            cards[i].style.backgroundColor = 'rgb(152, 150, 150)';
+            // darker pinkrgb(182, 127, 127)
+        }
+        for(var i = 0; i < logoo.length; i++) {
+            logoo[i].style.filter = 'invert(80%)';
+            // logoo[i].style.backgroundColor = 'transparent';
+        }
+        for(var i = 0; i < nav.length; i++) {
+            nav[i].style.color = 'white';
+        }
+        for(var i = 0; i < img.length; i++) {
+            img[i].style.borderColor = 'lightgray';
+        }
+        for(var i = 0; i < eye.length; i++) {
+            eye[i].style.color = 'lightgray';
+        }
+        for(var i = 0; i < window.length; i++) {
+            window[i].style.backgroundColor = 'lightgray';
+        }
+        for(var i = 0; i < text.length; i++) {
+            text[i].style.color = 'lightgray';
+        }
+        for(var i = 0; i < bt1.length; i++) {
+            bt1[i].style.backgroundColor = 'darkgray';
+        }
+        for(var i = 0; i < bt2.length; i++) {
+            bt2[i].style.backgroundColor = 'white';
+        }
+        for(var i = 0; i < p1.length; i++) {
+            p1[i].style.color = 'black';
+        }
+        for(var i = 0; i < z.length; i++) {
+            z[i].style.color ='';
+        }
+        for(var i = 0; i < lipprod.length; i++) {
+            lipprod[i].style.color = 'lightgray';
+        }
+        for(var i = 0; i < Sponges.length; i++) {
+            Sponges[i].style.color = 'lightgray';
+        }
+        for(var i = 0; i < facee.length; i++) {
+            facee[i].style.color = 'lightgray';
+        }
+        for(var i = 0; i < Eylashes.length; i++) {
+            Eylashes[i].style.color = 'lightgray';
+        }
+        for(var i = 0; i < Mascara.length; i++) {
+            Mascara[i].style.color = 'lightgray';
+        }
+        for(var i = 0; i < kohl.length; i++) {
+            kohl[i].style.color = 'lightgray';
+        }
+        for(var i = 0; i < EyeLiner.length; i++) {
+            EyeLiner[i].style.color = 'lightgray';
+        }
+        for(var i = 0; i < EyeShadow.length; i++) {
+            EyeShadow[i].style.color = 'lightgray';
+        }
+        for(var i = 0; i < EyePrimer.length; i++) {
+            EyePrimer[i].style.color = 'lightgray';
+        }
+        for(var i = 0; i < FaceBrush.length; i++) {
+            FaceBrush[i].style.color = 'lightgray';
+        }
+        for(var i = 0; i < Curlers.length; i++) {
+            Curlers[i].style.color = 'lightgray';
+        }
+        for(var i = 0; i < q1.length; i++) {
+            q1[i].style.color = 'lightgray';
+        }
+        for(var i = 0; i < shop.length; i++) {
+            shop[i].style.borderColor = 'lightgray';
+        } 
+        for(var i = 0; i < dropdownbtn.length; i++) {
+            dropdownbtn[i].style.color = 'white';
+        }  
+        for(var i = 0; i < viewmore.length; i++) {
+            viewmore[i].style.color = 'white';
+        }
+        for(var i = 0; i < accountcontainer.length; i++) {
+            accountcontainer[i].style.backgroundColor = 'lightgray';
+        }
+        for(var i = 0; i < profile.length; i++) {
+            profile[i].style.color = 'black';
+        }
+        for(var i = 0; i < info.length; i++) {
+            info[i].style.color = 'black';
+        }
+      
+        
+    } else {
+        for(var i = 0; i < myElements.length; i++) {
+            myElements[i].style.color = 'black';
+            myElements[i].style.backgroundColor = 'white';
+            myElements[i].style.borderColor = 'rgb(210, 167, 167)';
+        }
+        for(var i = 0; i < elements.length; i++) {
+            elements[i].style.backgroundColor = 'white';
+        }
+        for(var i = 0; i < cards.length; i++) {
+            cards[i].style.backgroundColor = 'rgb(255, 202, 202)'; 
+        }
+        for(var i = 0; i < logoo.length; i++) {
+            logoo[i].style.filter = 'none';
+        }
+        for(var i = 0; i < nav.length; i++) {
+            nav[i].style.color = 'rgb(208, 177, 177)';
+        }
+        for(var i = 0; i < img.length; i++) {
+            img[i].style.borderColor = 'rgba(238, 193, 193, 0.749)';
+        }
+        for(var i = 0; i < eye.length; i++) {
+            eye[i].style.color = 'rgb(208, 177, 177)';
+        }
+        for(var i = 0; i < window.length; i++) {
+            window[i].style.backgroundColor = 'white';
+        }
+        for(var i = 0; i < text.length; i++) {
+            text[i].style.color = 'pink';
+        }
+        for(var i = 0; i < bt1.length; i++) {
+            bt1[i].style.backgroundColor = 'pink';
+        }
+        for(var i = 0; i < bt2.length; i++) {
+            bt2[i].style.backgroundColor = 'whitesmoke';
+        }
+        for(var i = 0; i < p1.length; i++) {
+            p1[i].style.color = 'rgb(221, 93, 140);';
+        }
+        for(var i = 0; i < z.length; i++) {
+            z[i].style.color = 'rgb(222, 128, 128)';
+        }
+        for(var i = 0; i < lipprod.length; i++) {
+            lipprod[i].style.color = 'rgb(208, 177, 177)';
+        }
+        for(var i = 0; i < Sponges.length; i++) {
+            Sponges[i].style.color = 'rgb(208, 177, 177)';
+        }
+        for(var i = 0; i < facee.length; i++) {
+            facee[i].style.color = 'rgb(208, 177, 177)';
+        }
+        for(var i = 0; i < Eylashes.length; i++) {
+            Eylashes[i].style.color = 'rgb(208, 177, 177)';
+        }
+        for(var i = 0; i < Mascara.length; i++) {
+            Mascara[i].style.color = 'rgb(208, 177, 177)';
+        }
+        for(var i = 0; i < kohl.length; i++) {
+            kohl[i].style.color = 'rgb(208, 177, 177)';
+        }
+        for(var i = 0; i < EyeLiner.length; i++) {
+            EyeLiner[i].style.color = 'rgb(208, 177, 177)';
+        }
+        for(var i = 0; i < EyeShadow.length; i++) {
+            EyeShadow[i].style.color = 'rgb(208, 177, 177)';
+        }
+        for(var i = 0; i < EyePrimer.length; i++) {
+            EyePrimer[i].style.color = 'rgb(208, 177, 177)';
+        }
+        for(var i = 0; i < FaceBrush.length; i++) {
+            FaceBrush[i].style.color = 'rgb(208, 177, 177)';
+        }
+        for(var i = 0; i < Curlers.length; i++) {
+            Curlers[i].style.color = 'rgb(208, 177, 177)';
+        }
+        for(var i = 0; i < q1.length; i++) {
+            q1[i].style.color = ' rgb(222, 162, 162) ';
+        }
+        for(var i = 0; i < shop.length; i++) {
+            shop[i].style.borderColor = 'rgb(222, 162, 162) ';
+        }
+        for(var i = 0; i < dropdownbtn.length; i++) {
+            dropdownbtn[i].style.color = 'rgb(208, 177, 177)';
+        }
+        for(var i = 0; i < viewmore.length; i++) {
+            viewmore[i].style.color = 'blue';
+        }
+        for(var i = 0; i < accountcontainer.length; i++) {
+            accountcontainer[i].style.backgroundColor = 'white';
+        }
+        for(var i = 0; i < profile.length; i++) {
+            profile[i].style.color = 'rgb(210, 167, 167)';
+        }
+        for(var i = 0; i < info.length; i++) {
+            info[i].style.color = 'rgb(210, 167, 167)';
+        }
+       
+    }
+}
+window.onload = function() {
+    var darkModeToggle = document.getElementById('dark-mode-toggle');
+    var darkMode = localStorage.getItem('darkMode') === 'true';
+    darkModeToggle.checked = darkMode;
+    document.body.classList.toggle('darkMode', darkMode);
+    if (darkMode) toggleDarkMode();
+}
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+function openChangePassword() {
+    var passwordForm = document.getElementById("password-form");
+    if (passwordForm.style.display === "none") {
+        passwordForm.style.display = "block";
+    } else {
+        passwordForm.style.display = "none";
+    }
+}
+
+function changePassword() {
+    var oldPassword = document.getElementById("oldPassword").value;
+    var newPassword = document.getElementById("newPassword").value;
+    var confirmPassword = document.getElementById("confirmPassword").value;
+    if (newPassword !== confirmPassword) {
+        alert("New password and confirm password do not match!");
+    } else {
+        // Send request to change password
+        alert("Password changed successfully!");
+    }
+}
+
+function revealOffers() {
+    var offersList = document.getElementById("offers-list");
+    if (offersList.style.display === "none") {
+        offersList.style.display = "block";
+    } else {
+        offersList.style.display = "none";
+    }
+
+}
