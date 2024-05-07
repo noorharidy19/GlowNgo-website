@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="admin.css">
+    <script src="admin.js"></script>
+    <title></title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo" ><img src="images/logo.jpeg" width="180" height="80"></a>
+        <nav class="navigation">
+            <a href="Home.html">Home</a>
+            <a href="Products.html">Products</a>
+            <a href="MyAccount.html"><i class="fa-solid fa-user"></i></a>
+        </nav>
+    </header>
+<section>
+    <div id="mySidenav" class="sidenav">
+        <a href="adminprod.html" id="Products">Products<i class="fa-solid fa-cart-shopping"></i></a>
+        <a href="users.html" id="Users">Users&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-users"></i></a>
+        <a href="orders.html" id="Orders">Orders&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-basket-shopping"></i></a>
+    </div>
+    <h1 class="user">Orders</h1>
+</section>
+<table>
+    <tr>
+        <th>Order ID</th>
+        <th>User ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Phone Number</th>
+        <th>Order Status</th>
+        <th>View Order</th>
+        
+    </tr>
+    <tr>
+        <td>101</td>
+        <td>2003</td>
+        <td>Noor</td>
+        <td>Haridy</td>
+        <td>NoorHaridy</td>
+        <td>NoorHaridy@gmail.com</td>
+        <td>Maddi Street</td>
+        <td>01234567891</td>
+        <td>Packing</td>
+        <td> <button onclick="showModal(['myModal3'])" class="view-button">view</button></td>
+    </tr>
+    <tr>
+        <td>102</td>
+        <td>2005</td>
+        <td>Nourhan</td>
+        <td>Mohamed</td>
+        <td>nourhan.mohamed</td>
+        <td>NourhanMohamed@gmail.com</td>
+        <td>Nasr City</td>
+        <td>01230984111</td>
+        <td>Deleviring</td>
+        <td> <button onclick="showModal(['myModal4'])" class="view-button">view</button></td>
+    </tr>
+</table>
+<div class="buttons-container">
+    <button onclick="showModal(['myModal'])" class="add-button">Add</button>
+    <button onclick="showModal(['myModal1'])" class="edit-button">Edit</button>
+    <button onclick="showModal(['myModal2'])" class="Remove-button">Remove</button>
+</div>
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal(['myModal'])">&times;</span>
+        <h2>Add Order Details</h2>
+        <form onsubmit="return OrdersvalidationForm();">
+            <div class="form-group">
+                <label class="label-field">Order Id:</label>
+                <input type="text" name="Orderid" placeholder="Enter Order ID" class="input-field" id="orderId">
+                <div class="error" id="orderidError"></div>
+            </div>
+            <div class="form-group">
+                <label class="label-field">First Name:</label>
+                <input type="text" name="firstName" placeholder="Enter First Name" class="input-field" id="firstname">
+                <div class="error" id="firstnameError"></div>
+            </div>
+            <div class="form-group">
+                <label class="label-field">Last Name:</label>
+                <input type="text" name="lastName" placeholder="Enter Last Name" class="input-field" id="lastname">
+                <div class="error" id="lastnameError"></div>
+            </div>
+            <div class="form-group">
+                <label class="label-field">Username:</label>
+                <input type="text" name="username" placeholder="Enter Username" class="input-field" id="orderusername">
+                <div class="error" id="orderusernameError"></div>
+            </div>
+            <div class="form-group">
+                <label class="label-field">Email:</label>
+            <input type="text" name="email" placeholder="Enter Email" class="input-field" id="orderemail">
+            <div class="error" id="orderemailError"></div>
+            </div>
+            <div class="form-group">
+                <label class="label-field">Address:</label>
+                <input type="text" name="address" placeholder="Enter Address" class="input-field" id="orderaddress">
+                <div class="error" id="orderaddressError"></div>
+            </div>
+            <div class="form-group">
+                <label class="label-field">Phone Number:</label>
+            <input type="text" name="phone" placeholder="Enter Phone Number" class="input-field" id="orderphone">
+            <div class="error" id="orderphoneError"></div>
+            </div>
+            <div class="form-group">
+                <label class="label-field">Order Status:</label>
+                <select name="orderStatus" class="input-field" id="orderstat">
+                    <option value="">Select Order Status</option>
+                    <option value="pending">Pending</option>
+                    <option value="pending">Waiting for Confirmation</option>
+                    <option value="waiting">Waiting for Shipment</option>
+                    <option value="waiting">Waiting for Payment</option>
+                    <option value="waiting">Completed</option>
+                </select>
+                <div class="error" id="statusError"></div>
+            </div>
+            <div class="form-group">
+                <button type="button" onclick="showModal(['myModal5'])" class="show-button">Show Order Details</button>
+
+            </div>            
+            <div class="form-group">
+                <input type="submit" value="Submit" class="submit-btn">
+            </div>
+        </form>
+    </div>
+</div>
+<div id="myModal1" class="modal2">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal(['myModal1'])">&times;</span>
+        <h2>Edit User</h2>
+        <form onsubmit="return OrderValidationEdit();">
+            <div class="form-group">
+                <label class="label-field">Order ID:</label>
+                <input type="text" name="Id" placeholder="Enter ID" class="input-field" id="Oid">
+                <div class="error" id="OIDError"></div>
+            </div>
+                <div class="form-group">
+                    <label class="label-field">Select new order status:</label>
+                    <select name="orderStatus" class="input-field" id="changestatus">
+                        <option value="">Select Order Status</option>
+                        <option value="pending">Pending</option>
+                        <option value="pending">Waiting for Confirmation</option>
+                        <option value="waiting">Waiting for Shipment</option>
+                        <option value="waiting">Waiting for Payment</option>
+                        <option value="waiting">Completed</option>
+                    </select>
+                    <div class="error" id="changestatusERROR"></div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Submit" class="submit-btn">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="myModal2" class="modal2">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal(['myModal2'])">&times;</span>
+            <h2>Remove User</h2>
+             <form onsubmit="return OrdervalidationRemove();">
+                <div class="form-group"
+                    <label class="label-field">Order ID:</label>
+                    <input type="text" placeholderr="Enter ID" class="input-field" id="ORDERID">
+                    <div class="error" id="ORDERIDErrorr"></div>
+                </div>
+                <div class="form-group">
+                    <label class="label-field">User Email:</label>
+                    <input type="text" placeholder="Enter Email" class="input-field" id="EMAILORder">
+                    <div class="error" id="EMAILORderError"></div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Submit" class="submit-btn">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="myModal3" class="CART">
+        <div class="modal-content">
+            <h2 class="pcart">  Noor's order details&nbsp; <i class="fa-solid fa-bag-shopping"></i></i>  </h2>
+            <span class="close" onclick="closeModal(['myModal3'])">&times;</span>
+                <div class="product-display">
+                  <img src="images/fentycon.jpg" alt="Concelar img" width="218" height="200" class="imgg" id="c">
+                  <img src="images/con2.jpg" alt="Concelar img" width="218" height="200" class="imgg" id="c1">
+                  <div class="product1">
+                    <h3>Fenty Beauty Concealer</h3>
+                    <h3>Price: <span id="price1">30.00</span>$   Quantity: <span id="quantity1">1</span></h3>
+                    <div class="modal-content">
+                      <img class="circle-image" src="images/fentycon.jpg" alt="Description of image" onclick="showShade(['c'],['imgg'])">
+                      <img class="circle-image" src="images/con2.jpg" alt="Description of image" onclick="showShade(['c1'],['imgg'])">
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="product-display">
+                  <img src="images/bronzerkiko.jpg" alt="Bronzer img" width="218" height="200" class="imggg" id="br1">
+                  <img src="images/bronz1.jpg" alt="Bronzer img" width="218" height="200" class="imggg" id="b">
+                  <div class="product1">
+                    <h3>Kiko Bronzer</h3>
+                    <h3>Price: <span id="price2">20.00</span>$   Quantity: <span id="quantity2">1</span></h3>
+                    <div class="product-display">
+                        <img class="circle-image" src="images/bronzerkiko.jpg" alt="Description of image" onclick=" showShade(['br1'],['imggg'])">
+                        <img class="circle-image" src="images/bronz1.jpg" alt="Description of image" onclick=" showShade(['b'],['imggg']) ">
+                        </div>
+
+                        
+                  </div>
+                </div>
+                <div class="product-display">
+                  <img src="images/benetint.jpg" alt="Lipstick img" width="218" height="200" class="imgggg" id="r1">
+                  <img src="images/tintshade.jpg" alt="Lipstick img" width="218" height="200" class="imgggg" id="r2">
+                  <div class="product1">
+                    <h3>Benetint</h3>
+                    <h3>Price: <span id="price3">24.00</span>$   Quantity: <span id="quantity3">1</span></h3>
+                    <div class="circle-container">
+                        <img class="circle-image" src="images/benetint.jpg" alt="Description of image" onclick=" showShade(['r1'],['imgggg']) ">
+                        <img class="circle-image" src="images/tintshade.jpg" alt="Description of image" onclick=" showShade(['r2'],['imgggg']) ">
+                        </div>
+                  </div>
+                </div>
+                <div class="total">
+                    <h3>Total: <span id="total"></span>74$</h3>
+                </div>    
+            </div>
+        </div>
+        <div id="myModal4" class="CART">
+            <div class="modal-content">
+                <h2 class="pcart"> Nourhan's order details&nbsp; <i class="fa-solid fa-bag-shopping"></i></i>  </h2>
+                <span class="close" onclick="closeModal(['myModal4'])">&times;</span>
+                    <div class="product-display">
+                      <img src="images/rarestickjpg.jpg" alt="Concelar img" width="218" height="200" class="imgg1" id="c2">
+                      <img src="images/rarestick1.jpg" alt="Concelar img" width="218" height="200" class="imgg1" id="c3">
+                      <div class="product1">
+                        <h3>Rare Beauty Lip stick</h3>
+                        <h3>Price: <span id="price1">20.00</span>$   Quantity: <span id="quantity1">1</span></h3>
+                        <div class="modal-content">
+                          <img class="circle-image" src="images/rareshade.webp" alt="Description of image" onclick="showShade(['c2'],['imgg1'])">
+                          <img class="circle-image" src="images/rareshade1.webp" alt="Description of image" onclick="showShade(['c3'],['imgg1'])">
+                        </div>
+                        
+                      </div>
+                    </div>
+                    <div class="product-display">
+                      <img src="images/mascararare.jpeg" alt="Bronzer img" width="218" height="200" class="imggg22" id="br2">
+                      <img src="images/mascarararesh.webp" alt="Bronzer img" width="218" height="200" class="imggg22" id="b1">
+                      <div class="product1">
+                        <h3>Rare Beauty Mascara</h3>
+                        <h3>Price: <span id="price2">11.00</span>$   Quantity: <span id="quantity2">1</span></h3>
+                        <div class="product-display">
+                            <img class="circle-image" src="images/mascararare.jpeg" alt="Description of image" onclick=" showShade(['br2'],['imggg22'])">
+                            <img class="circle-image" src="images/mascarararesh.webp" alt="Description of image" onclick=" showShade(['b1'],['imggg22']) ">
+                            </div>
+                      </div>
+                    </div>
+                    <div class="product-display">
+                      <img src="images/primerdiorjpg.jpg" alt="Lipstick img" width="218" height="200" class="imgggg3" id="r3">
+                      <img src="images/primeBA.jpg" alt="Lipstick img" width="218" height="200" class="imgggg3" id="r4">
+                      <div class="product1">
+                        <h3>Dior Primer</h3>
+                        <h3>Price: <span id="price3">38.00</span>$   Quantity: <span id="quantity3">1</span></h3>
+                        <div class="circle-container">
+                            <img class="circle-image" src="images/primerdiorjpg.jpg" alt="Description of image" onclick=" showShade(['r3'],['imgggg3']) ">
+                            <img class="circle-image" src="images/primeBA.jpg" alt="Description of image" onclick=" showShade(['r4'],['imgggg3']) ">
+                            </div>
+                      </div>
+                    </div>
+                    <div class="total">
+                        <h3>Total: <span id="total"></span>69$</h3>
+                    </div>    
+                </div>
+        </div>
+        <div id="myModal5" class="CART">
+            <div class="modal-content">
+                <h2 class="pcart">Order details&nbsp; <i class="fa-solid fa-bag-shopping"></i></h2>
+                <span class="close" onclick="closeModal(['myModal5'])">&times;</span>
+                </div>
+                    <div class="product-display">
+                      <img src="images/fentyFounjpg.jpg" alt="Concelar img" width="218" height="200" class="imgdetails" id="c4">
+                      <img src="images/founshade1.jpg" alt="Concelar img" width="218" height="200" class="imgdetails" id="c5">
+                      <div class="product1">
+                        <h3>Fenty Beauty Founadtion</h3>
+                        <h3>Price: <span id="price1">40.00</span>$   Quantity: <span id="quantity1">1</span></h3>
+                        <div class="modal-content">
+                          <img class="circle-image" src="images/fentyFounjpg.jpg" alt="Description of image" onclick="showShade(['c4'],['imgdetails'])">
+                          <img class="circle-image" src="images/founshade1.jpg" alt="Description of image" onclick="showShade(['c5'],['imgdetails'])">
+                        </div>
+                        
+                      </div>
+                    </div>
+                    <div class="product-display">
+                      <img src="images/bronzerkiko.jpg" alt="Bronzer img" width="218" height="200" class="imgggdeatils" id="br3">
+                      <img src="images/bronz1.jpg" alt="Bronzer img" width="218" height="200" class="imgggdeatils" id="b3">
+                      <div class="product1">
+                        <h3>Kiko Bronzer</h3>
+                        <h3>Price: <span id="price2">20.00</span>$   Quantity: <span id="quantity2">1</span></h3>
+                        <div class="product-display">
+                            <img class="circle-image" src="images/bronzerkiko.jpg" alt="Description of image" onclick=" showShade(['br3'],['imgggdeatils'])">
+                            <img class="circle-image" src="images/bronz1.jpg" alt="Description of image" onclick=" showShade(['b3'],['imgggdeatils']) ">
+                            </div>  
+                      </div>
+                    </div>
+                    <div class="total">
+                        <h3>Total: <span id="total"></span>60$</h3>
+                    </div>    
+                </div>
+            </div>
+</section>
+</body>
+</html>

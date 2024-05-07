@@ -65,6 +65,18 @@ function closeModal(containerIds) {
     });
 
 }
+function showShade(containerIds, containerClass) {
+    var hideElements = document.getElementsByClassName(containerClass);
+    for (var i = 0; i < hideElements.length; i++) {
+        hideElements[i].style.display = "none";
+    }
+
+    containerIds.forEach(function(id) {
+        document.getElementById(id).style.display = "block";
+    });
+    
+    
+}
 
 
 const adminCheckbox = document.getElementById('admin1');
@@ -430,6 +442,126 @@ function UservalidationRemove() {
         Validation = false;
     } else {
         document.getElementById('emaillError').innerHTML = "";
+    }
+    return Validation;
+}
+function OrdersvalidationForm() {
+    var OrderId = document.getElementById('orderId').value;
+    var firstname = document.getElementById('firstname').value;
+    var lastname = document.getElementById('lastname').value;
+    var Username = document.getElementById('orderusername').value;
+    var Email = document.getElementById('orderemail').value;
+    var Address = document.getElementById('orderaddress').value;
+    var Phone = document.getElementById('orderphone').value;
+    var Status = document.getElementById('orderstat').value;
+
+    var Validation = true;
+
+    //Id Validation
+    if(OrderId == "" || OrderId < 0 || isNaN(OrderId) || OrderId.length > 3){
+        document.getElementById('orderidError').innerHTML = "Please enter a valid Order ID (max 3 digits)";
+        Validation = false;
+    } else {
+        document.getElementById('orderidError').innerHTML = "";
+    }
+
+    //name Validation
+    if(firstname == "" || !/^[a-zA-Z\s]+$/.test(firstname)){
+        document.getElementById('firstnameError').innerHTML = "Please enter a valid First name";
+        Validation= false;
+    } else {
+        document.getElementById('firstnameError').innerHTML = "";
+    }
+
+    if(lastname == "" || !/^[a-zA-Z\s]+$/.test(lastname)){
+        document.getElementById('lastnameError').innerHTML = "Please enter a valid Last name";
+        Validation= false;
+    } else {
+        document.getElementById('lastnameError').innerHTML = "";
+    }
+
+
+    //Email Validation
+    if(Email == "" || !/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(Email)){
+        document.getElementById('orderemailError').innerHTML = "Please enter a valid email";
+        Validation = false;
+    } else {
+        document.getElementById('orderemailError').innerHTML = "";
+    }
+    //Username Validation
+    if(Username == "" || !/^[a-zA-Z0-9]+$/.test(Username)){
+        document.getElementById('orderusernameError').innerHTML = "Please enter a valid username";
+        Validation = false;
+    } else {
+        document.getElementById('orderusernameError').innerHTML = "";
+    }
+
+    //Phone Validation
+    if(Phone == "" || Phone.length < 11 ||Phone.length > 11 || isNaN(Phone)){
+        document.getElementById('orderphoneError').innerHTML = "Please enter a valid phone number";
+        Validation = false;
+    } else {
+        document.getElementById('orderphoneError').innerHTML = "";
+    }
+
+    //Address Validation
+    if(Address == ""){
+        document.getElementById('orderaddressError').innerHTML = "Please enter a valid address";
+        Validation = false;
+    } else {
+        document.getElementById('orderaddressError').innerHTML = "";
+    }
+    if(Status == ""){
+        document.getElementById('statusError').innerHTML = "Please choose Order Status";
+        Validation = false;
+    } else {
+        document.getElementById('statusError').innerHTML = "";
+    }
+
+    
+
+    return Validation;
+}
+function OrderValidationEdit(){
+    var Choice = document.getElementById('changestatus').value;
+    var OrderIDchange = document.getElementById('Oid').value;
+    var Validation = true;
+    //Id Validation
+    if(OrderIDchange == "" || OrderIDchange < 0 || isNaN(OrderIDchange) || id.length > 3){
+        document.getElementById('OIDError').innerHTML = "Please enter a valid Order ID (max 3 digits)";
+        Validation = false;
+    } else {
+        document.getElementById('OIDError').innerHTML = "";
+    }
+    //status Validation
+
+    if(Choice == ""){
+        document.getElementById('changestatusERROR').innerHTML = "Please choose Order Status";
+        Validation = false;
+    } else {
+        document.getElementById('changestatusERROR').innerHTML = "";
+    }
+
+ return Validation;
+}
+function OrdervalidationRemove() {
+    var IDOrder = document.getElementById('ORDERID').value;
+    var emailOrder = document.getElementById('EMAILORder').value;
+    var Validation = true;
+
+    //Id Validation
+    if(IDOrder == "" || IDOrder < 0 || isNaN(IDOrder) || IDOrder.length > 3){
+        document.getElementById('ORDERIDErrorr').innerHTML = "Please enter a valid Order ID (max 3 digits)";
+        Validation = false;
+    } else {
+        document.getElementById('ORDERIDErrorr').innerHTML = "";
+    }
+    //Email Validation
+    if(emailOrder == "" || !/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(emailOrder)){
+        document.getElementById('EMAILORderError').innerHTML = "Please enter a valid email";
+        Validation = false;
+    } else {
+        document.getElementById('EMAILORderError').innerHTML = "";
     }
     return Validation;
 }
