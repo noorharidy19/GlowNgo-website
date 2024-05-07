@@ -108,7 +108,6 @@ function showImage(selectedOption){
 };
 
 function validationForm() {
-    var id = document.getElementById('productID').value;
     var name = document.getElementById('productName').value;
     var price = document.getElementById('productPrice').value;
     var category = document.getElementById('productCategory').value;
@@ -120,14 +119,6 @@ function validationForm() {
 
     
     var Validation = true;
-
-    //Id Validation
-    if(id == "" || id < 0 || isNaN(id) || id.length > 4){
-        document.getElementById('idError').innerHTML = "Please enter a valid product ID (max 4 digits)";
-        Validation = false;
-    } else {
-        document.getElementById('idError').innerHTML = "";
-    }
 
     //name Validation
     if(name == "" || !/^[a-zA-Z\s]+$/.test(name)){
@@ -197,32 +188,24 @@ function validationForm() {
 }
 
 function validationFormRemove() {
-    var id = document.getElementById('productID1').value;
+    var Yes = document.getElementById('Yes3');
+    var No = document.getElementById('No3');
     var Validation = true;
 
     //Id Validation
-    if(id == "" || id < 0 || isNaN(id)|| id.length > 4){
-        document.getElementById('idError1').innerHTML = "Please enter a valid product ID";
+    if(!Yes.checked && !No.checked) {
+        document.getElementById('RadioProductsError').innerHTML = "Please select Yes or No";
         Validation = false;
     } else {
-        document.getElementById('idError1').innerHTML = "";
+        document.getElementById('RadioProductsError').innerHTML = "";
     }
-
     return Validation;
 }
 function validationFormEdit() {
     var choice = document.getElementById('editField').value;
     var productField = document.getElementById('productChoice').value;
-    var id = document.getElementById('idd').value;
     var img = document.getElementById('productImage1').value;
     var Validation = true;
-    //Id Validation
-    if(id == "" || id < 0 || isNaN(id) || id.length > 4){
-        document.getElementById('idError2').innerHTML = "Please enter a valid product ID";
-        Validation = false;
-    } else {
-        document.getElementById('idError2').innerHTML = "";
-    }
     //Choice Validation
     if(choice == "select") {
         document.getElementById('choiceError').innerHTML = "Please choose a field to edit";
@@ -433,7 +416,6 @@ function UservalidationRemove() {
     return Validation;
 }
 function OrdersvalidationForm() {
-    var OrderId = document.getElementById('orderId').value;
     var firstname = document.getElementById('firstname').value;
     var lastname = document.getElementById('lastname').value;
     var Username = document.getElementById('orderusername').value;
@@ -443,14 +425,6 @@ function OrdersvalidationForm() {
     var Status = document.getElementById('orderstat').value;
 
     var Validation = true;
-
-    //Id Validation
-    if(OrderId == "" || OrderId < 0 || isNaN(OrderId) || OrderId.length > 3){
-        document.getElementById('orderidError').innerHTML = "Please enter a valid Order ID (max 3 digits)";
-        Validation = false;
-    } else {
-        document.getElementById('orderidError').innerHTML = "";
-    }
 
     //name Validation
     if(firstname == "" || !/^[a-zA-Z\s]+$/.test(firstname)){

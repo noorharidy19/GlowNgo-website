@@ -20,12 +20,13 @@
     </header>
 <section>
     <div id="mySidenav" class="sidenav">
-        <a href="adminprod.html" id="Products">Products<i class="fa-solid fa-cart-shopping"></i></a>
+        <a href="AdminProducts.html" id="Products">Products<i class="fa-solid fa-cart-shopping"></i></a>
         <a href="users.html" id="Users">Users&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-users"></i></a>
         <a href="orders.html" id="Orders">Orders&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-basket-shopping"></i></a>
     </div>
     <h1 class="user">Orders</h1>
 </section>
+<div id="overlay" style="display: none;"></div>
 <table>
     <tr>
         <th>Order ID</th>
@@ -70,6 +71,7 @@
             <button onclick="showModal(['myModal2'])" class="Remove-button">Remove</button></td>
     </tr>
 </table>
+
 <div class="buttons-container">
     <button onclick="showModal(['myModal'])" class="add-button">Add</button>
    
@@ -79,11 +81,6 @@
         <span class="close" onclick="closeModal(['myModal'])">&times;</span>
         <h2>Add Order Details</h2>
         <form onsubmit="return OrdersvalidationForm();">
-            <div class="form-group">
-                <label class="label-field">Order Id:</label>
-                <input type="text" name="Orderid" placeholder="Enter Order ID" class="input-field" id="orderId">
-                <div class="error" id="orderidError"></div>
-            </div>
             <div class="form-group">
                 <label class="label-field">First Name:</label>
                 <input type="text" name="firstName" placeholder="Enter First Name" class="input-field" id="firstname">
