@@ -442,6 +442,12 @@ function getTotalPrice() {
     var accountcontainer= document.getElementsByClassName('account-container');
     var profile= document.getElementsByClassName('profile-title');
     var info= document.getElementsByClassName('info');
+    var n= document.getElementsByClassName('n');
+    var popupp= document.getElementsByClassName('CART');
+    var popupp2= document.getElementsByClassName('WISHLIST');
+    var add= document.getElementsByClassName('add');
+    var remove= document.getElementsByClassName('remove');
+    var sub= document.getElementsByClassName('sub');
     if (darkModeToggle.checked) {
         for(var i = 0; i < myElements.length; i++) {
             myElements[i].style.backgroundColor = '#333333'; // lighter black
@@ -522,7 +528,8 @@ function getTotalPrice() {
             q1[i].style.color = 'lightgray';
         }
         for(var i = 0; i < shop.length; i++) {
-            shop[i].style.borderColor = 'lightgray';
+            shop[i].style.borderColor = 'gray';
+            shop[i].style.backgroundColor = 'lightgray';
         } 
         for(var i = 0; i < dropdownbtn.length; i++) {
             dropdownbtn[i].style.color = 'white';
@@ -538,6 +545,25 @@ function getTotalPrice() {
         }
         for(var i = 0; i < info.length; i++) {
             info[i].style.color = 'black';
+        }
+        for(var i = 0; i < n.length; i++) {
+            n[i].style.color = 'black';
+            n[i].style.backgroundColor = 'lightgray';
+        }
+        for(var i = 0; i < popupp.length; i++) {
+            popupp[i].style.backgroundColor = 'lightgray';
+        }
+        for(var i = 0; i < popupp2.length; i++) {
+            popupp2[i].style.backgroundColor = 'lightgray';
+        }
+        for(var i = 0; i < add.length; i++) {
+            add[i].style.backgroundColor = 'darkgary';
+        }
+        for(var i = 0; i < remove.length; i++) {
+            remove[i].style.backgroundColor = 'darkgary';
+        }
+        for(var i = 0; i < sub.length; i++) {
+            sub[i].style.backgroundColor = 'darkgary';
         }
       
         
@@ -621,6 +647,7 @@ function getTotalPrice() {
         }
         for(var i = 0; i < shop.length; i++) {
             shop[i].style.borderColor = 'rgb(222, 162, 162) ';
+            shop[i].style.backgroundColor = 'white';
         }
         for(var i = 0; i < dropdownbtn.length; i++) {
             dropdownbtn[i].style.color = 'rgb(208, 177, 177)';
@@ -636,6 +663,25 @@ function getTotalPrice() {
         }
         for(var i = 0; i < info.length; i++) {
             info[i].style.color = 'rgb(210, 167, 167)';
+        }
+        for(var i = 0; i < n.length; i++) {
+            n[i].style.color = 'rgb(208, 177, 177)';
+            n[i].style.backgroundColor = 'white';
+        }
+        for(var i = 0; i < popupp.length; i++) {
+            popupp[i].style.backgroundColor = 'white';
+        }
+        for(var i = 0; i < popupp2.length; i++) {
+            popupp2[i].style.backgroundColor = 'white';
+        }
+        for(var i = 0; i < add.length; i++) {
+            add[i].style.backgroundColor = 'rgb(196, 194, 194)';
+        }
+        for(var i = 0; i < remove.length; i++) {
+            remove[i].style.backgroundColor = 'rgb(196, 194, 194)';
+        }
+        for(var i = 0; i < sub.length; i++) {
+            sub[i].style.backgroundColor = 'rgb(196, 194, 194)';
         }
        
     }

@@ -254,3 +254,24 @@ function hidePopupsignin(id) {
 //   window.onload = function() {
 //     getTotalPrice();
 //   };
+// function toggleDarkMode() {
+//     var darkModeToggle = document.getElementById('dark-mode-toggle');
+//     document.body.classList.toggle('dark-mode', darkModeToggle.checked);
+//     localStorage.setItem('darkMode', darkModeToggle.checked);
+//     // rest of your code...
+
+//     var darkModeToggle = document.getElementById('dark-mode-toggle');
+//     var myElements = document.getElementsByClassName('myElement');
+//     var elements = document.getElementsByClassName('bodyy');
+//     var cards= document.getElementsByClassName('shop');
+//     var logoo = document.getElementsByClassName('logo');
+//     var nav = document.getElementsByClassName('nav1');
+  
+// }
+// window.onload = function() {
+//     var darkModeToggle = document.getElementById('dark-mode-toggle');
+//     var darkMode = localStorage.getItem('darkMode') === 'true';
+//     darkModeToggle.checked = darkMode;
+//     document.body.classList.toggle('darkMode', darkMode);
+//     if (darkMode) toggleDarkMode();
+// }
