@@ -8,15 +8,20 @@
     <link rel="stylesheet" href="myprofile.css">
     <link rel="stylesheet" href="StyleProd.css">
 </head>
-<body>
-    <header>
+<body class="bodyy">
+    <header class="myElement">
         <a href="#" class="logo" ><img src="images/logo.jpeg" width="180" height="80"></a>
         <nav class="navigation">
-            <a href="Home.html">Home</a>
+            <label class="switch">
+                <input type="checkbox" id="dark-mode-toggle" onchange="toggleDarkMode();">
+                <span class="slider round"></span>
+                <i class="fa-regular fa-moon"></i>
+              </label>
+            <a href="Home.html" class="nav1">Home</a>
             <div class="dropdown-menu">
                 <a href="products.html" class="dropdownbtn">Products</a>
                 <div class="dropdown-contents">
-                    <a href="face.html">
+                    <a href="face.html" >
                         <img src="images/face.jpg"> <br>Face
                     </a>
                     <a href="brow.html"> <img src="images/brows.jpg" > <br>Brows</a>
@@ -25,11 +30,11 @@
                     <a href="eyes.html"><img src="images/eye.jpg" ><br>Eyes</a>
                 </div>
             </div>
-            <a href="About.html">About</a>
+            <a href="About.html" class="nav1">About</a>
            
-        <a href="#"><i class="fa-solid fa-user"></i></a>
-        <a href="#" title="shopping cart" onclick="showPopup(['CART'])"><i class="fa-solid fa-cart-shopping"></i></a>
-        <a href="#" title="Wishlist" onclick="showPopup(['WISHLIST'])"><i class="fa-solid fa-heart"></i></i></a>
+        <a href="#" class="nav1"><i class="fa-solid fa-user"></i></a>
+        <a href="#" class="nav1" title="shopping cart" onclick="showPopup(['CART'])"><i class="fa-solid fa-cart-shopping"></i></a>
+        <a href="#" class="nav1" title="Wishlist" onclick="showPopup(['WISHLIST'])"><i class="fa-solid fa-heart"></i></i></a>
         </nav>
     </header> 
 <div class="account-container">
@@ -42,7 +47,7 @@
     </div>
 
     <div id="Profile" class="tabcontent">
-        <h3>Profile Information</h3>
+        <h3 class="info">Profile Information</h3>
         <form>
             <label for="username">User Name:</label><br>
             <input type="text" id="username" name="username" value="nourhan.mohamed"><br>
@@ -132,51 +137,125 @@
 <footer>
 </footer>
 
-<script>
-function openTab(evt, tabName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
+<!-- --------------------------------CART------------------------------------ -->
+<div class="CART " id="CART">
+    <h2 class="pcart"> Your Cart&nbsp; <i class="fa-solid fa-bag-shopping"></i></i>  </h2>
+   
+    <div class="popupp">
+        <span class="close-btn" onclick="hidePopup(['CART'])">&times;</span>
+        <div class="product-display">
+          <img src="images/fentycon.jpg" alt="Concelar img" width="218" height="200" class="imgg" id="c">
+          <img src="images/con2.jpg" alt="Concelar img" width="218" height="200" class="imgg" id="c1">
+          <div class="product1">
+            <h3>Fenty Beauty Concealer</h3>
+            <h3>Price: <span id="price1">30.00</span>$   Quantity: <span id="quantity1">1</span></h3>
+            <div class="circle-container">
+              <img class="circle-image" src="images/fentycon.jpg" alt="Description of image" onclick="showShade(['c'],['imgg'])">
+              <img class="circle-image" src="images/con2.jpg" alt="Description of image" onclick="showShade(['c1'],['imgg'])">
+            </div>
+            <button type="button" class="remove" onclick="changeQuantity(-1, 'quantity1', 'price1')">-</button>
+            <button type="button" class="add" onclick="changeQuantity(1, 'quantity1', 'price1')">+</button>
+            
+          </div>
+        </div>
+        <div class="product-display">
+          <img src="images/bronzerkiko.jpg" alt="Bronzer img" width="218" height="200" class="imggg" id="br1">
+          <img src="images/bronz1.jpg" alt="Bronzer img" width="218" height="200" class="imggg" id="b">
+          <div class="product1">
+            <h3>Kiko Bronzer</h3>
+            <h3>Price: <span id="price2">20.00</span>$   Quantity: <span id="quantity2">1</span></h3>
+            <div class="circle-container">
+                <img class="circle-image" src="images/bronzerkiko.jpg" alt="Description of image" onclick=" showShade(['br1'],['imggg'])">
+                <img class="circle-image" src="images/bronz1.jpg" alt="Description of image" onclick=" showShade(['b'],['imggg']) ">
+                </div>
+                <button type="button" class="remove" onclick="changeQuantity(-1, 'quantity2', 'price2')">-</button>
+                <button type="button" class="add" onclick="changeQuantity(1, 'quantity2', 'price2')">+</button>
+                
+          </div>
+        </div>
+        <div class="product-display">
+          <img src="images/benetint.jpg" alt="Lipstick img" width="218" height="200" class="imgggg" id="r1">
+          <img src="images/tintshade.jpg" alt="Lipstick img" width="218" height="200" class="imgggg" id="r2">
+          <div class="product1">
+            <h3>Benetint</h3>
+            <h3>Price: <span id="price3">24.00</span>$   Quantity: <span id="quantity3">1</span></h3>
+            <div class="circle-container">
+                <img class="circle-image" src="images/benetint.jpg" alt="Description of image" onclick=" showShade(['r1'],['imgggg']) ">
+                <img class="circle-image" src="images/tintshade.jpg" alt="Description of image" onclick=" showShade(['r2'],['imgggg']) ">
+                </div>
+                <button type="button" class="remove" onclick="changeQuantity(-1, 'quantity3', 'price3')">-</button>
+                <button type="button" class="add" onclick="changeQuantity(1, 'quantity3', 'price3')">+</button>
+          </div>
+        </div>
+        <div class="total">
+            <h3>Total: <span id="total"></span>$</h3>
+        </div>
+        <div class="checkout">
+            <button type="button" onclick="window.location.href = 'checkout.html'">Proceed to Checkout</button>
 
-function openChangePassword() {
-    var passwordForm = document.getElementById("password-form");
-    if (passwordForm.style.display === "none") {
-        passwordForm.style.display = "block";
-    } else {
-        passwordForm.style.display = "none";
-    }
-}
+          </div>
+      
 
-function changePassword() {
-    var oldPassword = document.getElementById("oldPassword").value;
-    var newPassword = document.getElementById("newPassword").value;
-    var confirmPassword = document.getElementById("confirmPassword").value;
-    if (newPassword !== confirmPassword) {
-        alert("New password and confirm password do not match!");
-    } else {
-        // Send request to change password
-        alert("Password changed successfully!");
-    }
-}
+    </div>
+</div> 
+<!-- --------------------------------WISHLIST------------------------------------ -->
+<div class="WISHLIST " id="WISHLIST">
+<h2 class="pcart"> Your Wishlist&nbsp; <i class="fa-regular fa-heart"></i>  </h2>
+<div class="popupp">
+    <span class="close-btn" onclick="hidePopup(['WISHLIST'])">&times;</span>
+    <div class="product-display">
+      <img src="images/rareprimer.jpeg" alt="Concelar img" width="218" height="200" class="imgg1" id="c2">
+      <img src="images/rareshadeprimer.jpg" alt="Concelar img" width="218" height="200" class="imgg1" id="c12">
+      <div class="product1">
+        <h3>Rare Beauty Primer</h3>
+        <h3>Price: <span id="price1">21.00</span>$</h3>
+        <div class="circle-container">
+          <img class="circle-image" src="images/rareprimer.jpeg" alt="Description of image" onclick="showShade(['c2'],['imgg1'])">
+          <img class="circle-image" src="images/rareshadeprimer.jpg" alt="Description of image" onclick="showShade(['c12'],['imgg1'])">
+        </div>
+        <button type="button" class="re">Remove</button>
+        <button type="button" class="ad">Add to Cart</button>
+        
+      </div>
+    </div>
+    <div class="product-display">
+      <img src="images/spongefanty.jpg" alt="Bronzer img" width="218" height="200" class="imggg" id="br1">
+      <div class="product1">
+        <h3>Feanty Beauty Blender</h3>
+        <h3>Price: <span id="price2">24.00</span>$</h3>
+        <br>
+        <br>
+            <button type="button" class="re">Remove</button>
+            <button type="button" class="ad">Add to Cart</button>
+            
+      </div>
+    </div>
+    <div class="product-display">
+      <img src="images/kikogel.jpg" alt="Lipstick img" width="218" height="200" class="imgggg2" id="r12">
+      <img src="images/gelshade.jpg" alt="Lipstick img" width="218" height="200" class="imgggg2" id="r22">
+      <div class="product1">
+        <h3>Kiko Eyebrow Gel</h3>
+        <h3>Price: <span id="price3">15.00</span>$</span></h3>
+        <div class="circle-container">
+            <img class="circle-image" src="images/kikogel.jpg" alt="Description of image" onclick=" showShade(['r12'],['imgggg2']) ">
+            <img class="circle-image" src="images/gelshade.jpg" alt="Description of image" onclick=" showShade(['r22'],['imgggg2']) ">
+            </div>
+            <button type="button" class="re">Remove</button>
+            <button type="button" class="ad">Add to Cart</button>
+      </div>
+    </div>
+    <div class="ADD">
+        <button type="button" onclick="">ADD PRODUCT</button>
+        <button type="button" onclick="">ADD ALL TO CART</button>
+      </div>
 
-function revealOffers() {
-    var offersList = document.getElementById("offers-list");
-    if (offersList.style.display === "none") {
-        offersList.style.display = "block";
-    } else {
-        offersList.style.display = "none";
-    }
-}
-</script>
+</div>
+</div> 
 
+
+<script src="myprofile.js"></script>
+<script src="Prod.js"></script>
 </body>
 </html>
+
+

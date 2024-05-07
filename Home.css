@@ -36,7 +36,8 @@ header{
   }
   body{
     text-align: center;
-    padding: 5%;
+    /* padding: 5%; */
+    
     
   }
   .home{
@@ -91,6 +92,7 @@ header{
     position: relative;
     margin: 25.5px 0 0 0;
     border:0 ;
+    padding-top: 90px;
 }
 
 .slide {
@@ -105,21 +107,21 @@ header{
 }
 
 .slide:nth-child(1) {
-    background-image: url("images/Pic1.jpg");
+    background-image: url("images/slide11.png");
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
 }
  
 .slide:nth-child(2) {
-    background-image: url("images/Pic2.jpg");
+    background-image: url("images/bran1.png");
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
 }
  
 .slide:nth-child(3) {
-    background-image: url("images/Pic3.jpg");
+    background-image: url("images/slide3.png");
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -200,6 +202,12 @@ header{
     transition: transform 0.3s ease;
     float: left;
     position: relative;
+}
+.q1{
+  color: rgb(222, 162, 162);
+  text-decoration: underline;
+  font-style: italic;
+  font-size:30px ;
 }
  
 .shop:hover {
@@ -622,6 +630,69 @@ button:hover {
     margin-left: 5px;
     }
 
-
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+    }
+    
+    .switch input { 
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+    }
+    
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: rgb(17, 16, 16);
+      transition: .4s;
+    }
+    
+    input:checked + .slider {
+      background-color: #5f6162;
+    }
+    
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+    
+    .slider.round {
+      border-radius: 34px;
+    }
+    
+    .slider.round:before {
+      border-radius: 50%;
+    }
+    .switch input:checked ~ i {
+      left: 75%;
+    }
+    
+    .switch i {
+      position: absolute;
+      top: 50%;
+      left: 25%;
+      transform: translate(-50%, -50%);
+      color: rgb(191, 190, 190);
+      font-size: 1em; /* Adjust as needed */
+      transition: left 0.3s ease-in-out;
+    }
+    
 
 
