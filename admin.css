@@ -118,7 +118,8 @@ table, th, td {
     color:black ;
   }
   table{
-    margin-left:130px;
+    margin-left:80px;
+
   }
 .modal {
     display: none;
@@ -157,11 +158,24 @@ table, th, td {
 .form-group1 {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    justify-content: center;
 }
 .form-group {
     margin-bottom: 20px;
     align-self: center; 
+}
+.input-radio {
+    appearance: none;
+    width: 20px; /* Adjust the width as needed */
+    height: 20px; /* Adjust the height as needed */
+    border-radius: 50%;
+    border: 2px solid #ccc; /* Border color */
+    cursor: pointer;
+    margin-right: 10px; /* Adjust spacing between radio button and label */
+}
+.input-radio:checked {
+    background-color: #ccc; /* Background color when checked */
 }
 
 .checkbox-group {
@@ -205,26 +219,26 @@ table, th, td {
     margin-right: 10px;
 }
 .edit-button{
-    display: inline-block;
+    display: inline;
     padding: 10px 10px;
     background-color: rgb(208, 177, 177);
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 20px;
-    margin-right: 10px;
+    /* margin-top: 20px;
+    margin-right: 10px; */
 }
 .Remove-button{
-    display: inline-block;
+    display: inline;
     padding: 10px 10px;
     background-color: rgb(208, 177, 177);
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 30px;
-    margin-right: 55px;
+    /* margin-top: 30px;
+    margin-right: 55px; */
 }
 .input-field {
     width: 100%;
@@ -270,7 +284,7 @@ table, th, td {
     text-decoration: underline;
 }
 .prod{
-margin-left: 190px;
+margin-left: 150px;
 
 }
 .circle-image {

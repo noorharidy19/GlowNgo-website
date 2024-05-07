@@ -20,8 +20,7 @@ function confirmCashPayment() {
 }
 
 function confirmVisaPayment() {
-    
-    document.getElementById("cardDetails").style.display = "none";
+    document.getElementById("visaDetails").style.display = "none";
     document.getElementById("confirmVisaButton").style.display = "none";
     document.getElementById("successMessages").style.display = "block";
     document.getElementById("successMessages").style.top = "50%";
@@ -61,12 +60,47 @@ function confirmPayment() {
     }, 3000); 
 }
 
-function confirmVisaPayment() {
+function validateVisaDetails() {
+    var cardNumber1 = document.getElementById('cardNumber').value;
+    var expiryYear1 = document.getElementById('expiryYear').value;
+    var expiryMonth1 = document.getElementById('expiryMonth').value;
+    var cvv1 = document.getElementById('cvv').value;
+    var Validation = true;
     
-    document.getElementById("successMessages").style.display = "block";
-    document.getElementById("successHeader").innerText = "Order and Payment Successful";
-    document.getElementById("successText").innerText = "Thank you for your order and payment!";
-    setTimeout(function() {
-        document.getElementById("successMessages").style.display = "none";
-    }, 3000); 
+    var visaRegEx = /^(?:4[0-9]{12}(?:[0-9]{3})?)$/;
+    if(cardNumber1 == "" || !visaRegEx.test(cardNumber1)){
+        document.getElementById('cardnumberError').innerHTML = "Please enter a valid Card number";
+        Validation = false;
+    } else {
+        document.getElementById('cardnumberError').innerHTML = "";
+    }
+    
+    var currentYear = new Date().getFullYear();
+    if(expiryYear1 == "" || expiryYear1 < currentYear || expiryYear1 > currentYear + 20){
+        document.getElementById('expiryYearError').innerHTML = "Please enter a valid expiry year";
+        Validation = false;
+    } else {
+        document.getElementById('expiryYearError').innerHTML = "";
+    }
+    
+    if(expiryMonth1 == "" || expiryMonth1 < 1 || expiryMonth1 > 12){
+        document.getElementById('expiryMonthError').innerHTML = "Please enter a valid Order expiry month";
+        Validation = false;
+    } else {
+        document.getElementById('expiryMonthError').innerHTML = "";
+    }
+    
+    var cvvRegEx = /^[0-9]{3}$/;
+    if(cvv1 == "" || !cvvRegEx.test(cvv1)){
+        document.getElementById('cvvError').innerHTML = "Please enter a valid cvv";
+        Validation = false;
+    } else {
+        document.getElementById('cvvError').innerHTML = "";
+    }
+
+    if (Validation) {
+        confirmVisaPayment();
+    }
+
+    return Validation;
 }
