@@ -512,3 +512,233 @@ function OrdervalidationRemove() {
     }
     return Validation;
 }
+function toggleDarkMode() {
+    var darkModeToggle = document.getElementById('dark-mode-toggle');
+    document.body.classList.toggle('dark-mode', darkModeToggle.checked);
+    localStorage.setItem('darkMode', darkModeToggle.checked);
+
+    var darkModeToggle = document.getElementById('dark-mode-toggle');
+    var myElements = document.getElementsByClassName('myElement');
+    var elements = document.getElementsByClassName('bodyy');
+    var logoo = document.getElementsByClassName('logo');
+    var nav = document.getElementsByClassName('nav1');
+    var table=document.getElementsByClassName('tab');
+    var table1=document.getElementsByClassName('prod');
+    var Text = document.getElementsByClassName('text');
+    var button= document.getElementsByClassName('edit-button');
+    var buttonprod= document.getElementsByClassName('But');
+    var button1= document.getElementsByClassName('Remove-button');
+    var button2= document.getElementsByClassName('add-button');
+    var button3= document.getElementsByClassName('submit-btn');
+    var button4= document.getElementsByClassName('view-button');
+    var button5= document.getElementsByClassName('show-button');
+    var User=document.getElementsByClassName('user');
+    var text =document.getElementsByClassName('adduser');
+    var window= document.getElementsByClassName('modal');
+    var window1= document.getElementsByClassName('modal1');
+    var window2= document.getElementsByClassName('modal2');
+    var window3= document.getElementsByClassName('CART');
+    var radio= document.getElementsByClassName('input-radio');
+    var side1= document.getElementsByClassName('side');
+    var prod=document.getElementsByClassName('Products');
+    var windowprod1=document.getElementsByClassName('Add-container');
+    var windowprod2=document.getElementsByClassName('Edit-container');
+    var windowprod3=document.getElementsByClassName('Remove-container');
+    if (darkModeToggle.checked) {
+        for(var i = 0; i < myElements.length; i++) {
+            myElements[i].style.backgroundColor = '#333333'; 
+            myElements[i].style.borderColor = 'white';
+        }
+        for(var i = 0; i < elements.length; i++) {
+            elements[i].style.backgroundColor = '#333333'; // lighter black
+        }
+        for(var i = 0; i < logoo.length; i++) {
+            logoo[i].style.filter = 'invert(80%)';
+            // logoo[i].style.backgroundColor = 'transparent';
+        }
+        for(var i = 0; i < nav.length; i++) {
+            nav[i].style.color = 'white';
+        }
+        for(var i = 0; i < table.length; i++) {
+            table[i].style.borderColor = 'lightgrey';
+            table[i].style.borderwidth = '2px';
+        }
+        for(var i = 0; i < table1.length; i++) {
+            table1[i].style.borderColor = 'lightgrey';
+            table1[i].style.borderwidth = '2px';
+        }
+        for(var i = 0; i < Text.length; i++) {
+            Text[i].style.color = 'white';
+            Text[i].style.borderColor = 'lightgrey';
+        }
+        for(var i=0;i<button.length;i++){
+            button[i].style.backgroundColor='lightgrey';
+            button[i].style.color='black';
+        }
+        for(var i=0;i<buttonprod.length;i++){
+            buttonprod[i].style.backgroundColor='lightgrey';
+            buttonprod[i].style.color='black';
+        }
+        for(var i=0;i<button1.length;i++){
+            button1[i].style.backgroundColor='lightgrey';
+            button1[i].style.color='black';
+        }
+        for(var i=0;i<button2.length;i++){
+            button2[i].style.backgroundColor='lightgrey';
+            button2[i].style.color='black';
+        }
+        for(var i=0;i<button3.length;i++){
+            button3[i].style.backgroundColor='darkgrey';
+            button3[i].style.color='black';
+        }
+        for(var i=0;i<button4.length;i++){
+            button4[i].style.backgroundColor='lightgrey';
+            button4[i].style.color='black';
+        }
+        for(var i=0;i<button5.length;i++){
+            button5[i].style.backgroundColor='darkgrey';
+            button5[i].style.color='black';
+        }
+        for(var i=0;i<User.length;i++){
+            User[i].style.color='white';
+        }
+        for(var i=0;i<prod.length;i++){
+            prod[i].style.color='white';
+        }
+        for(var i=0;i<window.length;i++){
+            window[i].style.backgroundColor='lightgrey';
+        }
+        for(var i=0;i<window1.length;i++){
+            window1[i].style.backgroundColor='lightgrey';
+        }
+        for(var i=0;i<window2.length;i++){
+            window2[i].style.backgroundColor='lightgrey';
+        }
+        for(var i=0;i<window3.length;i++){
+            window3[i].style.backgroundColor='lightgrey';
+        }
+
+        for(var i=0;i<text.length;i++){
+            text[i].style.color='grey';
+        }
+        for(var i=0;i<radio.length;i++){
+            radio[i].style.borderColor='white';
+        }
+        for(var i = 0; i < side1.length; i++) {
+            side1[i].style.backgroundColor = 'grey';
+        }
+        for(var i=0;i<windowprod1.length;i++){
+            windowprod1[i].style.backgroundColor='lightgrey';
+        }
+        for(var i=0;i<windowprod2.length;i++){
+            windowprod2[i].style.backgroundColor='lightgrey';
+        }
+        for(var i=0;i<windowprod3.length;i++){
+            windowprod3[i].style.backgroundColor='lightgrey';
+        }
+
+
+
+    }
+    else {
+        for(var i = 0; i < myElements.length; i++) {
+            myElements[i].style.color = 'black';
+            myElements[i].style.backgroundColor = 'white';
+            myElements[i].style.borderColor = 'rgb(210, 167, 167)';
+        }
+        for(var i = 0; i < elements.length; i++) {
+            elements[i].style.backgroundColor = 'white';
+        }
+        for(var i = 0; i < logoo.length; i++) {
+            logoo[i].style.filter = 'none';
+        }
+        for(var i = 0; i < nav.length; i++) {
+            nav[i].style.color = 'rgb(208, 177, 177)';
+        }
+        for(var i = 0; i < table.length; i++) {
+            table[i].style.borderColor = 'rgb(208, 177, 177)';
+        }
+        for(var i = 0; i < table1.length; i++) {
+            table1[i].style.borderColor = 'rgb(208, 177, 177)';
+        }
+        for(var i = 0; i < Text.length; i++) {
+            Text[i].style.color = 'black';
+            Text[i].style.borderColor = 'rgb(208, 177, 177)';
+        }
+        for(var i=0;i<button.length;i++){
+            button[i].style.backgroundColor='rgb(208, 177, 177)';
+            button[i].style.color='white';
+        }
+        for(var i=0;i<button1.length;i++){
+            button1[i].style.backgroundColor='rgb(208, 177, 177)';
+            button1[i].style.color='white';
+        }
+        for(var i=0;i<button2.length;i++){
+            button2[i].style.backgroundColor='rgb(208, 177, 177)';
+            button2[i].style.color='white';
+        }
+        for(var i=0;i<button3.length;i++){
+            button3[i].style.backgroundColor='rgb(208, 177, 177)';
+            button3[i].style.color='white';
+        }
+        for(var i=0;i<button4.length;i++){
+            button4[i].style.backgroundColor='rgb(208, 177, 177)';
+            button4[i].style.color='white';
+        }
+        for(var i=0;i<button5.length;i++){
+            button5[i].style.backgroundColor='rgb(208, 177, 177)';
+            button5[i].style.color='white';
+        }
+        for(var i=0;i<buttonprod.length;i++){
+            buttonprod[i].style.backgroundColor='rgb(208, 177, 177)';
+            buttonprod[i].style.color='white';
+        }
+        for(var i=0;i<User.length;i++){
+            User[i].style.color='rgb(208, 177, 177)';
+        }
+        for(var i=0;i<prod.length;i++){
+            prod[i].style.color='rgb(208, 177, 177)';
+        }
+        for(var i=0;i<window.length;i++){
+            window[i].style.backgroundColor='white';
+        }
+        for(var i=0;i<window1.length;i++){
+            window1[i].style.backgroundColor='white';
+        }
+        for(var i=0;i<window2.length;i++){
+            window2[i].style.backgroundColor='white';
+        }
+        for(var i=0;i<windowprod1.length;i++){
+            windowprod1[i].style.backgroundColor='white';
+        }
+        for(var i=0;i<windowprod2.length;i++){
+            windowprod2[i].style.backgroundColor='white';
+        }
+        for(var i=0;i<windowprod3.length;i++){
+            windowprod3[i].style.backgroundColor='white';
+        }
+        for(var i=0;i<window3.length;i++){
+            window3[i].style.backgroundColor='white';
+        }
+        for(var i=0;i<text.length;i++){
+            text[i].style.color='rgb(208, 177, 177)';
+        }
+        for(var i=0;i<radio.length;i++){
+          radio[i].style.borderColor='#ccc';
+
+        }
+        for(var i = 0; i < side1.length; i++) {
+            side1[i].style.backgroundColor = 'rgb(208, 177, 177)';
+        }
+ 
+
+    }
+
+}
+window.onload = function() {
+    var darkModeToggle = document.getElementById('dark-mode-toggle');
+    var darkMode = localStorage.getItem('darkMode') === 'true';
+    darkModeToggle.checked = darkMode;
+    document.body.classList.toggle('dark-mode', darkMode);
+    if (darkMode) toggleDarkMode();
+}
