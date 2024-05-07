@@ -77,14 +77,14 @@ function validateVisaDetails() {
     
     var currentYear = new Date().getFullYear();
     if(expiryYear1 == "" || expiryYear1 < currentYear || expiryYear1 > currentYear + 20){
-        document.getElementById('expiryYearError').innerHTML = "Please enter a valid expiery year";
+        document.getElementById('expiryYearError').innerHTML = "Please enter a valid expiry year";
         Validation = false;
     } else {
         document.getElementById('expiryYearError').innerHTML = "";
     }
     
     if(expiryMonth1 == "" || expiryMonth1 < 1 || expiryMonth1 > 12){
-        document.getElementById('expiryMonthError').innerHTML = "Please enter a valid Order expiery month";
+        document.getElementById('expiryMonthError').innerHTML = "Please enter a valid Order expiry month";
         Validation = false;
     } else {
         document.getElementById('expiryMonthError').innerHTML = "";
