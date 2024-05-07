@@ -37,6 +37,7 @@
         <th>Phone Number</th>
         <th>Admin Or User?</th>
         <th>Number Of Orders</th>
+        <th></th>
         
     </tr>
     <tr>
@@ -50,6 +51,8 @@
         <td>01234567891</td>
         <td>User</td>
         <td>2</td>
+        <td> <button onclick="showModal(['myModal1'])" class="edit-button">Edit</button>
+            <button onclick="showModal(['myModal2'])" class="Remove-button">Remove</button></td>
     </tr>
     <tr>
         <td>2004</td>
@@ -62,6 +65,8 @@
         <td>01110984111</td>
         <td>Admin</td>
         <td>1</td>
+        <td> <button onclick="showModal(['myModal1'])" class="edit-button">Edit</button>
+            <button onclick="showModal(['myModal2'])" class="Remove-button">Remove</button></td>
     </tr>
     <tr>
         <td>2005</td>
@@ -74,13 +79,13 @@
         <td>01230984111</td>
         <td>User</td>
         <td>3</td>
+        <td> <button onclick="showModal(['myModal1'])" class="edit-button">Edit</button>
+            <button onclick="showModal(['myModal2'])" class="Remove-button">Remove</button></td>
     </tr>
 </table>
 
 <div class="buttons-container">
     <button onclick="showModal(['myModal'])" class="add-button">Add</button>
-    <button onclick="showModal(['myModal1'])" class="edit-button">Edit</button>
-    <button onclick="showModal(['myModal2'])" class="Remove-button">Remove</button>
 </div>
 <div id="myModal" class="modal">
     <div class="modal-content">
@@ -146,11 +151,6 @@
         <span class="close" onclick="closeModal(['myModal1'])">&times;</span>
         <h2 style="color:rgb(211, 170, 170)">Edit User</h2>
         <form onsubmit="return UserValidationEdit();">
-            <div class="form-group">
-                <label class="label-field">ID:</label>
-                <input type="text" name="newValue" placeholder="Enter ID" class="input-field" id="userid">
-                <div class="error" id="useridError"></div>
-            </div>
                 <div class="form-group">
                     <label class="label-field">Select Field to Edit:</label>
                     <select id="editFieldd" name="editField" class="input-field1">
@@ -179,18 +179,22 @@
             <span class="close" onclick="closeModal(['myModal2'])">&times;</span>
             <h2 style="color:rgb(211, 170, 170)">Remove User</h2>
             <form onsubmit="return UservalidationRemove();">
-                <div class="form-group">
-                    <label class="label-field">ID:</label>
-                    <input type="text" placeholderr="Enter ID" class="input-field" id="useridd">
-                    <div class="error" id="useriddError"></div>
+                <h2>Are you sure you want to delete the user?</h2>
+                <div class="form-group1">
+                    <div>
+                        <input type="radio" id="Yes1" name="role" class="input-radio">
+                        <label for="Yes1">Yes</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="No1" name="role" class="input-radio">
+                        <label for="No1">No</label>
+                    </div>
                 </div>
+                <div class="error" id="RadioError"></div>
                 <div class="form-group">
-                    <label class="label-field">Email:</label>
-                    <input type="text" placeholder="Enter Email" class="input-field" id="emaill">
-                    <div class="error" id="emaillError"></div>
-                </div>
-                <div class="form-group">
-                    <input type="submit" value="Submit" class="submit-btn">
+                    <div>
+                        <input type="submit" value="Submit" class="submit-btn">
+                    </div>
                 </div>
             </form>
         </div>

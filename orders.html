@@ -38,6 +38,7 @@
         <th>Phone Number</th>
         <th>Order Status</th>
         <th>View Order</th>
+        <th></th>
         
     </tr>
     <tr>
@@ -51,6 +52,8 @@
         <td>01234567891</td>
         <td>Packing</td>
         <td> <button onclick="showModal(['myModal3'])" class="view-button">view</button></td>
+        <td> <button onclick="showModal(['myModal1'])" class="edit-button">Edit</button>
+            <button onclick="showModal(['myModal2'])" class="Remove-button">Remove</button></td>
     </tr>
     <tr>
         <td>102</td>
@@ -63,12 +66,13 @@
         <td>01230984111</td>
         <td>Deleviring</td>
         <td> <button onclick="showModal(['myModal4'])" class="view-button">view</button></td>
+        <td> <button onclick="showModal(['myModal1'])" class="edit-button">Edit</button>
+            <button onclick="showModal(['myModal2'])" class="Remove-button">Remove</button></td>
     </tr>
 </table>
 <div class="buttons-container">
     <button onclick="showModal(['myModal'])" class="add-button">Add</button>
-    <button onclick="showModal(['myModal1'])" class="edit-button">Edit</button>
-    <button onclick="showModal(['myModal2'])" class="Remove-button">Remove</button>
+   
 </div>
 <div id="myModal" class="modal">
     <div class="modal-content">
@@ -135,13 +139,8 @@
 <div id="myModal1" class="modal2">
     <div class="modal-content">
         <span class="close" onclick="closeModal(['myModal1'])">&times;</span>
-        <h2>Edit User</h2>
+        <h2>Edit Orders</h2>
         <form onsubmit="return OrderValidationEdit();">
-            <div class="form-group">
-                <label class="label-field">Order ID:</label>
-                <input type="text" name="Id" placeholder="Enter ID" class="input-field" id="Oid">
-                <div class="error" id="OIDError"></div>
-            </div>
                 <div class="form-group">
                     <label class="label-field">Select new order status:</label>
                     <select name="orderStatus" class="input-field" id="changestatus">
@@ -163,20 +162,24 @@
     <div id="myModal2" class="modal2">
         <div class="modal-content">
             <span class="close" onclick="closeModal(['myModal2'])">&times;</span>
-            <h2>Remove User</h2>
-             <form onsubmit="return OrdervalidationRemove();">
-                <div class="form-group"
-                    <label class="label-field">Order ID:</label>
-                    <input type="text" placeholderr="Enter ID" class="input-field" id="ORDERID">
-                    <div class="error" id="ORDERIDErrorr"></div>
+            <h2 style="color:rgb(211, 170, 170)">Remove Orders</h2>
+            <form onsubmit="return OrdervalidationRemove();">
+                <h2>Are you sure you want to delete the user?</h2>
+                <div class="form-group1">
+                    <div>
+                        <input type="radio" id="Yes2" name="role" class="input-radio">
+                        <label for="Yes2">Yes</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="No2" name="role" class="input-radio">
+                        <label for="No2">No</label>
+                    </div>
                 </div>
+                <div class="error" id="RadioOrderError"></div>
                 <div class="form-group">
-                    <label class="label-field">User Email:</label>
-                    <input type="text" placeholder="Enter Email" class="input-field" id="EMAILORder">
-                    <div class="error" id="EMAILORderError"></div>
-                </div>
-                <div class="form-group">
-                    <input type="submit" value="Submit" class="submit-btn">
+                    <div>
+                        <input type="submit" value="Submit" class="submit-btn">
+                    </div>
                 </div>
             </form>
         </div>

@@ -366,15 +366,9 @@ function UserValidation(){
 function UserValidationEdit(){
     var choicee = document.getElementById('editFieldd').value;
     var userField = document.getElementById('val').value;
-    var id = document.getElementById('userid').value;
+    
     var Validation = true;
-    //Id Validation
-    if(id == "" || id < 0 || isNaN(id) || id.length > 4){
-        document.getElementById('useridError').innerHTML = "Please enter a valid user ID";
-        Validation = false;
-    } else {
-        document.getElementById('useridError').innerHTML = "";
-    }
+
     //Choice Validation
 
     if(choicee == "select") {
@@ -425,23 +419,16 @@ function UserValidationEdit(){
  return Validation;
 }
 function UservalidationRemove() {
-    var id = document.getElementById('useridd').value;
-    var email = document.getElementById('emaill').value;
+    var Yes = document.getElementById('Yes1');
+    var No = document.getElementById('No1');
     var Validation = true;
 
     //Id Validation
-    if(id == "" || id < 0 || isNaN(id) || id.length > 4){
-        document.getElementById('useriddError').innerHTML = "Please enter a valid user ID";
+    if(!Yes.checked && !No.checked) {
+        document.getElementById('RadioError').innerHTML = "Please select Yes or No";
         Validation = false;
     } else {
-        document.getElementById('useriddError').innerHTML = "";
-    }
-    //Email Validation
-    if(email == "" || !/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(email)){
-        document.getElementById('emaillError').innerHTML = "Please enter a valid email";
-        Validation = false;
-    } else {
-        document.getElementById('emaillError').innerHTML = "";
+        document.getElementById('RadioError').innerHTML = "";
     }
     return Validation;
 }
@@ -524,15 +511,8 @@ function OrdersvalidationForm() {
 }
 function OrderValidationEdit(){
     var Choice = document.getElementById('changestatus').value;
-    var OrderIDchange = document.getElementById('Oid').value;
     var Validation = true;
-    //Id Validation
-    if(OrderIDchange == "" || OrderIDchange < 0 || isNaN(OrderIDchange) || id.length > 3){
-        document.getElementById('OIDError').innerHTML = "Please enter a valid Order ID (max 3 digits)";
-        Validation = false;
-    } else {
-        document.getElementById('OIDError').innerHTML = "";
-    }
+
     //status Validation
 
     if(Choice == ""){
@@ -545,23 +525,16 @@ function OrderValidationEdit(){
  return Validation;
 }
 function OrdervalidationRemove() {
-    var IDOrder = document.getElementById('ORDERID').value;
-    var emailOrder = document.getElementById('EMAILORder').value;
+    var Yes1 = document.getElementById('Yes2');
+    var No1 = document.getElementById('No2');
     var Validation = true;
 
     //Id Validation
-    if(IDOrder == "" || IDOrder < 0 || isNaN(IDOrder) || IDOrder.length > 3){
-        document.getElementById('ORDERIDErrorr').innerHTML = "Please enter a valid Order ID (max 3 digits)";
+    if(!Yes1.checked && !No1.checked) {
+        document.getElementById('RadioOrderError').innerHTML = "Please select Yes or No";
         Validation = false;
     } else {
-        document.getElementById('ORDERIDErrorr').innerHTML = "";
-    }
-    //Email Validation
-    if(emailOrder == "" || !/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(emailOrder)){
-        document.getElementById('EMAILORderError').innerHTML = "Please enter a valid email";
-        Validation = false;
-    } else {
-        document.getElementById('EMAILORderError').innerHTML = "";
+        document.getElementById('RadioOrderError').innerHTML = "";
     }
     return Validation;
 }
