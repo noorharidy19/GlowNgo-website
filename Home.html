@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Home.css">
-    <link rel="stylesheet" href="StyleProd.css">
+    <link rel="stylesheet" href="css/Home.css">
+    <!-- <link rel="stylesheet" href="StyleProd.css"> -->
     <!-- <link rel="stylesheet" href="StyleProd.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Home</title>
@@ -12,7 +12,7 @@
 
 <body class="bodyy">
     <header class="myElement">
-        <a href="#" class="logo" ><img src="images/logo.jpeg"></a>
+        <a href="#" class="logo" ><img src="images/logo.jpeg" width="180" height="80"></a>
         <span class="search">
             <input type="text" placeholder="Search">
             <i class="fa-solid fa-search"></i>
@@ -400,9 +400,9 @@
             <span class="close-btn" onclick="hidePopupsignin('popupContainerSignIn')">&times;</span>
             <h2>Log in</h2>
 <form onsubmit="return validateForm2()">
-    <input type="text" id="username" placeholder="Username" class="text">
+    <input type="text" id="username" placeholder="Username" class="textt">
     <span id="usernameErr" style="color: red;"></span>
-    <input type="password" id="password" placeholder="Password" class="text">
+    <input type="password" id="password" placeholder="Password" class="textt">
     <span id="passwordErr" style="color: red;"></span>
     <!-- <i class="fa-solid fa-eye fa-fade fa-sm" onclick="Show()"></i> -->
     <button type="button" onclick="validateForm2()">Login</button>
@@ -427,17 +427,17 @@
             <span class="close-btn" onclick="hidePopupsignin('popupContainerSignUp')">&times;</span>
             <h2>Sign Up</h2>
             <form onsubmit="return SignupValidation()">
-                <input type="text" id="name" placeholder="Name">
+                <input type="text" id="name" placeholder="Name" class="textt">
                 <span id="nameErr" style="color: red;"></span>
-                <input type="email" id="email" placeholder="Email">
+                <input type="email" id="email" placeholder="Email" class="textt">
                 <span id="emailErr" style="color: red;"></span>
-                <input type="password" id="pass" placeholder="Password">
+                <input type="password" id="pass" placeholder="Password" class="textt">
                 <span id="passwordErr" style="color: red;"></span>
-                <input type="password" id="confirm_pass" placeholder="Confirm Password">
+                <input type="password" id="confirm_pass" placeholder="Confirm Password" class="textt">
                 <span id="confirm_passwordErr" style="color: red;"></span>
-                <input type="text" id="country" placeholder="Address">
+                <input type="text" id="country" placeholder="Address" class="textt">
                 <span id="countryErr" style="color: red;"></span>
-                <input type="tel" id="phone" placeholder="Phone Number">
+                <input type="tel" id="phone" placeholder="Phone Number" class="textt">
                 <span id="phoneErr" style="color: red;"></span>
                 <br>
                 <input type="checkbox" id="terms">
@@ -459,6 +459,7 @@
             
         </div>
     </div>
+    
     
     <div class="popup-container" id="popupContainerForget">
     <div class="popup">
@@ -526,7 +527,7 @@
                 <h3>Total: <span id="total"></span>$</h3>
             </div>
             <div class="checkout">
-                <button type="button" onclick="" class="sub">Procced to Check Out</button>
+                <button type="button" onclick=" window.location.href = 'checkout.html'" class="sub">Procced to Check Out</button>
               </div>
           
 
@@ -587,7 +588,7 @@
   </div> 
 
 
-    <script src="Home.js"></script>
-    <script src="Prod.js"></script>
+    <script src="js/Home.js"></script>
+    <script src="js/Prod.js"></script>
 </body>
 </html>

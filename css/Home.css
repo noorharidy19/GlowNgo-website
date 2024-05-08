@@ -297,8 +297,8 @@ p:hover {
 .popup {
     text-align: center;
 }
-
-input[type="text"], 
+.textt,
+/* input[type="text"],  */
 input[type="password"],
 input[type="email"],
 input[type="tel"],
