@@ -8,7 +8,11 @@ body {
     padding: 20px;
     text-align: center; 
 }
+.about-title {
 
+    font-size: 36px;
+   text-decoration: underline;
+}
 h1.about-title,
 h2 {
     color: rgb(210, 167, 167); 

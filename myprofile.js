@@ -1,27 +1,27 @@
-function showPopup(containerIds) {
-    containerIds.forEach(function(id) {
-        document.getElementById(id).style.display = "block";
-        document.getElementById('overlay').style.display = 'block';
-    });
-}
+// function showPopup(containerIds) {
+//     containerIds.forEach(function(id) {
+//         document.getElementById(id).style.display = "block";
+//         document.getElementById('overlay').style.display = 'block';
+//     });
+// }
 
-function hidePopup(containerIds) {
-    containerIds.forEach(function(id) {
-        document.getElementById(id).style.display = "none";
-        document.getElementById('overlay').style.display = 'none';
-    });
-}
-function showP(containerIds) {
-    containerIds.forEach(function(id) {
-        document.getElementById(id).style.display = "block";
-    });
-}
+// function hidePopup(containerIds) {
+//     containerIds.forEach(function(id) {
+//         document.getElementById(id).style.display = "none";
+//         document.getElementById('overlay').style.display = 'none';
+//     });
+// }
+// function showP(containerIds) {
+//     containerIds.forEach(function(id) {
+//         document.getElementById(id).style.display = "block";
+//     });
+// }
 
-function hideP(containerIds) {
-    containerIds.forEach(function(id) {
-        document.getElementById(id).style.display = "none";
-    });
-}
+// function hideP(containerIds) {
+//     containerIds.forEach(function(id) {
+//         document.getElementById(id).style.display = "none";
+//     });
+// }
 function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
@@ -65,39 +65,39 @@ function revealOffers() {
         offersList.style.display = "none";
     }
 }
-let initialPrices = {};
+// let initialPrices = {};
 
-function changeQuantity(change, quantityId, priceId) {
-    let quantityElement = document.getElementById(quantityId);
-    let quantity = parseInt(quantityElement.textContent);
+// function changeQuantity(change, quantityId, priceId) {
+//     let quantityElement = document.getElementById(quantityId);
+//     let quantity = parseInt(quantityElement.textContent);
     
-    quantity += change;
-    if (quantity < 1) {
-      quantity = 1;
-    } else if (quantity > 5) {
-      quantity = 5;
-    }
+//     quantity += change;
+//     if (quantity < 1) {
+//       quantity = 1;
+//     } else if (quantity > 5) {
+//       quantity = 5;
+//     }
     
-    let priceElement = document.getElementById(priceId);
-    if (!initialPrices[priceId]) {
-      initialPrices[priceId] = parseFloat(priceElement.textContent);
-    }
+//     let priceElement = document.getElementById(priceId);
+//     if (!initialPrices[priceId]) {
+//       initialPrices[priceId] = parseFloat(priceElement.textContent);
+//     }
     
-    let pricePerItem = initialPrices[priceId];
+//     let pricePerItem = initialPrices[priceId];
     
-    quantityElement.textContent = quantity;
-    priceElement.textContent = (pricePerItem * quantity).toFixed(2);
-    getTotalPrice();
-  }
-function getTotalPrice() {
-    let priceIds = ['price1', 'price2', 'price3']; 
-    let totalPrice = 0;
-    priceIds.forEach(function(priceId) {
-      let priceElement = document.getElementById(priceId);
-      totalPrice += parseFloat(priceElement.textContent);
-    });
-    document.getElementById('total').textContent = totalPrice.toFixed(2);
-  }
-  window.onload = function() {
-    getTotalPrice();
-  };
+//     quantityElement.textContent = quantity;
+//     priceElement.textContent = (pricePerItem * quantity).toFixed(2);
+//     getTotalPrice();
+//   }
+// function getTotalPrice() {
+//     let priceIds = ['price1', 'price2', 'price3']; 
+//     let totalPrice = 0;
+//     priceIds.forEach(function(priceId) {
+//       let priceElement = document.getElementById(priceId);
+//       totalPrice += parseFloat(priceElement.textContent);
+//     });
+//     document.getElementById('total').textContent = totalPrice.toFixed(2);
+//   }
+//   window.onload = function() {
+//     getTotalPrice();
+//   };
