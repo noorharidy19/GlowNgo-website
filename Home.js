@@ -101,24 +101,28 @@ window.onload = function() {
 
 
 function SignupValidation() {
-   
     var name = document.getElementById("name").value;
     var email = document.getElementById("email").value;
-    var password = document.getElementById("password").value;
-    var confirm_password = document.getElementById("confirm_password").value;
+    var password = document.getElementById("pass").value;
+    var confirm_password = document.getElementById("confirm_pass").value;
     var country = document.getElementById("country").value;
     var phone = document.getElementById("phone").value;
     var terms = document.getElementById("terms").checked;
 
     var error = false;
 
-    document.getElementById('name-Err').innerHTML = "";
+    document.getElementById('nameErr').innerHTML = "";
     document.getElementById('emailErr').innerHTML = "";
     document.getElementById('passwordErr').innerHTML = "";
     document.getElementById('confirm_passwordErr').innerHTML = "";
     document.getElementById('countryErr').innerHTML = "";
     document.getElementById('phoneErr').innerHTML = "";
     document.getElementById('termsErr').innerHTML = "";
+
+    if (password !== confirm_password) {
+        document.getElementById('confirm_passwordErr').innerHTML = "Passwords do not match.";
+        error = true;
+    }
 
     if (name === "") {
         document.getElementById('nameErr').innerHTML = "Please enter your name.";
@@ -141,33 +145,25 @@ function SignupValidation() {
     }
 
     if (country === "") {
-        document.getElementById('countryErr').innerHTML = "Please select your country.";
+        document.getElementById('countryErr').innerHTML = "Please enter your address.";
         error = true;
     }
 
     if (phone === "") {
         document.getElementById('phoneErr').innerHTML = "Please enter your phone number.";
         error = true;
-    } 
-    if(phone == "" || phone.length < 11 ||phone.length > 11 || isNaN(phone)){
+    } else if (phone.length !== 11 || isNaN(phone)) {
         document.getElementById('phoneErr').innerHTML = "Please enter a valid phone number";
-        Validation = false;
-    } else {
-        document.getElementById('phoneErr').innerHTML = "";
-    } if(user == "" || !/^[a-zA-Z0-9]+$/.test(user)){
-        document.getElementById('name-Err').innerHTML = "Please enter a valid username";
-        Validation = false;
-    } else {
-        document.getElementById('name-Err').innerHTML = "";
+        error = true;
+    }
+
+    if (name === "" || !/^[a-zA-Z0-9]+$/.test(name)) {
+        document.getElementById('nameErr').innerHTML = "Please enter a valid username";
+        error = true;
     }
 
     if (!terms) {
         document.getElementById('termsErr').innerHTML = "Please accept the terms and conditions.";
-        error = true;
-    }
-
-    if (password !== confirm_password) {
-        document.getElementById('confirm_passwordErr').innerHTML = "Passwords do not match.";
         error = true;
     }
 
@@ -176,8 +172,12 @@ function SignupValidation() {
         return true;
     }
 
-    return false;
+    return !error;
 }
+
+
+
+
 
 function Show() {
     var showpw = document.getElementById("password");
