@@ -423,33 +423,33 @@
     </div>
 
     <div class="popup-container" id="popupContainerSignUp">
-        
         <div class="popup">
             <span class="close-btn" onclick="hidePopupsignin('popupContainerSignUp')">&times;</span>
             <h2>Sign Up</h2>
-            <form onsubmit="return validateForm1()">
-                <input type="text" id="name" placeholder="Name" required class="text">
-                <input type="email" id="email" placeholder="Email" required>
-                <input type="password" id="password" placeholder="Password" required>
-                <input type="password" id="confirm_password" placeholder="Confirm Password" required>
-                <select id="country" required>
-                    <option value="" disabled selected>Select your country</option>
-                    <option value="Dubai">Dubai</option>
-                    <option value="Saudia-Arabia">Saudia Arabia</option>
-                    <option value="United-Arab-Emirates">United Arab Emirates</option>
-                    <option value="Egypt">Egypt</option>
-                </select>
-                <input type="tel" id="phone" placeholder="Phone Number" required>
+            <form onsubmit="return SignupValidation()">
+                <input type="text" id="name" placeholder="Name">
+                <span id="nameErr" style="color: red;"></span>
+                <input type="email" id="email" placeholder="Email">
+                <span id="emailErr" style="color: red;"></span>
+                <input type="password" id="pass" placeholder="Password">
+                <span id="passwordErr" style="color: red;"></span>
+                <input type="password" id="confirm_pass" placeholder="Confirm Password">
+                <span id="confirm_passwordErr" style="color: red;"></span>
+                <input type="text" id="country" placeholder="Country">
+                <span id="countryErr" style="color: red;"></span>
+                <input type="tel" id="phone" placeholder="Phone Number">
+                <span id="phoneErr" style="color: red;"></span>
                 <br>
-                <input type="checkbox" id="terms" required>
+                <input type="checkbox" id="terms">
                 <label for="terms">I accept the terms and conditions </label>
+                <br>
+                <span id="termsErr" style="color: red;"></span>
                 <button type="submit">Sign Up</button>
-                <a href="gmail.html"><i class="fa-solid fa-envelope fa-2xl"style="color: #3601f4;"></i></a>
+                <a href="gmail.html"><i class="fa-solid fa-envelope fa-2xl" style="color: #3601f4;"></i></a>
                 <a href="facebook.html"><i class="fa-brands fa-facebook fa-2xl" style="color: #3601f4;"></i></a>
             </form>
             <br>
-            <span id="errorField" class="error"></span>
-            <div>or sign up with social media account</div>
+            <div>or sign up with a social media account</div>
             
             <div class="signin">
                 Already Have an account <a href="#" onclick="hidePopupsignin('popupContainerSignUp'); showPopupSignin('popupContainerSignIn')">Log in</a>
@@ -457,6 +457,7 @@
             
         </div>
     </div>
+    
     <div class="popup-container" id="popupContainerForget">
     <div class="popup">
         <span class="close-btn" onclick="hidePopupsignin('popupContainerForget')">&times;</span>
