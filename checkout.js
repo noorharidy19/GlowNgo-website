@@ -124,3 +124,27 @@ function hiderating() {
     document.getElementById('rating').style.display = 'none';
 }
 
+
+
+// function changeQuantity(change, quantityId, priceId) {
+//     let quantityElement = document.getElementById(quantityId);
+//     let quantity = parseInt(quantityElement.textContent);
+    
+//     quantity += change;
+//     if (quantity < 1) {
+//       quantity = 1;
+//     } else if (quantity > 5) {
+//       quantity = 5;
+//     }
+    
+//     let priceElement = document.getElementById(priceId);
+//     if (!initialPrices[priceId]) {
+//       initialPrices[priceId] = parseFloat(priceElement.textContent);
+//     }
+    
+//     let pricePerItem = initialPrices[priceId];
+    
+//     quantityElement.textContent = quantity;
+//     priceElement.textContent = (pricePerItem * quantity).toFixed(2);
+//     getTotalPrice();
+//   }

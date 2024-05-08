@@ -193,5 +193,116 @@ body {
 .popup-rate {
     text-align: center;
 }
+@media only screen and (max-width: 800px) and (orientation: landscape) {
+    /* Adjustments for landscape orientation */
+    .checkout-container {
+      width: 90%;
+    }
+    .order-summary-details,
+    .order-summary-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .order-summary-details p,
+    .order-summary-total p {
+      margin: 5px 0;
+    }
+    .payment-method-button {
+      width: 48%; /* Adjust button width for landscape */
+      margin-right: 4%; /* Add some spacing between buttons */
+    }
+    .cash-details,
+    .visa-details {
+      width: 48%; /* Adjust payment details width for landscape */
+    }
+  }
+  
 
-
+@media only screen and (max-width: 600px) {
+    /* Adjustments for mobile devices */
+    .checkout-container {
+      width: 90%;
+    }
+    .order-summary-details,
+    .order-summary-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .order-summary-details p,
+    .order-summary-total p {
+      margin: 5px 0;
+    }
+    .payment-method-button {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .cash-details,
+    .visa-details {
+      width: 100%;
+    }
+  }
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: rgb(17, 16, 16);
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #5f6162;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  .switch input:checked ~ i {
+    left: 75%;
+  }
+  
+  .switch i {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    color: rgb(191, 190, 190);
+    font-size: 1em; /* Adjust as needed */
+    transition: left 0.3s ease-in-out;
+  }

@@ -6,13 +6,22 @@
     <title>Checkout - Makeup Brand</title>
     <link rel="stylesheet" href="checkout.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bodyy">
+    <script src="checkout.js"></script>
+    <script src="Prod.js"></script> 
     
+    <label class="switch">
+        <input type="checkbox" id="dark-mode-toggle" onchange="toggleDarkMode();">
+        <span class="slider round"></span>
+        <i class="fa-regular fa-moon"></i>
+      </label> 
 <div class="checkout-container">
     <h1 class="checkout-title">Checkout</h1>
 
     
     <div class="order-summary">
-        <h2>ORDER SUMMARY</h2>
+        <h2 class="a1">ORDER SUMMARY</h2>
         <div class="item-details">
             <button class="your-items-button" onclick="toggleItemList()">Your items</button>
             <div class="item-list">
@@ -24,7 +33,7 @@
         
         <div class="order-summary-details">
             <p>Subtotal</p>
-            <p>$74.00</p>
+            <p class="total1">$74.00</p>
         </div>
         <div class="order-summary-details">
             <p>Shipping cost</p>
@@ -37,13 +46,13 @@
         <hr>
         <div class="order-summary-details order-summary-total">
             <p>Estimated Total</p>
-            <p>$76.00</p>
+            <p class="total2">$76.00</p>
         </div>
     </div>
 
     
     <div class="payment-method">
-        <h2>Payment Method</h2>
+        <h2 class="a1">Payment Method</h2>
         <div class="payment-buttons">
             <button class="payment-method-button" onclick="showCashDetails()">Cash</button>
             <button class="payment-method-button" onclick="showVisaDetails()">Visa</button>

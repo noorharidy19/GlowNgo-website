@@ -377,13 +377,19 @@ function changeQuantity(change, quantityId, priceId) {
     getTotalPrice();
   }
 function getTotalPrice() {
+//     var total1 = document.getElementsByClassName('total1')[0].textContent;
+// var total2 = document.getElementsByClassName('total2')[0].textContent;
     let priceIds = ['price1', 'price2', 'price3']; 
     let totalPrice = 0;
     priceIds.forEach(function(priceId) {
       let priceElement = document.getElementById(priceId);
       totalPrice += parseFloat(priceElement.textContent);
+    //   total1+=totalPrice;
+    //   total2+=totalPrice;
     });
     document.getElementById('total').textContent = totalPrice.toFixed(2);
+    // document.getElementByClassName('total1').textContent = total1.toFixed(2);
+    // document.getElementByClassName('total2').textContent = total2.toFixed(2);
   }
   window.onload = function() {
     getTotalPrice();
@@ -448,6 +454,16 @@ function getTotalPrice() {
     var add= document.getElementsByClassName('add');
     var remove= document.getElementsByClassName('remove');
     var sub= document.getElementsByClassName('sub');
+    var abouttitle= document.getElementsByClassName('about-title');
+    var p= document.getElementsByClassName('a2');
+    var h= document.getElementsByClassName('a1');
+    var li= document.getElementsByClassName('l');
+    var followtext= document.getElementsByClassName('follow-text');
+    var checkoutcontainer= document.getElementsByClassName('checkout-container');
+    var ordersummary= document.getElementsByClassName('order-summary');
+    var payment= document.getElementsByClassName('payment-method-button');
+    var confirm= document.getElementsByClassName('confirm-button');
+    var total= document.getElementsByClassName('checkout-title');
     if (darkModeToggle.checked) {
         for(var i = 0; i < myElements.length; i++) {
             myElements[i].style.backgroundColor = '#333333'; // lighter black
@@ -564,6 +580,38 @@ function getTotalPrice() {
         }
         for(var i = 0; i < sub.length; i++) {
             sub[i].style.backgroundColor = 'darkgary';
+        }
+        for(var i = 0; i < abouttitle.length; i++) {
+            abouttitle[i].style.color = 'black';
+        }
+        for(var i = 0; i < p.length; i++) {
+            p[i].style.color = 'lightgray';
+        }
+        for(var i = 0; i < h.length; i++) {
+            h[i].style.color = 'black';
+        }
+        for(var i = 0; i < li.length; i++) {
+            li[i].style.color = 'white';
+        }
+        for(var i = 0; i < followtext.length; i++) {
+            followtext[i].style.color = 'black';
+        }
+        for(var i = 0; i < checkoutcontainer.length; i++) {
+            checkoutcontainer[i].style.backgroundColor = 'darkgray';
+        }
+        for(var i = 0; i < ordersummary.length; i++) { 
+            ordersummary[i].style.backgroundColor = 'lightgray';
+        }
+        for(var i = 0; i < payment.length; i++) {
+            payment[i].style.backgroundColor = 'lightgray';
+            payment[i].style.color = 'black';
+        }
+        for(var i = 0; i < confirm.length; i++) {
+            confirm[i].style.backgroundColor = 'lightgray';
+            confirm[i].style.color = 'black';
+        }
+        for(var i = 0; i < total.length; i++) {
+            total[i].style.color = 'black';
         }
       
         
@@ -682,6 +730,38 @@ function getTotalPrice() {
         }
         for(var i = 0; i < sub.length; i++) {
             sub[i].style.backgroundColor = 'rgb(196, 194, 194)';
+        }
+        for(var i = 0; i < abouttitle.length; i++) {
+            abouttitle[i].style.color = 'rgb(210, 167, 167)';
+        }
+        for(var i = 0; i < p.length; i++) {
+            p[i].style.color = 'rgb(208, 177, 177)';
+        }
+        for(var i = 0; i < h.length; i++) {
+            h[i].style.color = 'rgb(210, 167, 167)';
+        }
+        for(var i = 0; i < li.length; i++) {
+            li[i].style.color = 'black';
+        }
+        for(var i = 0; i < followtext.length; i++) {
+            followtext[i].style.color = 'rgb(210, 167, 167)';
+        }
+        for(var i = 0; i < checkoutcontainer.length; i++) {
+            checkoutcontainer[i].style.backgroundColor = 'white';
+        }
+        for(var i = 0; i < ordersummary.length; i++) {
+            ordersummary[i].style.backgroundColor = 'whitesmoke';
+        }
+        for(var i = 0; i < payment.length; i++) {
+            payment[i].style.backgroundColor = 'rgb(210, 167, 167)';
+            payment[i].style.color = 'white';
+        }   
+        for(var i = 0; i < confirm.length; i++) {
+            confirm[i].style.backgroundColor = 'rgb(210, 167, 167)';
+            confirm[i].style.color = 'white';
+        }
+        for(var i = 0; i < total.length; i++) {
+            total[i].style.color = 'rgb(210, 167, 167)';
         }
        
     }
