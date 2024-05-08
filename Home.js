@@ -169,6 +169,7 @@ function SignupValidation() {
 
     if (!error) {
         showPopupSignin('popupContainerSignIn');
+        document.getElementById('successMessage').style.display = 'block';
         return true;
     }
 

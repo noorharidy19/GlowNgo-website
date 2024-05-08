@@ -24,7 +24,7 @@
               </label>
             <a href="Home.html" class="nav1">Home</a>
             <div class="dropdown-menu">
-                <a href="products.html" class="dropdownbtn">Products</a>
+                <a href="Products.html" class="dropdownbtn">Products</a>
                 <div class="dropdown-contents">
                     <a href="face.html"  class="n">
                         <img src="images/face.jpg"> <br>Face
@@ -403,7 +403,7 @@
     <span id="usernameErr" style="color: red;"></span>
     <input type="password" id="password" placeholder="Password" class="text">
     <span id="passwordErr" style="color: red;"></span>
-    <i class="fa-solid fa-eye fa-fade fa-sm" onclick="Show()"></i>
+    <!-- <i class="fa-solid fa-eye fa-fade fa-sm" onclick="Show()"></i> -->
     <button type="button" onclick="validateForm2()">Login</button>
     <br>    
     <div class="forget"> <a href="#" onclick="hidePopupsignin('popupContainerSignIn'); showPopupSignin('popupContainerForget')">Forgot Password</a></div>
@@ -434,7 +434,7 @@
                 <span id="passwordErr" style="color: red;"></span>
                 <input type="password" id="confirm_pass" placeholder="Confirm Password">
                 <span id="confirm_passwordErr" style="color: red;"></span>
-                <input type="text" id="country" placeholder="Country">
+                <input type="text" id="country" placeholder="Address">
                 <span id="countryErr" style="color: red;"></span>
                 <input type="tel" id="phone" placeholder="Phone Number">
                 <span id="phoneErr" style="color: red;"></span>
@@ -444,6 +444,8 @@
                 <br>
                 <span id="termsErr" style="color: red;"></span>
                 <button type="submit">Sign Up</button>
+                <div id="successMessage" style="display: none; color: green;">Account created successfully!</div>
+                <br>
                 <a href="gmail.html"><i class="fa-solid fa-envelope fa-2xl" style="color: #3601f4;"></i></a>
                 <a href="facebook.html"><i class="fa-brands fa-facebook fa-2xl" style="color: #3601f4;"></i></a>
             </form>
