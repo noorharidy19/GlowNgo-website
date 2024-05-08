@@ -426,11 +426,15 @@
         <div class="popup">
             <span class="close-btn" onclick="hidePopupsignin('popupContainerSignUp')">&times;</span>
             <h2>Sign Up</h2>
-            <form onsubmit="return validateForm1()">
+            <form onsubmit="return SignupValidation()">
                 <input type="text" id="name" placeholder="Name" required class="text">
+                <span id="nameErr" style="color: red;"></span> 
                 <input type="email" id="email" placeholder="Email" required>
+                <span id="emailErr" style="color: red;"></span>
                 <input type="password" id="password" placeholder="Password" required>
+                <span id="passwordErr" style="color: red;"></span>
                 <input type="password" id="confirm_password" placeholder="Confirm Password" required>
+                <span id="confirm_passwordErr" style="color: red;"></span>
                 <select id="country" required>
                     <option value="" disabled selected>Select your country</option>
                     <option value="Dubai">Dubai</option>
@@ -438,16 +442,18 @@
                     <option value="United-Arab-Emirates">United Arab Emirates</option>
                     <option value="Egypt">Egypt</option>
                 </select>
+                <span id="countryErr" style="color: red;"></span>
                 <input type="tel" id="phone" placeholder="Phone Number" required>
+                <span id="phoneErr" style="color: red;"></span>
                 <br>
                 <input type="checkbox" id="terms" required>
                 <label for="terms">I accept the terms and conditions </label>
+                <span id="termsErr" style="color: red;"></span>
                 <button type="submit">Sign Up</button>
                 <a href="gmail.html"><i class="fa-solid fa-envelope fa-2xl"style="color: #3601f4;"></i></a>
                 <a href="facebook.html"><i class="fa-brands fa-facebook fa-2xl" style="color: #3601f4;"></i></a>
             </form>
             <br>
-            <span id="errorField" class="error"></span>
             <div>or sign up with social media account</div>
             
             <div class="signin">
