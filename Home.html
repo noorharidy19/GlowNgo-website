@@ -400,7 +400,9 @@
             <h2>Log in</h2>
 <form onsubmit="return validateForm2()">
     <input type="text" id="username" placeholder="Username" class="text">
+    <span id="usernameErr" style="color: red;"></span>
     <input type="password" id="password" placeholder="Password" class="text">
+    <span id="passwordErr" style="color: red;"></span>
     <i class="fa-solid fa-eye fa-fade fa-sm" onclick="Show()"></i>
     <button type="button" onclick="validateForm2()">Login</button>
     <br>    
@@ -411,7 +413,7 @@
 </form>
 
             <br>
-            <span id="usernameErr" class="error"></span> 
+            
             <div class="create-account">
                 Don't have an account? <a href="#" onclick="hidePopupsignin('popupContainerSignIn'); showPopupSignin('popupContainerSignUp')">Create an account</a>
             </div>

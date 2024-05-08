@@ -8,79 +8,84 @@
     <title></title>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
-<body>
-    <header>
+<body class="bodyy">
+    <header class="myElement">
         <a href="#" class="logo" ><img src="images/logo.jpeg" width="180" height="80"></a>
         <nav class="navigation">
-            <a href="Home.html">Home</a>
-            <a href="Products.html">Products</a>
-            <a href="MyAccount.html"><i class="fa-solid fa-user"></i></a>
+            <label class="switch">
+                <input type="checkbox" id="dark-mode-toggle" onchange="toggleDarkMode();">
+                <span class="slider round"></span>
+                <i class="fa-regular fa-moon"></i>
+              </label>
+            <a href="Home.html" class="nav1">Home</a>
+            <a href="Products.html" class="nav1">Products</a>
+            <a href="MyAccount.html" class="nav1"><i class="fa-solid fa-user"></i></a>
         </nav>
     </header>
 <section>
     <div id="mySidenav" class="sidenav">
-        <a href="AdminProducts.html" id="Products">Products<i class="fa-solid fa-cart-shopping"></i></a>
-        <a href="users.html" id="Users">Users&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-users"></i></a>
-        <a href="orders.html" id="Orders">Orders&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-basket-shopping"></i></a>
+        <a href="AdminProducts.html" id="Products" class="side">Products<i class="fa-solid fa-cart-shopping"></i></a>
+        <a href="users.html" id="Users" class="side">Users&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-users"></i></a>
+        <a href="orders.html" id="Orders" class="side">Orders&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-basket-shopping"></i></a>
     </div>
     <h1 class="user">Users</h1>
 </section>
 <div id="overlay" style="display: none;"></div>
-<table>
+<table class="tab">
     <tr>
-        <th>ID</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Username</th>
-        <th>Password</th>
-        <th>Email</th>
-        <th>Address</th>
-        <th>Phone Number</th>
-        <th>Admin Or User?</th>
-        <th>Number Of Orders</th>
-        <th></th>
+        <th class="text">ID</th>
+        <th class="text">First Name</th>
+        <th class="text">Last Name</th>
+        <th class="text">Username</th>
+        <th class="text">Password</th>
+        <th class="text">Email</th>
+        <th class="text">Address</th>
+        <th class="text">Phone Number</th>
+        <th class="text">Admin Or User?</th>
+        <th class="text">Number Of Orders</th>
+        <th class="text"></th>
         
     </tr>
     <tr>
-        <td>2003</td>
-        <td>Noor</td>
-        <td>Haridy</td>
-        <td>NoorHaridy</td>
-        <td>1234</td>
-        <td>NoorHaridy@gmail.com</td>
-        <td>Maddi Street</td>
-        <td>01234567891</td>
-        <td>User</td>
-        <td>2</td>
-        <td> <button onclick="showModal(['myModal1'])" class="edit-button">Edit</button>
+        <td class="text">2003</td>
+        <td class="text">Noor</td>
+        <td class="text">Haridy</td>
+        <td class="text">NoorHaridy</td>
+        <td class="text">1234</td>
+        <td class="text">NoorHaridy@gmail.com</td>
+        <td class="text">Maddi Street</td>
+        <td class="text">01234567891</td>
+        <td class="text">User</td>
+        <td class="text">2</td>
+        <td class="text"> <button onclick="showModal(['myModal1'])" class="edit-button">Edit</button>
             <button onclick="showModal(['myModal2'])" class="Remove-button">Remove</button></td>
     </tr>
     <tr>
-        <td>2004</td>
-        <td>Nourhan</td>
-        <td>Amr</td>
-        <td>nour.amr</td>
-        <td>nour1234</td>
-        <td>Nourhan@gmail.com</td>
-        <td>First Settlement</td>
-        <td>01110984111</td>
-        <td>Admin</td>
-        <td>1</td>
-        <td> <button onclick="showModal(['myModal1'])" class="edit-button">Edit</button>
+        <td class="text">2004</td>
+        <td class="text">Nourhan</td>
+        <td class="text">Amr</td>
+        <td class="text">nour.amr</td>
+        <td class="text">nour1234</td>
+        <td class="text">Nourhan@gmail.com</td>
+        <td class="text">First Settlement</td>
+        <td class="text">01110984111</td>
+        <td class="text">Admin</td>
+        <td class="text">1</td>
+        <td class="text"> <button onclick="showModal(['myModal1'])" class="edit-button">Edit</button>
             <button onclick="showModal(['myModal2'])" class="Remove-button">Remove</button></td>
     </tr>
     <tr>
-        <td>2005</td>
-        <td>Nourhan</td>
-        <td>Mohamed</td>
-        <td>nourhan.mohamed</td>
-        <td>1234</td>
-        <td>NourhanMohamed@gmail.com</td>
-        <td>Nasr City</td>
-        <td>01230984111</td>
-        <td>User</td>
-        <td>3</td>
-        <td> <button onclick="showModal(['myModal1'])" class="edit-button">Edit</button>
+        <td class="text">2005</td>
+        <td class="text">Nourhan</td>
+        <td class="text">Mohamed</td>
+        <td class="text">nourhan.mohamed</td>
+        <td class="text">1234</td>
+        <td class="text">NourhanMohamed@gmail.com</td>
+        <td class="text">Nasr City</td>
+        <td class="text">01230984111</td>
+        <td class="text">User</td>
+        <td class="text">3</td>
+        <td class="text"> <button onclick="showModal(['myModal1'])" class="edit-button">Edit</button>
             <button onclick="showModal(['myModal2'])" class="Remove-button">Remove</button></td>
     </tr>
 </table>
@@ -91,7 +96,7 @@
 <div id="myModal" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeModal(['myModal'])">&times;</span>
-        <h2 style= "color:rgb(211, 170, 170)">Add User</h2>
+        <h2 style= "color:rgb(211, 170, 170)" class="adduser">Add User</h2>
         <form onsubmit="return UserValidation();">
             <div class="form-group">
                 <label class="label-field">First Name:</label>
@@ -150,7 +155,7 @@
 <div id="myModal1" class="modal1">
     <div class="modal-content">
         <span class="close" onclick="closeModal(['myModal1'])">&times;</span>
-        <h2 style="color:rgb(211, 170, 170)">Edit User</h2>
+        <h2 style="color:rgb(211, 170, 170)" class="adduser">Edit User</h2>
         <form onsubmit="return UserValidationEdit();">
                 <div class="form-group">
                     <label class="label-field">Select Field to Edit:</label>
@@ -178,7 +183,7 @@
     <div id="myModal2" class="modal2">
         <div class="modal-content">
             <span class="close" onclick="closeModal(['myModal2'])">&times;</span>
-            <h2 style="color:rgb(211, 170, 170)">Remove User</h2>
+            <h2 style="color:rgb(211, 170, 170)" class="adduser">Remove User</h2>
             <form onsubmit="return UservalidationRemove();">
                 <h2>Are you sure you want to delete the user?</h2>
                 <div class="form-group1">

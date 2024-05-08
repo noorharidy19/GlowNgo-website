@@ -111,7 +111,7 @@ function validateForm1() {
     var country = document.getElementById("country").value;
     var phone = document.getElementById("phone").value;
     var terms = document.getElementById("terms").checked;
-
+    var Validation = true;
     var error = false;
     var errorMessage = "";
 
@@ -145,26 +145,66 @@ function Show() {
     } else {
         showpw.type = "password";
     }
-}function validateForm2() {
+}
+function validateForm2() {
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
 
     var error = false;
 
-    if (username.trim() === "" || password.trim() === "") {
-        printError("usernameErr", "Please fill the fields.");
+    // Reset error messages
+    document.getElementById('usernameErr').innerHTML = "";
+    document.getElementById('passwordErr').innerHTML = "";
+
+    if (username === "") {
+        document.getElementById('usernameErr').innerHTML = "Please enter your username.";
         error = true;
-    } else if (username === "nourhan.mohamed" && password === "1234") {
-        window.location.href = "myprofile.html";
-    } else if (username === "nour.amr" && password === "nour1234") {
-        window.location.href = "admin.html";
-    } else {
-        printError("usernameErr", "Invalid username or password. Please try again.");
+    }
+    if (username===" ")
+    {
+        document.getElementById('usernameErr').innerHTML = "Please enter a valid username.";
         error = true;
+    }
+    if (password === "") {
+        document.getElementById('passwordErr').innerHTML = "Please enter your password.";
+        error = true;
+    }
+    if (password === " ") {
+        document.getElementById('passwordErr').innerHTML = "Please enter a valid password.";
+        error = true;
+    }
+
+    if (!error && !isValidCredentials(username, password)) {
+        document.getElementById('usernameErr').innerHTML = "Invalid username or password. Please try again.";
+        error = true;
+    }
+
+    if (!error) {
+        if (username === "nourhan.mohamed" && password === "1234") {
+            window.location.href = "myprofile.html";
+            return false; 
+        } else if (username === "nour.amr" && password === "nour1234") {
+            window.location.href = "admin.html";
+            return false; 
+        } else {
+            document.getElementById('usernameErr').innerHTML = "Invalid username or password. Please try again.";
+            error = true;
+        }
     }
 
     return !error;
 }
+
+
+function isValidCredentials(username, password) {
+    var validUsers = {
+        "nourhan.mohamed": "1234",
+        "nour.amr": "nour1234"
+    };
+
+    return validUsers.hasOwnProperty(username) && validUsers[username] === password;
+}
+
 
 function sendResetPasswordEmail() {
     var email = document.getElementById("resetEmail").value;
