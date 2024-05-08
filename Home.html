@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="StyleProd.css">
     <!-- <link rel="stylesheet" href="StyleProd.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Home</title>
@@ -11,7 +12,7 @@
 
 <body class="bodyy">
     <header class="myElement">
-        <a href="#" class="logo" ><img src="images/logo.jpeg" width="180" height="80"></a>
+        <a href="#" class="logo" ><img src="images/logo.jpeg"></a>
         <span class="search">
             <input type="text" placeholder="Search">
             <i class="fa-solid fa-search"></i>
@@ -24,7 +25,7 @@
               </label>
             <a href="Home.html" class="nav1">Home</a>
             <div class="dropdown-menu">
-                <a href="products.html" class="dropdownbtn">Products</a>
+                <a href="Products.html" class="dropdownbtn">Products</a>
                 <div class="dropdown-contents">
                     <a href="face.html"  class="n">
                         <img src="images/face.jpg"> <br>Face
@@ -403,7 +404,7 @@
     <span id="usernameErr" style="color: red;"></span>
     <input type="password" id="password" placeholder="Password" class="text">
     <span id="passwordErr" style="color: red;"></span>
-    <i class="fa-solid fa-eye fa-fade fa-sm" onclick="Show()"></i>
+    <!-- <i class="fa-solid fa-eye fa-fade fa-sm" onclick="Show()"></i> -->
     <button type="button" onclick="validateForm2()">Login</button>
     <br>    
     <div class="forget"> <a href="#" onclick="hidePopupsignin('popupContainerSignIn'); showPopupSignin('popupContainerForget')">Forgot Password</a></div>
@@ -422,33 +423,35 @@
     </div>
 
     <div class="popup-container" id="popupContainerSignUp">
-        
         <div class="popup">
             <span class="close-btn" onclick="hidePopupsignin('popupContainerSignUp')">&times;</span>
             <h2>Sign Up</h2>
-            <form onsubmit="return validateForm1()">
-                <input type="text" id="name" placeholder="Name" required class="text">
-                <input type="email" id="email" placeholder="Email" required>
-                <input type="password" id="password" placeholder="Password" required>
-                <input type="password" id="confirm_password" placeholder="Confirm Password" required>
-                <select id="country" required>
-                    <option value="" disabled selected>Select your country</option>
-                    <option value="Dubai">Dubai</option>
-                    <option value="Saudia-Arabia">Saudia Arabia</option>
-                    <option value="United-Arab-Emirates">United Arab Emirates</option>
-                    <option value="Egypt">Egypt</option>
-                </select>
-                <input type="tel" id="phone" placeholder="Phone Number" required>
+            <form onsubmit="return SignupValidation()">
+                <input type="text" id="name" placeholder="Name">
+                <span id="nameErr" style="color: red;"></span>
+                <input type="email" id="email" placeholder="Email">
+                <span id="emailErr" style="color: red;"></span>
+                <input type="password" id="pass" placeholder="Password">
+                <span id="passwordErr" style="color: red;"></span>
+                <input type="password" id="confirm_pass" placeholder="Confirm Password">
+                <span id="confirm_passwordErr" style="color: red;"></span>
+                <input type="text" id="country" placeholder="Address">
+                <span id="countryErr" style="color: red;"></span>
+                <input type="tel" id="phone" placeholder="Phone Number">
+                <span id="phoneErr" style="color: red;"></span>
                 <br>
-                <input type="checkbox" id="terms" required>
+                <input type="checkbox" id="terms">
                 <label for="terms">I accept the terms and conditions </label>
+                <br>
+                <span id="termsErr" style="color: red;"></span>
                 <button type="submit">Sign Up</button>
-                <a href="gmail.html"><i class="fa-solid fa-envelope fa-2xl"style="color: #3601f4;"></i></a>
+                <div id="successMessage" style="display: none; color: green;">Account created successfully!</div>
+                <br>
+                <a href="gmail.html"><i class="fa-solid fa-envelope fa-2xl" style="color: #3601f4;"></i></a>
                 <a href="facebook.html"><i class="fa-brands fa-facebook fa-2xl" style="color: #3601f4;"></i></a>
             </form>
             <br>
-            <span id="errorField" class="error"></span>
-            <div>or sign up with social media account</div>
+            <div>or sign up with a social media account</div>
             
             <div class="signin">
                 Already Have an account <a href="#" onclick="hidePopupsignin('popupContainerSignUp'); showPopupSignin('popupContainerSignIn')">Log in</a>
@@ -456,6 +459,7 @@
             
         </div>
     </div>
+    
     <div class="popup-container" id="popupContainerForget">
     <div class="popup">
         <span class="close-btn" onclick="hidePopupsignin('popupContainerForget')">&times;</span>
